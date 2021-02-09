@@ -33,6 +33,9 @@ body {
   padding-top: 30px;
   font-weight: 600;
   font-size: 48px;
+  position: relative;
+  animation-name: comeup;
+  animation-duration: 1s;
 }
 .signupForm {
   flex: 1 1 70%;
@@ -87,9 +90,17 @@ body {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  
+@media only screen and (max-width: 550px) {  
   .info{
     display: none;
+  }
+}
+
+@keyframes comeup {
+  from {
+    top: 1000px;
+  }
+  to {
+    top: 0px;
   }
 }
