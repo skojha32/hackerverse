@@ -1,0 +1,858 @@
+.section2{
+	
+}
+.banner_image{
+	
+	
+}
+.banner_titles{
+	margin-top: 0px;
+}
+.banner_titles>h3{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 62px;
+}
+.banner_titles>p{
+    color: #f7f9f9;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+.banner_img{
+    width: 35%;
+    position: absolute;
+    right: -60px;
+    top: -25px;
+}
+.mib_banner_img{
+    width: 35%;
+}
+.highlights>span{
+    color: #56d3f3;
+    font-weight: 600;
+}
+.tags_ibm_chal{
+    font-size: 24px;
+    text-transform: initial;
+    font-weight: 500;
+    margin-top: 13px;
+    color: #fff !important;
+}
+
+.blur_color{
+	background-image: linear-gradient(268deg, #7c21c1, #18051b);
+	height: 420px;
+	padding-top: 40px;
+}
+.form_css{
+	font-size: 18px;
+	padding: 10px 20px;
+	height: 70px !important;
+	border: none;
+}
+.internhship_headers{
+	font-size: 25px;
+	font-weight: 500;
+}
+.internship_div{
+	margin-top: -10px;
+}
+.fomr_btn{
+	width: 100%;
+	color: #fff;
+	background-color: #0b2b4e;
+	border-color: #112b4e;
+	height: 45px;
+	font-weight: 500;
+	margin-top: 10px;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #02070a3d;
+    outline: 0;
+    box-shadow: none;
+}
+.fomr_btn:focus {
+    box-shadow: none;
+}
+.internship_card {
+    background-color: #fff;
+    border: 1px solid #a7b0c16b;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+.internship_company_logo {
+    width: 80px;
+    float: right;
+    border-radius: 3px;
+    border: 1px solid #ccccccdb !important;
+	box-shadow: 1px 1px 10px #ccc;
+}
+.internship_role {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    color: #539bce;
+}
+.internship_company {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #7b7d80;
+    text-decoration: none;
+}
+.internship_locations {
+    font-style: inherit;
+    font-size: 14px;
+    height: 32px !important;
+	font-weight: 500;
+	margin: 10px 0px
+}
+}
+.internship_company_logo {
+    width: 60px;
+    float: right;
+    border-radius: 3px;
+    border: 1px solid #ccccccdb !important;
+}
+.internship_table_tbody>tr>td {
+	font-size: 15px;
+	font-weight: 500;
+	color: #7d8284;
+	border-top: 0px solid white !important;
+	padding: 0px !important;
+}
+.apply_intern {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    color: #ffff !important;
+    margin-top: -15px;
+    float: right;
+}
+table  {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.internship_table_thead>tr>th {
+	font-size: 15px;
+	font-weight: 500;
+}
+.internship_tablevu {
+    margin-top: 8px;
+}
+.apply_intern:focus {
+	box-shadow: none;
+}
+.internship_type{
+	font-weight: 500;
+	color: #34383ebd !important;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.internships_search{
+	background-color: #ffffff;
+	padding: 10px 25px;
+	border-radius: 5px;
+	border: 1px solid #112b4e1f;
+}
+.internship_display_div{
+	
+}
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin: 20px 0;
+	border-radius: 4px;
+	list-style: none;
+}
+.pagination>li {
+    display: inline;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span{
+	color: #fff;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+.pagination>li>a, .pagination>li>span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #337ab7;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	font-weight: 500;
+	font-size: 15px;
+	cursor:pointer;
+}
+.internship_title{
+	font-size: 16px;
+	font-weight: 600;
+	color: #1e1f23ab  !important;
+	height: 85px;
+	overflow: hidden;
+}
+.team_individual{
+	background-color: #33689421;
+    padding: 5px 8px;
+    color: #5cb1bf;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    font-style: inherit;
+    text-transform: uppercase;
+}
+.badge_skills{
+	background-color: #d7dfef78;
+    padding: 5px 8px;
+    color: #6aa2d3;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 10px;
+    font-style: inherit;
+    margin: 2px 0px;
+}
+.btn-km{
+	float: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: #58b77ec7;
+    color: #ffff !important;
+    margin-top: 12px;
+}
+.skill_badges_divs{
+	margin-top: 10px;
+	height: 50px;
+	overflow: hidden;
+}
+.company_logo{
+	border: 1px solid #112b4e08;
+}
+.internhip_div{
+	
+}
+.inidi{
+    background-color: #ffbc32 !important;
+}
+
+.internship_card:hover{
+	box-shadow: 1px 1px 15px #ccc;	
+}
+.badge_categories{
+	background-color: #33689421;
+	padding: 5px 8px;
+	color: #5cb1bf;
+	font-weight: 500;
+	font-size: 12px;
+	border-radius: 10px;
+	font-style: inherit;
+	text-transform: uppercase;
+}
+.enrollments_stats{
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.main_title_p{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #71e3eb !important;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+}
+.btn-re{
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+.start_date{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #71e3eb !important;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+}
+.blur_color{
+    background-image: linear-gradient(268deg, #00000000, #08051b00);
+}
+.header_contents {
+    padding: 36px 0px;
+    text-transform: uppercase;
+    font-weight: 600; 
+    text-align: left;  
+}
+.listes{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-left: 30px;
+}
+.listes>li{
+
+}
+.listes>li:before {
+    content: '✓';
+    padding-right: 12px;
+    font-weight: 800;
+}
+table p{
+    color: #100101 !important;
+    font-weight: 600;
+}
+.sublinies{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #222222c2 !important;
+}
+.dished_bck{
+    background-color: #cccccc21;
+    margin: 30px 0px;
+    padding-bottom: 90px;
+    padding-top: 60px;
+}
+
+.program_titls {
+    border-bottom: 2px solid #58a3c236;
+    padding-bottom: 11px;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 25px 0px;
+}
+.panel-group {
+    padding: 10px;
+}
+.card_view {
+    border: 1px solid #18181c1a;
+    min-height: 356px;
+    background-color: #fcfcfc;
+}
+.panel-group3 {
+    background: #54aeaf1a;
+    margin-bottom: 0px !important;
+}
+.panel-group .panel {
+    border: 0px;
+    margin-bottom: 0px;
+}
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    margin: 5px 0px;
+    padding: 10px;
+}
+.collapse {
+    display: none;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+    border: 1px solid #ddd;
+    margin-top: -5px;
+    border-top: none;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.ben1 {
+    background-image: linear-gradient(to right, #6edfda, #5784e7);
+}
+.ben_icons {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid white;
+    background-color: #fff;
+}
+.ben_content {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.ben2 {
+    background-image: linear-gradient(to right, #e84e9c, #ea6f77);
+}
+.ben3 {
+    background-image: linear-gradient(to right, #6de098, #5ab9b2);
+}
+.benifits_cards {
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.ben3 {
+    background-image: linear-gradient(to right, #6de098, #5ab9b2);
+}
+.ibm_back_image{
+    background: url(../../ibm_hack_challenge_banner.png);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    margin-top: 0px;
+}
+.section11{
+    height: 85px;
+    background-color: black;
+}
+.content_siders{
+
+}
+.content_siders>h4{
+    text-transform: uppercase;
+    color: #222;
+}
+.content_siders>p{
+    color: #222;
+    font-weight: 500;
+}
+.content_siders_sidrs{
+    color: #ffff;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.content_siders_sidrs>p{
+    color: #222;
+    line-height: 24px;
+    font-weight: 500;
+}
+.pro_caards:hover{
+    background: #49989e;
+    box-shadow: 1px 1px 16px #2a6365;
+}
+.content_siders_sidrs>p>b{
+
+}
+.pro_caards{
+    
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    height: 250px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    cursor:pointer;
+}
+.pro_caards_blur>h3{
+    height: 200px;
+    padding: 0px 25px;
+    text-align: center;
+    padding-top: 68px;
+    color: #fff;
+    font-size: 23px;
+}
+.pro_caards_blur{
+    background-color: #040404b3;
+    height: 250px;
+    border-radius: 3px;
+}
+.pro_a{
+    
+}
+.header_contents_div>p{
+    color: #222;
+    font-weight: 500;
+}
+.header_contents_div>b{
+
+}
+
+.boot_pro_caards{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.boot_pro_caards_blur>h3{
+    text-align: center;
+    padding: 0px 15px;
+    padding-top: 18px;
+    color: #222;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.boot_pro_caards_blur{
+    height: 140px;
+    border-radius: 3px;
+}
+.etxt{
+    text-align: left;
+}
+.project_template{
+    width: 100%;
+    margin-top: 0px;
+}
+.prize_cards{
+    height: 100px;
+}
+.img_crads{
+    height: 115px;
+}
+.prize_content{
+
+}
+.prize_content>h3{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.prize_content>p{
+    color: #364250;
+    font-weight: 500;
+}
+.video_banner{
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    margin-top: 50px;
+    text-align: center;
+}
+.common_vido_header{
+    font-weight: 700;
+    font-size: 28px;
+}
+.green_colored{
+    color: #77f57b !important;
+    letter-spacing: 1px;
+}
+.whited_colored{
+    color: #ffff !important;  
+}
+.ibm_challenegs{
+    font-size: 34px;
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+.counter_divs{
+    background-color: #49989e;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding-top: 7px;
+    color: #fff;
+    font-weight: 500;
+}
+.count_card{
+    min-height: 145px;
+    margin-bottom: 30px;
+    padding: 20px 28px;
+    background-color: #49989e1f;
+    border-radius: 5px;
+}
+.count_card>p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    padding-top: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+.tabs_pannel{
+
+
+}
+.tabs_list{
+
+}
+.tab_classss{
+    margin: 5px 0px;
+    width: 100%;
+    text-align: left;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+}
+.mb_tab_classss{
+    margin: 5px 0px;
+    width: 100%;
+    text-align: left;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.tab_active{
+    background-color: #49989e;
+    color: #fff;
+}
+.mb_tab_active{
+    background-color: #49989e;
+    color: #fff;
+}
+
+.tabs_div{
+    min-height: 350px;
+    background-color: #d7dfef42;
+}
+.mb_tabs_div{
+    background-color: #d7dfef42;
+    width: 100%;
+}
+
+.content_siders_sidrs_2{
+    color: #ffff;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.ee_cc{
+    color: #222;
+}
+.seve_taps{
+    
+}
+.about_test{
+
+}
+.about_test p{
+}
+.custom_tests_2{
+    width: 25%;
+    flex: 0 0 25%;
+}
+.custom_table{
+    font-size: 13px;
+    font-weight: 500;
+}
+.highkigt_pron_stat{
+    font-weight: 600;
+    font-size: 16px;
+}
+.btn-modal{
+    font-weight: 500;
+    color: #ffff !important;
+    text-transform: uppercase;
+    position: absolute;
+    left: 15px;
+}
+.spaces_b{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.spaces_r{
+ 
+}
+.pro_c1{
+    background: url(../../problem_statements/1.png);
+}
+.pro_c2{
+    background: url(../../problem_statements/2.png);
+}
+.pro_c3{
+    background: url(../../problem_statements/3.png);
+}
+.pro_c4{
+    background: url(../../problem_statements/4.png);
+}
+.pro_c5{
+    background: url(../../problem_statements/5.png);
+}
+.pro_c6{
+    background: url(../../problem_statements/6.png);
+}
+.light-version .dream-faq-area dt{
+    background-image: linear-gradient(to right, #49989e 0%, #4a969b 100%)
+}
+.dream-faq-area dd{
+    background-color: #4a969b08;
+    font-size: 15px;
+    font-weight: 500;
+}
+dd p{
+    color: #222 !important;
+}
+.dished_bck_faq{
+    background-color: #cccccc21;
+}
+.fress{
+    color: #fafff8;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 6px;
+}
+.b_blod{
+
+}
+.content_siders_sidrs_2 p{
+    color: #222 !important;
+    font-weight: 500;
+}
+.dyy_b{
+    color: #222 !important;
+    font-size: 16px;
+    font-weight: 600 !important;
+    line-height: 0px;  
+}
+#scrollUp{
+    display:none !important; 
+}
+.slack_logos{
+    width:150px;
+}
+.slack_para{
+    font-size: 17px !important;
+    padding: 22px 0px;
+    color: #222 !important;
+    font-weight: 500
+}
+.join_slack{
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.join_slack > span{
+    font-weight: 600;
+}
+.btn-slack-join{
+    padding: 10px 28px;
+    font-weight: 500;
+}
+.slack_dash{
+    background-color: #e2e2e64d !important;
+    padding: 45px 15px;
+}
+.cinosn_imahe{
+    width: 100px;
+}
+.cols_one{
+    flex: 0 0 13.333333%;
+    max-width: 11.333333%;
+}
+/********************* Responsive *********************************/
+
+@media only screen and (max-width: 767px){
+    .banner_titles>h3{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .pro_caards_blur{
+        padding: 10px;
+    }
+    .boot_pro_caards_blur>h3{
+        padding: 0px 6px;
+        padding-top: 29px;
+        text-align: center;
+    }
+    .custom_tests_2{
+        flex: 0 0 50%;
+    }
+    .ibm_back_image{
+        background: url(../../icons/ibm_cloud_mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .pro_caards_blur>h3{
+        height: 200px;
+        padding: 0px 14px;
+        text-align: center;
+        padding-top: 70px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .custom_table a{
+        word-break: break-all;
+    }
+    #desktop_pannels{
+        display: none;
+    }
+    #mobile_pannels{
+        display: contents !important;
+    }
+    #scrollUp{
+        display: none;
+    }
+    .banner_img{
+        width: 40%;
+        position: inherit;
+        right: 0px;
+        top: -25px;
+    }
+    .blur_color{
+        background-image: linear-gradient(268deg, #0000006e, #02000ce6);
+        height: 455px;
+    }
+    .img_mobi{
+        display: initial !important;
+        margin-bottom: 15px;
+        margin-top: -12px;
+        width: 26%;
+        
+    }
+    .img_desk{
+        display: none;
+    }
+    #mobil_flow{
+        display: inline-flex !important;
+    }
+    #desk_flow{
+        display: none;
+    }
+    .banner_titles>p{
+        color: #f7f9f9;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 500;
+        margin-top: 0px;
+    }
+    .spaces_r{
+        margin-top: -7px;
+    }
+    .tags_ibm_chal{
+        font-size: 18px;
+        margin-top: 18px;
+    }
+    .fress{
+        display: block;
+        margin-top: 7px;
+    }
+    .count_card{
+        min-height: 185px;
+    }
+    .join_slack > span{
+        font-size: 20px;
+    }
+    .ibm_challenegs{
+        font-size: 28px;
+    }
+    .prize_cards{
+        height: 75px;
+    }
+    .img_crads {
+        height: 95px;
+    }
+    .prize_content>p{
+        line-height: 20px
+    }
+
+}

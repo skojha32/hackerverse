@@ -1,0 +1,337 @@
+.home-subheading{
+	text-shadow: none;
+	font-family: "Montserrat", sans-serif !important;	
+}
+.tabs-button-group .button{
+	font-family: "Montserrat", sans-serif !important;	
+	font-weight: 500;
+	border: 0px;
+}
+.tabs-button-group .is-active{
+	background-image: linear-gradient(to right, #3023ae, #ff057c);
+	border: 0px;
+}
+.call-to-action-main-columns{
+	padding-top: 70px;
+}
+.call-to-action-title{
+	font-size: 27px;
+	padding-bottom: 15px;
+}
+.tabcontent-hero h3{
+	font-weight: 500;
+	color: #000204;
+	padding-bottom: 40px;
+}
+.para_contents{
+	font-weight: 500;
+    font-size: 15px;
+}
+.custom_boxes:hover{
+	transition: all .3s ease-in-out;
+}
+.custom_boxes:hover{
+	box-shadow: 1px 1px 13px #42383d;
+	transition: all .3s ease-in-out;
+}
+.has-text-centered{
+	border-radius: 4px;
+}
+.button.is-medium{
+	font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.tabs-button-group .button{
+	transition: all .3s ease-in-out;
+}
+.tabs-button-group .button:hover{
+	box-shadow: 1px 1px 13px #2d2929a6;
+	transition: all .3s ease-in-out;
+}
+.heightlighted-logo:hover{
+	margin-top: -17px;
+	transition: all .3s ease-in-out;
+}
+.heightlighted-logo{
+	transition: all .3s ease-in-out;
+}
+.button.is-medium{
+	transition: all .3s ease-in-out;
+}
+.button.is-medium:hover{
+	transition: all .3s ease-in-out;
+	box-shadow: 1px 1px 13px #2d2929a6;
+}
+.know-more-cards-title{
+	text-shadow: none;
+}
+.hero-brand-container{
+	padding-top: 45px;
+}
+.know-more-cards-container-left-column{
+	color: #0000008c;
+	font-family: "Montserrat", sans-serif !important;
+}
+.mentor-name{
+	color: #0000008c;
+	font-size: 14px !important;
+	line-height: 21px !important;
+}
+.card-header-title{
+	padding-bottom: 14px !important;
+	color: #363636bf;
+}
+.tag:not(body){
+	background-color: #cae7ef6e;
+}
+.slider-pagination .slider-page{
+	background: #e62e7d7a;
+}
+.lets-get-cards-right-side{
+	height: 520px
+}
+.slider-navigation-next{
+	background-color: #ce2ea0 !important;
+}
+.know-more-button{
+	font-size: 15px !important;
+    opacity: 0.7;
+}
+.know-more-cards-title{
+	opacity: 1;
+	font-size: 27px;
+}
+.certificate-title{
+	font-size: 27px;
+}
+.certificate-avatar-list-subtitle{
+	color: #0000008c;
+    font-size: 14px !important;
+    line-height: 21px !important;
+	font-weight: 500;
+	padding-top: 10px;
+}
+.certificate-avatar-list-title{
+	color: #9d0a90;
+	opacity: 0.93;
+	font-weight: 600;
+}
+.step-paragraph{
+	font-weight: 500;
+	line-height: 25px;
+	font-size: 15px;
+	color: #302f30cf;
+}
+.step-heading-new{
+	font-size: 23px;
+    font-weight: 600;
+}
+.step-title{
+	font-size: 58px;
+}
+.learn-snap{
+	top: 174px;
+    left: 125px;
+	position: inherit;
+	font-family: "Montserrat", sans-serif !important;
+}
+.practice-snap {
+    top: 627px;
+    left: 210px;
+    position: inherit;
+    font-family: "Montserrat", sans-serif !important;
+}
+.intern-snap {
+    top: 1076px;
+    left: 240px;
+    position: inherit;
+    font-family: "Montserrat", sans-serif !important;
+}
+.step3-heading{
+	color: #302f30cf;
+	line-height: 25px;
+	font-size: 15px;
+}
+.step3-column-detail{
+	color: #302f30cf;
+	line-height: 25px;
+	font-size: 15px;
+	font-weight: 500;
+}
+.blockquote-text{
+	padding-bottom: 15px;
+	line-height: 30px;
+	font-weight: 600;
+}
+.para{
+	font-size: 14px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.img_but_cont{
+	font-family: "Montserrat", sans-serif !important;
+    font-weight: 500;
+}
+.partner-tab{
+	font-weight: 600;
+	transition: all .3s ease-in-out;
+}
+.partner-tabs-container .is-active {
+    transition: all .3s ease-in-out;
+}
+.promotion-title{
+	font-size: 18px;
+}
+.hero-brand-logo img{
+	width: 100%;
+    box-shadow: 1px 1px 10px #ccc;
+    margin-bottom: 15px;
+    transition: all .3s ease-in-out;
+}
+.hero-brand-logo img:hover{
+	box-shadow: 1px 1px 7px #2d2d2dc4;
+    margin-top: -10px;
+    transition: all .3s ease-in-out;
+}
+.custom-footer h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.custom-footer-li{
+	color: #a6def9;
+    font-size: 14px;
+    line-height: 28px;
+}
+.custom-footer-li > li > a{
+	color: #a6def9 !important;
+    font-size: 14px;
+    line-height: 28px;
+}
+.custom-footer p{
+	font-size: 14px;
+    color: #a6def9;
+    line-height: 23px;
+}
+.custom-footer h5 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #c345c1;
+}
+.slogan {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #a6def9;
+    line-height: 23px;
+}
+.column_title{
+	font-size: 14px;
+    color: #a6def9;
+    line-height: 23px;
+}
+.social-media-links{
+	margin-top: 13px;
+}
+a.navbar-item, .navbar-link{
+	font-weight: 500;
+}
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active{
+	background-color: transparent;
+    color: #6c33ec !important;
+    font-weight: 500;
+}
+.heightlighted-logo{
+	box-shadow: none !important;
+}
+.join_signin{
+	text-transform: uppercase!important;
+	background-color: white;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+}
+.navbar-dropdown > .navbar-item{
+    font-size: 16px;
+    font-weight: 500;
+}
+.card-content{
+	height: 210px;
+}
+.call-to-action-actions{
+	margin-top: 40px;
+}
+.card-header-title{
+	min-height: 94px;
+}
+.promotion-section{
+	margin-bottom: 100px;
+	margin-top: -68px;
+}
+.mail_link{
+	font-weight: 500;
+    color: #c345c1 !important;
+}
+.join_signin{
+	font-weight: 500 !important;
+}
+.know-more-card{
+	height: 400px;
+}
+.card-header-title{
+	min-height: 100px;
+}
+.know-more-card-subtitle{
+	height: 62px;
+    overflow: hidden;
+}
+.know-more-button{
+	color: #fff !important;
+}
+@media (max-width: 767px){ 
+
+	.home-heading{
+		padding: 10px;
+		font-size: 35px;
+	}
+	.hero-brand-logo{
+		width: 32%;
+	}
+	.hero-brand-logo img{
+		margin-bottom: 0px;
+	}
+	#college .card{
+		height: 256px;
+	}
+	#brand .card{
+		height: 232px;
+	}
+	.certificate-avatar-list-avatar{
+		margin-left: -15px;
+	}
+	.media-content{
+		padding-right: 15px;
+	}
+	.nav-logo-custom {
+		width: 178px !important;
+		height: 62px !important;
+	}
+	.custom-navbar-link{
+	  padding-left: 16px !important;
+	  padding-bottom: 0px;
+	  padding-top: 10px !important;
+	}
+
+
+}

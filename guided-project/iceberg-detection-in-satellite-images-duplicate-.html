@@ -1,0 +1,1027 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from smartinternz.com/guided-project/iceberg-detection-in-satellite-images-duplicate- by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 13:24:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Iceberg Detection in Satellite Images using IBM Watson Studio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../assets/guided_projects/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/guided_projects/css/style.css">
+    <link rel="stylesheet" href="../assets/guided_projects/css/internship.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+    <meta property="og:title" content="Guided Projects" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:description" content="Iceberg Detection in Satellite Images using IBM Watson Studio">
+    <meta property="og:image" content="../assets/smartinternz_thumb.png">
+
+    <title>Guided Projects</title>
+    
+    <link rel="stylesheet" href="../../e6t7a8v2.stackpathcdn.com/tutorial/css/fontawesome-all.min.css">
+
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='../../platform-api.sharethis.com/js/sharethis.js#property=5f591cce58adc60012f342c5&product=sop' async='async'></script>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/smartinternz.ico">  
+
+    
+    <meta name="p:domain_verify" content="55c4ec39b8d9f7a35b5fafcd164c516d"/>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    '../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '356991988979960'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=356991988979960&amp;ev=PageView%20%20%20%20&amp;noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TV4Q7TH');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <script type='text/javascript' src='../../platform-api.sharethis.com/js/sharethis.js#property=5f591cce58adc60012f342c5&product=sop' async='async'></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161189280-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161189280-1');
+    </script>
+
+
+ <!-- Hotjar Tracking Code for https://smartinternz.com/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1735161,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    
+    <!--<script type="text/javascript"> var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"3beb4b5cf8def8ca59f84994be43531a4432e4c4aabafd36bc2ddfff59403f79ad01f27f219d594ba5ad42027dff434f", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>"); </script> -->
+
+
+    <style>
+        .whatsapp_red {
+            cursor: pointer;
+        }
+        .back_icons{
+            background-color: #f4c71e;
+            padding: 10px 18px;
+            border-radius: 3px;
+            color: #060606;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .whats_logo_know {
+            background-color: #060606;
+            padding: 7px;
+            margin-right: -5px;
+            margin-left: 28px;
+            border-radius: 2px;
+            height: 48px;
+        }
+        .btn-kr {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0px;
+            border-radius: 3px;
+            background-color: #58d84d;
+            border: 0px;
+            padding: 11px 20px;
+        }
+
+        .discrip span {
+            font-size: 14px !important;
+            font-family: "Montserrat", sans-serif !important;
+            color: #6f7577 !important;
+        }
+        .discrip img{
+            width: 100%;
+            padding: 0px 20px;
+            /*box-shadow: 0 4px 21px 0px #00000099;*/
+            border-radius: 5px;
+        }
+        .discrip {
+            font-size: 14px !important;
+            font-family: "Montserrat", sans-serif !important;
+            font-weight: 500 !important;
+            color: #6f7577 !important;
+            box-shadow: 0px 0px 0px #ffff;
+            border:0px;
+            padding:0px;
+        }
+        .discrip p{
+            font-size: 14px !important;
+            font-family: "Montserrat", sans-serif !important;
+            font-weight: 500 !important;
+            color: #6f7577 !important;
+        }
+        .discrip iframe{
+            width:100%;
+        }
+        .discrip video{
+            width:100%;
+        }
+
+        .btn-enroll{
+            font-weight: 500;
+            padding: 10px 20px;
+        }
+        .skill-guide li{
+            line-height: 2.5;
+            cursor: pointer;
+            display: inline-flex;
+            padding: 0px 22px;
+            margin-bottom: 7px;
+            background: #427bff;
+            color: #ffffff;
+            border: 1px solid #427bff;
+        }
+        .border-secondary{
+            border: 0px !important;
+        }
+        .classy-nav-container{
+            
+        }
+        #tree_view_display{
+            background-color: #ffff;
+            padding: 10px 0px;
+        }
+            .test_coll{
+                margin-bottom: 12px !important;
+            }
+            .mentor_pro{
+            background-color: #cccccc69;
+            margin: 25px 0px;
+            padding: 35px 40px;
+            border-radius: 5px;
+        }
+        .mentor_pro h4{
+            font-size: 26px
+        }
+        .mentor_pro h5{ 
+            margin-bottom: 28px;
+            font-size: 30px;
+        }
+        .mentor_pro img{
+            border-radius: 10px;
+        }
+        .mentor_pro p{
+            font-size: 13px !important;
+        }
+        .tets_img{
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+
+
+        .w3-card-4{
+            border-radius: 12px;
+            box-shadow: 1px 1px 3px #ccc;
+            padding-bottom: 30px;
+        }
+        .w3-container{
+
+        }
+        .mentor_header{
+
+        }
+        .mentor_header h3{
+            background-color: #427bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 0px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .w3-center{
+            text-align:center;
+        }
+        .mentor_pic{
+            width: 150px;
+            border-radius: 50%;
+            margin: 25px 0px;
+        }
+        .w3-container p{
+
+        }
+        .w3-container h5{
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+        .guided-card{
+            padding: 0px;
+        }
+        .discrip ul li{
+            list-style: disc;
+            margin-left: 25px;
+        }
+        .half_star{
+            width: 20px;
+            margin-top: 1px;
+        }
+        .classy-nav-container{
+        background-color: #1f2464 !important;
+	
+	}
+    .guided-inn{
+        float: initial;
+    }
+    .img-fluid{
+
+    }
+    .image_card{
+        width: 100%;
+        height: 160px;
+        background-size: cover;
+    }
+    .card_details{
+        padding: 10px;
+    }
+    .guided-card:hover{
+        padding: 0px;
+        border: 1px solid #9a9a9a96;
+        box-shadow: 1px 1px 15px #9a9a9a;
+    }
+    .card {
+        border: none;
+        min-height: 300px;
+    }
+
+    @media (max-width: 600px){
+        .card {
+            min-height: 120px;
+        }
+        .image_card{
+            height: 120px;
+        }
+        .card_details{
+            padding: 0px;
+        }
+        .discrip img{
+            width: 100% !important;
+        }
+        .discrip span{
+            width: 100% !important;
+        }
+        .btn-enroll{
+            display: inline-block !important;
+        }
+        .guided-inn1{
+            display: block !important;
+        }
+    }
+
+    .btn-enroll{
+        cursor: pointer !important;
+    }
+    .ads_images{
+    border-radius: 5px;
+    width:100%;
+}
+.ads_btn{
+    font-weight: 500;
+    padding: 11px 20px;
+    border-radius: 0px;
+    background-color: #ffe600 !important;
+    border: 0px;
+    color: #161719 !important;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.ads_btn:hover{
+    background-color: #ccb911 !important;
+    color: #ffffff !important;
+}
+
+
+
+
+.guided-inn1 {
+    background: #fff;
+    position: relative;
+    border-radius: 1px;
+    border-bottom: 1px solid #1e236321;
+}
+.guide-cource {
+   
+    background-size: cover;
+    min-height: 160px;
+    width: 100%
+}
+.gui-pri {
+    padding: 6%;
+}
+.guided-inn h4 {
+    color: #333;
+    font-weight: 600;
+    float: left;
+}
+.guided-inn h5 {
+    color: #333;
+    font-weight: 500;
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.main_price{
+    color: #427bff; 
+}
+
+
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("fast");
+            });
+        });  
+    </script>
+
+    <script type="text/javascript" src="../../code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+        src="../../cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#testimonial-slider").owlCarousel({
+                items: 1,
+                itemsDesktop: [1000, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [768, 1],
+                pagination: true,
+                navigation: true,
+                navigationText: ["", ""],
+                slideSpeed: 1000,
+                autoPlay: true
+            });
+        });
+    </script>
+
+<link rel="stylesheet" href="../assets/vps/css/custom/company/admin_projects.css">
+</head>
+
+<body class="light-version">
+
+    <div style="background-color: #fff !important" class="badge-info">
+        <div class="guided-inn pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8">
+
+                        <a href="../guided-projects.html" ><i class="fa fa-arrow-left back_icons" ></i></a>
+                        <h2 class="mt-2">Iceberg Detection in Satellite Images using IBM Watson Studio</h2>
+                        <p>Icebergs present hazards for ship navigation. The main aim is to build a model that identifies whether a remotely sensed target is an iceberg or not.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="star-ul mt-2">
+                                    <li class="mr-1"><h6 class="star-p">4.6</h6></li>   
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    <li><img class="star-li pr-1 half_star" src="../assets/guided_projects/images/half-star.png" alt="star-ratting" ></a>
+                                    </li>
+                                    <span class="star-span pr-1">( 76 )</span><br>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mt-2">
+                                <ul>
+                                    <li class=""><img class="star-li pt-1" src="../assets/guided_projects/images/guided-inn1.png"
+                                            alt="guided-inn1">
+                                        <h6>8 Hrs</h6>
+                                    </li>
+                                    <li class="">
+                                                                            <img class="star-li pl-3 pt-1" src="../assets/guided_projects/images/Basic.png"  alt="guided-inn1">
+                                    
+
+                                  
+                                        <h6>Basic</h6>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 col-sm-12 col-md-4 text-left">
+                        <div class="guided-inn1 mt-0">
+                            <div class="row"> 
+                                <div class="col-md-12 col-12 mb-2">
+                                    <div class="guide-cource" style="background-image: url(../images/mentor_logo/thumbs/1602324615iceberg_detection_1.png);"></div>
+                                </div>
+                                <div class="gui-pri">
+                                    <div class="col-md-12 col-12 mb-2">
+                                        <h4 class="main_price"> INR 999</h4>&nbsp;&nbsp;
+                                        <h5><s>INR 1998</s><span class="pl-2">50% OFF</span></h5> 
+                                        
+                                    </div>
+                                    <div class="col-md-12 col-12 text-center">
+                                    	
+
+                                        
+
+
+                                            <a class="btn btn-primary btn-enroll btn-block" href="../student-logine82a.html?role=reg" >Enroll Now</a>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="guided-left">
+                <div class="">
+                    <div class="col-md-8 mt-3">
+
+                        <div class="papper_shades">
+                            <h5 class="mt-4">Project Description</h5>
+                            <div class="discrip">
+                                <p class="MsoNormal" style="text-align: justify; ">Icebergs present serious hazards for
+ship navigation and offshore installations. Consequently, there is a large
+interest to localize them in timely and over vast areas. Because of their
+independence of cloud cover and daylight, satellite Synthetic Aperture Radar
+(SAR) images are among the preferred data sources for operational ice
+conditions and iceberg occurrences. The image spatial resolution mostly used
+for iceberg monitoring varies between a few and 100 m. Processed SAR data are characterized
+by speckle noise, which causes a grainy appearance of the images making the
+identification of icebergs extremely difficult. The methods of satellite
+monitoring of dangerous ice formations, like icebergs in the Arctic seas represent
+a threat to the safety of navigation and economic activity on the Arctic shelf.<br></p>
+
+<p class="MsoNormal" style="text-align: justify; "><span lang="EN-IN" style="line-height: 107%;">The main aim of this project is to
+build a model that automatically identifies whether a remotely sensed target
+is an iceberg or not. Often times an iceberg is wrongly classified as a ship.
+The algorithm had to be extremely accurate because lives and billions of
+dollars in energy infrastructure are at stake.&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="text-align:justify"><span lang="EN-IN" style="line-height: 107%;"></span></p><p class="MsoNormal" style="text-align: justify; "><span lang="EN-IN" style="line-height: 107%; font-weight: bold;">Architecture:</span><span lang="EN-IN" style="font-size:12.0pt;line-height:107%"> <o:p></o:p></span></p><p class="MsoNormal" style="text-align: justify; "><span lang="EN-IN" style="line-height: 107%; font-weight: bold;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAk4AAAEfCAYAAAC3Y0k6AAAgAElEQVR4Aey9d3gUR7Y+zJ/fc3/33t0bNtzdJRhwXpu0weuEjSMigwM44AAOOGIwcbHXOduAiMoBkJDIQYDIIEBkJCREzjlnJEBwvuet0RnV9HTP9EijUc/MqecpVXd1pX6rNf32qVPn1CEJgoAgIAgIAoKAICAICAK2EKhjq5QUEgQEAUFAEBAEBAFBQBAgIU7yEAgCgoAgIAgIAoKAIGATASFONoGSYoKAICAICAKCgCAgCAhxkmdAEBAEBAFBQBAQBAQBmwgIcbIJlBQTBAQBQUAQEAQEAUFAiJM8A4KAICAICAKCgCAgCNhEQIiTTaCkmCAgCAgCgoAgIAgIAkKc5BkQBAQBQUAQEAQEAUHAJgJCnGwCJcUEAUFAEBAEBAFBQBAQ4iTPgCAgCAgCYY7AkJ+mUJ0Gr3pFu7fFdQMtj3pNWn9Ceet22K0q5QSBsEdAiFPYT6HcgCAgCAgCLgSYQNU0HiBM6AuB++zeJ8Fnt4GSM5+NyUVBoBYREOJUi+BL14KAICAIBBMBJjHcZvuewwnxka7fKclQ0fZDKgWJQT4H/RzHR46fpV/d04vqP9CXi3ikKMPECRf0flEX/aEMpFEI6AvnHJE3dsIS1YexLVVB/ggCDkZAiJODJ0eGJggIAoJAIAjoBAb1mMAwYQEZ4mU15DF5wjHKIuAY5fgY58aAPJ04cVmkaCdjxmpVxVdbKAeSBTKHcjwuY19yLgg4DQEhTk6bERmPICAICAJVRMCKOHFzujQIZAURAalOnHIWF6p85HEZboPLWxEnXOd6xj70ttAHJFpcxtie3p8cCwJOQkCIk5NmQ8YiCAgCgkA1EPBHnEBSWBeJCQu6w3F1iNMHn01wEyy0xUt0TKC4D1xDAIHDsS6ZEuKkoJE/YYCAEKcwmCQZoiAgCAgCdhCwQ5xAcnh5jIkM0qoSJ+gqoT7aReC2mBxxH1j+42O+hnH8EDdH5QtxsjPDUsYJCAhxcsIsyBgEAUFAEAgCApDgMDlBc6yUzU1jeQzXIRECUWHlb+Tp+k6sb2Ssz+2gPEcQLhAgDjhmxXJ9PCBLyGf9KSZ53AcImARBIBwQEOIUDrMkYxQEBAFBQBAQBAQBRyAgxMkR0yCDEAQEAUFAEBAEBIFwQECIUzjMkoxREBAEBAFBQBAQBByBgBAnR0yDDEIQEAQEAUFAEBAEwgEBIU7hMEsyRkFAEBAEBAFBQBBwBAJCnBwxDZWDeDFhC0l0YVCJihwJAoKAICAICALOQECIkzPmwT0KkCYJpMij4CAICAKCgCAgCDgNASFODpsRIU6uCREcHPZgynAEAUFAEBAEFAJCnBz2IAhhcE2I4OCwB1OGIwgIAoKAIKAQEOLksAdBCINrQgQHhz2YMhxBQBAQBAQBhYAQJ4c9CEIYXBMiODjswZThOBaBmzdv0o0QRscCIQMTBEKEgBCnEAFttxshDC6kBAe7T4yUi1YErpffoG6Dc6heTALVa5MYuhiTQG99tSBaYZf7FgRIiJPDHgIhDK4JERwc9mDKcByHQKMOSVS3dRzVBXGKSQxZRH/ot0u/mY7DRAYkCIQCASFOoUA5gD7sEIYPPpvg9kwO7+bweF6dAC/naIM9p9ttD17RUbcmgh0caqJfaVMQCAcE5q7cQ3Vbx1PdmDgqvVoe0iGfu3hVkbW6MfG0uuhISPuWzgQBJyAgxMkJs6CNwQ5h0AlL9z4JirwUbT+ktRLYIRMnO7VqiigZ+7aDg7GOnAsC0YLAC4NzlNTn66TVtXLLvX9arPp/97uFtdK/dCoI1CYCQpxqE32Tvu0QBp04oQmQmSE/TaEf4ubQr+7pRSBTSBHGTliiruNcJ1ftew5X+UYpk06MuG6T1p+otnCNI+qjP708nyMvY4brBz1v3Q5VBufIRz07wQ4OdtqRMoJAJCLw0hAXcfoyIb9Wbu+DHxYp4vT+94tqpX/pVBCoTQSEONUm+iZ92yEMOnE6cvysm5iAPDGxQcrEB2WY1KBLvT5IEcry8hyOEbgtkC1cYyLE1/UyOGbJF/rSyRgfgzDxWNG2v2AHB39tyHVBIFIREOIUqTMr9xUOCAhxctgs2SEMTHxAYhBZusRkh2+Jr+spiBDO0QYHnBuJE9fhMpwin4Pen1mb6IOJE9cxluN8Y2oHB2MdORcEogUBIU7RMtNyn05EQIiTw2bFDmFg4mQcuk5kcM0X+RHiZERPzgWB8EFAiFP4zJWMNPIQEOLksDkNJnHi5TPoGSEwWcJOPJYcQVqFY6PEietCQoX6WOpDQFmcI18nakzmsBzHS4S8zMd9cX0eh2rQ4o8dHCyqSrYgEPEICHGK+CmWG3QwAkKcHDY5dggDK3Ybh67rMfE1JjcgSCA0HHTdJhAbkBwEneRwXVYOx3UmVOjL2B+bSQAx4/ZYOZz7Rft2FMTt4MBtSioIRBsCQpyibcblfp2EgBAnJ80GEQlhcE2I4OCwB1OG4ygEhDg5ajpkMFGGQI0RJ7z4JJpj4OsZE8LgQkdw8PWUyLVoR0CIU7Q/AXL/tYlAjRKn2ryxcO1bCINr5gSHcH2CZdyhQCAciNO18pu0sORMKOCQPgSBkCIgxCmkcPvvTAiDCyPBwf+zIiWiFwEnEycQpnfGb1crDlM2nIjeSZI7j1gEhDg5bGqFMLgmRHBw2IMpw3EUAk4lTr0n7og4FQ1HTbwMxhEICHFyxDRUDkIIgwsLwaHymZAjQcCIgFOJE8Z57sp1ejW5JOwlTicuXFP3YMRezgUBIU4OewaEMLgmRHBw2IMpw3EUAk4mTgwUCNTMgpN8GnapEKewm7KQDViIU8igttcRCINEFwb2EJNSgkD0IRAOxCncZ0WIU7jPYM2NX4hTzWErLQsCgoAgUCMICHGqEVg9GhXi5AGHnGgICHHSwJBDQUAQEATCAQEhTjU/S0Kcah7jcO1BiFO4zpyMWxAQBKIWAbvEqexqOc1cuotmL99drThz2S4qv3HTjfcHPyyiuq3j6P3vF7nzIu1AiFOkzWjw7keIU/CwlJYEAUFAEAgJAt0/naOIy5cJ+T77O3ziItVtk0x1YxKqFeu1SaZzF8vcfQlxckMhB1GIgBCnKJx0uWVBIJIQiKTNFL7mZXXREerUdzrd2iFJkSZIfB7uOZE277TeuVZefpM2bTtBBdurF9HGjZsicfI1P3ItehAQ4hQ9c+3zTrF1WIIgEI4IRDpxWlN8lOq3qZAYtY5zkyYQJxVjEqjJ8+l04uwVr+m7efMmXbh0NShRb1wkTjoachxtCAhxirYZt7hfvHwkCALhiAATp3Acu78xT160w7XExiTJR1qvTRItXnfAo8lDxy9S/baphGvVifXbpSnyxY0LcWIkJI1GBIQ4ReOsG+55btHpsLfya7glOY0iBCKVOM3O222LND34eibVa5OopE9IT5y57J59SJsGxC6nwSPzqhX7D19GV6+Vu9sV4uSGQg6iEAEhTlE46cZb5hePSJ2MyMh5OCDAz284jDWQMUIh270cZyFpeuztbNXk8o0H3STrzmdSAummSmWFOFUJNqkUIQgIcYqQiazqbbC0iV8+4/KPVrUpqScI1AoC/OzWSuc11GnCtM1+SdPjvSZ59L62+Kh759zOA2fVNUifHnw9gx55Y2K14oOvZdClK9fc/QlxckMhB1GIgBCnKJx0s1vGywd2SyQIAuGGQCQSpybPp3kRp3owKVAheTKSJszZ3c9V1mH7SkrHqV0K1WtbEZWuU6Ja2sOynt1Yv12q6DiF2z+GjLfGEBDiVGPQhlfDQpzCa75ktJUIRCJxatS+kiSBLHX4aDoV7TypiM5T706uvHkigpWAO7ukukkVyt9Vw8t1InHymAI5iTIEhDhF2YRb3a4QJytkJN/pCEQ6cerQZ7p7Cop3n3If88EdnVM8SBOI091CnBieKqdiObzK0EV8RSFOET/F9m5QiJM9nKSU8xCITOLk2iVXNyaeJi/cbgn6HV28SZNInCzhCuiCEKeA4IqqwkKcomq6rW9WiJM1NnLF2QhEInHq1Ge6W4pULyaRJi3wJE+w4X27iaQJpAnxvSD5kIN/uuvlNzwinoZH38xS/Xw6dqWzH45qjE6IUzXAi/CqQpwifILt3p4QJ7tISTmnIRCJxClt1haq2zreTZ7gay57vos8YaccjFkySTKmUPg+aWJFPNB5i3l/iqXRTPQJcwm6G5ZA23d6eSFOTp+h2hufEKfaw95RPQtxctR0yGACQCASiRNuH8t0HqQoJoFGZW+iujEVy3gWtp3++vKEANAzL/rpmJWefRv6AnHbsPW4eeUIyRXiFCETWQO3IcSpBkANxyaFOIXjrMmYgUCkEif4qIOkyYM86VIoA5lxSYES6eLlq9V+MLArz7NfzUdeTCIV7jhR7T6c3oAQJ6fPUO2NT4hT7WHvqJ6FODlqOmQwASAQqcQJEGTO20rQcbIkMRp5ghTo5BlvR78BQOkuil15pn3GJFBs5kZ3uUg+EOJUe7Nbp8Gr9EjX72pvAH56FuLkB6BouSzEKVpmOvLuM5KJE2Zr18GzpEwOGJfumDTFJNCT70ym0+dLgza5psQpJp5GZ28KWh9Ob0iIU+3NkBCn2sNeeg4AASFOAYAlRR2FQKQTJwZ7x/6z9Nq/5tHT706m2zu5/Nh1/Gg6HT8dHCkT94PUizjFJNDIrOghTcBAiJP+RIT2WCdOOG7S+hNCivire3q5j3GOkLduh0ceyiB88NkEj3wur7eHvCPHXS6KVCUbf0TiZAOkaCgixCkaZjky7zFaiJM+ey8NyVFLaV8m5OvZQTv2IE4xCTR6UnSRJgApxCloj1PADYHM8FIdjkF0EIb8NEURIW4Q13IWF/KpSnGOfASkGTNWu49Rv2j7Ifd1LsN9qYI2/ghxsgFSNBQR4hQNsxyZ9xiNxOmX8RsUcWr9/pQamVS3cnhMPMVN3VwjfTi9USFOtTdDIDxMZvRjM+KEPCZLKMsRo+/eJ8F9jnwEs7Ltew4P6GaFOAUEV+QWFuIUuXMb6XcWjcTp+vUbbltOWLZr9VZ20GLTbukuxfCYBIqf6vk1H+nPkn5/Qpx0NEJ7rJMl/diKOOlkCRImJklIsYynB17W0/MCPRbiFChiEVpeiFOETmwU3FY0EidM6/lLZdSwfVLFrjvYfAperN82kZZtOBgFT4/1LQpxssampq/oZEk/tiJOP8TN8ZAsMXEy6jKx7pNRT8q43Ofv/oQ4+UMoSq4LcYqSiY7A24xW4sRTeeTkRRo/t4Qy5m0NSlxZcJibjupUiFP4Tz8TKNyJkXRV5+6EOFUHvQiqK8QpgiYzym4l2olTlE13yG5XiFPIoK6xjkCc9Aidp2AEIU7BQDEC2hDiFAGTGKW3IMQpSie+hm9biFMNAxzGzQtxCuPJC+bQhTgFE01pK5QICHEKJdrR05cQp+iZ60DvVIhToIhFaHkhThE6sVFwW0KcomCSa+EWhTjVAuhh0qUQpzCZqJoephCnmkZY2q8pBIQ41RSy0d2uEKfonn9fdy/EyRc6UXRNiFMUTXaE3aoQpwibUIfcjhAnh0yEA4chxMmBk1IbQxLiVBuoS5/BQECIUzBQlDaMCAhxMiJSc+f6zjc+NhquNPbOtpuM+dU5R992ghAnOyhFQRkhTlEwyRF6i0KcInRia/m2hDiFbgKYLHGP7CqFz83SYNpl4vaFODESktpCQIiTLZikkAMREOLkwEmJgCEJcQrdJBqJE3pGHqRK7CKFy8DqtzEP50Zr4LpzX67LFsL5nFPuj8/9+a4TiVPong1H9yTEydHTI4PzgYAQJx/gyKUqIyDEqcrQBVyRCYteEXmQKumBHfQiz5fECXV1J8FHjp91N2OUZqGsTqjcBX0cCHHyAU40XYo04oQvBv5n5DTQ+dT/oQKtq5fnf3b+59SvyXH1ERDiVH0MpQVvBIQ4eWNSUzlmv9HIGzthiSI1fJ1TjMNInOo/0Nf0Nx8EiuuBQOnnnM/6VDi3E4JOnH6Zf4D4hwzp4Km77YxDytQyApFGnPifozqw4p+oqmQHdY1fS9UZi9S1RoB/b6xLyBVBIHAEhDgFjllVazCB4fq6VEi/huU3nCMYiRPy+fdar8NtIg9Of/mjmvP1lNvW88yOg06c0An/kCGVEB4IRANx4n8cnhGc458P/2z8taL7MsJ1/R+R62EtHREBX0S8ts5ECfX0iHI456Cvx3/w2QTOVmXwRYT2MB4J9hDg3xt7paWUIGAPASFO9nAKRin995KPWQrEu+c4n39Li7Yfcv/O4ndav86/yRibnq//nuv5fA+cx8t8nG9Ma4Q4sdRJpE1GuJ17HqnEif8R8E+of8VgJnANRAUkBf+EOEYe/lH5uv6PxrPHbeIc/2Cox//E/M+OMkykuC2kXA7tcn/8T4o6TMj0PrhfSc0REOJkjovkVg8BIU7Vwy+Sa9cIcQJg+DGTED4IRCpxMs4ACAnIi06icA4RLpMVncj4I064ztIq1GeypB9jDDhHQNt8bDxHPvdnLKcqyx9TBIQ4mcIimdVEQIhTNQGM4Oo1RpymbDgRwbBF3q1FE3FiksTLciAsupTJLnFiiZG+7VWIU+j/N4Q4hR7zaOhRiFM0zHLV7rHGiFPVhiO1aguBaCFO0CkCUdKlPjgG+YG0B8dWxAmkiMugHBMnSKx4HV4nTlBCxDUE7o/rI8U15LOeE46RjyASJwWDrT9CnGzBJIUEAUEgSAgIcQoSkOHeTKQRJ945ATLCkecI56xLhDwoeCMPZAVRl0SxzhLv5sA1kCSuD6KEutwf2kLg8pBuIaAMB+4PeVyey3B/3B7XicZ0YckZulZ+0++tC3HyC5EUEARqFYEbN24Qop1w86brfz6Q8qiDGEgdjIX7sjMuvUzQiBNeJMadQHgx8ItAP9YHIMfOQCDSiJMzUJVRVAcBLPfjuXxn/HafBEqIU3VQlrqCQM0iEAhp4pHYJUBcvippdfoIGnECMULUA8556UE/1svIsTMQEOJUc/PAL3ZJt3iYKgkUj94Td5hOErdjelEyBYEAETh7sYzOGeLZC6VkjOcvlQXYcvQVLy8vV1KdQCQ7XJbTq1ev0vj1JdR20jK6d/Jqap67lf4yfyu1WLCVmi3YRm2WbaencjfTn2dspL9NXEZ95ubTlgPHfILNbXPqs7DJRSFOJqBEYxZePlCGlBB8BOTFXjVMWeL0anIJnbty3bQRxpZT00KSKQj4QODU2VKau3IPJUwrpqQZWyhxRrFXjM0qoGGZm7zi8MxCiptcQOu2HKNr1+0tRfkYSkRdgkRHJyb6sdWN6mVGLN9M92TlU4vcLdR8TiE1z/GMTXMK6KVFBfTk/EJqMXuzut5sdkWZuUXUbN4WapO1nPYeP+nRnd4HLhjPPQoTmS7/CXEyohSl50Kcam7i5aVeNWxnFpy0JEzcYtyyw24pFuzHSRAE7CBQfuMmLd94kBKnF6sYP7WQfMVhGRvol/HrLePQCRtoWGYBpcwspj2HztkZgpQxIMAE5u2ZK6j5/K1uotRsdoH7uPncImqRW0LNEOeV0N9ztyoJlCo/r5iaz2ECVVmnxbxiapa1kjbtc23UMXTr8xRj4nHpBYU46WhE8bEQp5qbfCFONYctWhZ8axbfSGodhGl+/j5KmlnikygZSZQ/4qSTqqEZG2lUVgHtPljpWDaSMAzGvZiRkaT8QmqeW1JJkiBhgqRp/lZqmrmCBuaupfV7D1JZ2VXIiTyHceMGHT1zjiasw5JeHjWdU0TN5hZ5tNVsThE9kLWMblyzXlnRx6Ufe3ZGVOPESVcOZ30n4yDkvPYREOJUc3MgL/aawxYtQ+qEKEEQ8IVAwfYTlDxza0CEiQkUE6ef0tdZSp108oTjYRmbKD1nC10vlyU8q3lhcnJf9gq3tEgtyc3ZTE1nF9DPyzcS3azED+W5jmWbFRe2HzpGj2Uto7/mbiEPqdX8bTRp4zar6irfXx9BI068xZq3V2OXna4sLsrhPuep1i8Kcaq5KRDiFBi2N2/cpM07T9CorE30/vcL6YuEfNq697T3V6bNZsuulVPqzGLatu+MzRpSLJIQgJRp8sIdlDBtc5VIE8gTiNP3qWuo7Go5fZ+y1jZ5AoEakVUk0ieTBwrk5MSZ80o6pOsvQVqUtX6rSQ1Xlj9SY6xYVlpGT05cTs2xlMd6UnOL6dVpK4xF3ef++ggacUKPkCgxYYIdGj2AOLH0Sc+XY2cgUHLkks8t384YZXiOQoiTvXm7cfMmvf/DIvrDk2PplrYJdHunJLq9U7KK9dvEE2LhTk9FT6uWr5XfUC/LBm3i6U9Pj6WG7RKo7tNjq0y+rPqRfGcjAMXv5JnFVSZMLHGCDtOh4xfdNzti4ka/5EmXTkH6NG2x+a5Qd6NRdABiUnTgMLWYv9UtDWoxdzM9P3WZKQpGImM8N6tkLLN5/2FqWqFEzgSq1aSlZlVVnrG+XjCoxElvWI4FAUHAhYAQJ/9Pwo0bN6lxh0S6tWMiLV1/0KsCljte+XQu/d+TY+jz+FUe11H3o5+XUK+vF9DSDQfpnudS6fdPjKHbOibS470m0Y4DLl0TtP/8gFkedeUkchE4da6UkmdVbWmOCROnwyZsoKMnL3mAlTqr2JI8/Zi+jq6UXae9h8/T96mVEqrxc8SHKwjJrqMnqQUUu1kClFtCuUWBEUtfxMbXtQcm5lX2m1NIj2ebkzVMtlU7QSFOkCbZjR5PnpwIAlGAgBAn/5PcrFs63ffKBAIJ8hUWrztAdVvH0Sv/musu9sGPi1Ue8uu1jqMHXsugol3ekqm9R87TH5+Ko2UbvImZuzE5iAgEgkGa0mZvoXmr9lLi9M1qqW7HgcqlXthw+iGtkhAZ9Zt+Hr/evTyH5b3YzI308zjXrrzxc0oiAmN/N2FGOpB3pbSUmsHEQAVpajavmI6dcX3cGOv4M1JpLI8xmeUZx9p18gpqkVNETWcX0vMLCqjH9OXGIj7Pg0KcfPYgFwWBKEdAiJPvB2BDyTH6dcsRdOEydsv4Dzv2n6H/emQkTZjr0oN4+5sFbuL08ic5PhsYELtcLfktW3+Q+v6ylE6fu+KzvFwMPwSCQZogaZq2ZKe6+XE5WxRxysp1KRTjxfxdyhpLaROTqM/iPCWjB46dJ0iicH1cTnSQJ7Onp8m0DW7ShF105y54SvKALwiTP9Kkt81kiVP9mtXxC1OWUZcFMFtQQDBzMHmTb4VxvZ0aI064ATzAp8+bx6vXyvVxyLEgELEICHHyPbWjsjfRg69n+i5kuNqxzzTq8XmuyoVrqyZd0+i+VzKo9Kq5oUyujrJ3dkl2E60/P5vKlySNAARghDJ51jaKm+LbLhMvwflKoUyeMsOlH8W76uKnbiZdd4lJkjFNnlFkiubGbcfp53Eu8jQhCiVPr0zTlslyS2j74eNeOIEwweJ4IAF8IxDSxGUfylqhkbitPk0V6OMJGnHCAwvxePL0IvrnyDzqO3QpDRixkgaOXOUROa//8OX08dBlNCxjI63afJjOX7oa0I3rNyHHgoCTERDi5Ht28PK6o1MyQTncbnhuwCx6+ZM57uLtPpxKn8fnu899HcxcustNnG7tmOSrqFwLMwSSphdT2uxiZQLg4LGLtKb4KE1dvJNGTyogEPQ4P4YurYgUEycjQTKeQ6KEOHZyoSVy+ZuPKKkT3n27D0a2sUwmKADjwIlTLivgOYXUYs5m+mXJBi+MdEmTXteroJYRiGQK1dCuXqdpTqW9p4ey7S3ZVZs4YZswHqoBI1bRwBErqd+w5TQ8Y4Ni/AXbjxMY9oatnrFwxwkambWJRmZtVOJykKsBIFixeZQ0fTOdEvG59liE7vC6uAywBBv/bHivhy7aJxGWgw6TCyfPXqH/fnQknThz2faIzYjTZwalcbPGIAH/9cMjlJL5fd0nuJdjzMpKXnghkJu/T+2eg7RpdPYmpZ+ED3I9HDh2gRKnbaYxkwsC2mlnhzhBh+m4zWd4fM4WRZ5is4qixs5T0+wV7h10f83O06dFHYPMGMmS8dxYyey6WR7XQx9GaVbhvkNqqQ46Vy3mFtPGfZ46kGbtVZk4LV1/gCA1ggQJegPQNyjZcyqgr0a+GThUXLL+IH0yBm2toP6xK+jL+Hw6edb+Dym3JWngCBw9dVl9vd/WKZle/mQunTgteh9GFPEV+fQ7kynm/SkU894Ual2R4tgd+Rqucz7yOHKenurXKo7RD3QoIj3krtqrPqCy5m+jFi+Ooy79Ztq+ZRCnF/5Zqc8EiZM/4nTmfCn99yMjlY7TYW1rOTqFUnrvn5bQ37tPoKmybdz2PDil4PHTl5WfOaPECBImmA6ALzk9QFVkfE4JjZ1ij0DZIU74jQjkc4f1pECiIj1s2HuQms912VGCD7nzFz31mnD/paWldPnyZa9YVlZKly5e9MhH2QsXztOVK1c88lFfXTt/ji5fvuRx7dKlS3RFXfd+v7WetIqazd6klu2aZlXadzIjTRhrwMQJ0qN+w5Yp6RKU37bvr9xpEIzJB4nC1k+QJ5AyrCcjT0LNIfBwj0xl5+apdydTow6J1PKNrGp1hhfUviPnae+hc3TB8MVXrYZroTKknz+krqW6MYnKtlDjDkl0a4dE9fKFjSB/8Za28dS4faKqYyyLaw3bJqiIY9guqh8TT3d0Tibo3gDHSAznLpQRdtFBytT2g6n052dT6DePjVb2luAOw07oNmi2beIEiRaew/99dBTd3jmZrpR560/krtpHf3hqrFrCg8kDCeGFQOrMLX4lSFjhcBlSrbw3SKSwhGckXMZzO8QJ76rLpb517Cp7JrWy8tO4dcpxMD5eIzn8NXu5W5eo45SVXrfa8IGe1OCxgb5jq/7U4LEBrjKtKlJ/dbi8Ox1IDR4fTPv27/cYw+UrpcrdCyyMt5i3RTkGtiJNqGibOJXfuEG/TFivCNMX8fm053DN+gM/U+MAACAASURBVOHBF2Dm3K2KQPWPzaNFaz1v1OOu5aRaCNz/aga1/XAarSo8orZyV4c4wdrzXV1S6NZOqdSwfSo1eT5NSWRgvTfcwqETF6jlG9lUNyZOESXcC5aZsaurpuLmnScVqQCGkUqcoMj92NvZygozPxPrthylPz0dR//bahQV7zzF2Zbpi4Nz6EUbEqdn+s9UUqbfPj6a7n0+1cvFFXeAZRYYyoRJAxBXCeGDwP6jFyhhepFf8uMmQ1MK6dp1T/KM58+KQGHpz6jLhHM8M6zozefHTnlLUnwhCVMHqDti4iZfxcL6WllZWaUPutwtdOFSJUZMTho81IvqP/qx39j4yYFU9+GPqN4jfahuyz5U95E+VK9lH3Ve79F+qn7dln1d5y370J8eep8aPTlQlfnjgx9SfZRp1Z927t7jhekTk1yK63+ZsYk6TPXcEWksbIs4HTh6gfoNdy2h5eTtNrZRo+f4pxgyCn3n0b/GrqJwfAEHGyDsHLpcau2oMND+Wr4xkW5pl0BNu6ZRo/ZJBLs4VQnQbbu1Y4p68WPpFcshr38+jxq1T1Y2T6rSZm3VOXziIj3QY6KyC/T8wFl0Z5cURQLtbpmv6rjxxdrshXTVXyQSp0kLtyvJjtXz2+ubBfT0u1P8wtf9kzmE5ToOZkt1x85cVmQMZAixzGLH3ZeJ+fSfD42ggbHLCaYN/vOhWJod4t85vg9JA0egKpbBoeN00Lhce/Mmpc/eQvGGHXmbd5xUm5e+NZggKNlzms5dKqMf0yr91+m2nuzcCTZVwR4UHANHqlPgrxZvdEubmmV56zYBJzvEqd4jfen2lm9bwnr8+HFq8PggunrVWlJf//6elsRp26Gj1CxnMzXLKaQmc4st+8EFv8Rpwep9SvF78KgVdOaC9YB89hKEi9CHGBC7kgbGrqDy8vCTXgQBAqWYjCUKLP00apeodEIC/Uc1GwdeYm99PZ8atU+kt7+eb1bEbx7m5IHXMtUS0+UyT1KHJUAsb8FnmNMDvoAWr91PD/aYSH9+Nk1tVsCY73rGJT0LBXFq/kI63f1MZEqcug6arXbcVvc5eO2zeX6JE/qoFxOvSNOvHh5BeEnpAXONnXn/88goD4n2N0mr6d8fiKVd4t1eh8uRx1DjSKwwGeCWKNncOTd7ubkQABbCdenTzgrL86yTxNInfFzBor1OnIxLgXZAg9kDtJk2KzJ1nZpMXOUmTslrtygFcJY0MT4NHnrLp7QJpAkSqTsecREnY320c/TYMUWcrpRe8VIy537q/8OaOKFMk4oddi3mFNPWQ8ct2/FJnGA1dcCIFTRmkvXWSh5QKNKiXaeU3tOgkSuiTvKEBwUKx407JlPM+1Ndytwdk+mWtkm02cRKcqDzgS3aDdol0ZwV3iJMO21dunKNbu+UQl0HVkoBuF6nvjMUKQtk/Z/rhjodkbmBGnZIpUYdkihpmssWC6wE/737+JBJnKAoHalLdb97YrTyGF/deX31X/aIE6SzkB7phPfrpNXU9sOp9ESvSWp5bquJ89+Xh+Soa5Eo9asu9k6qj3dUoISJy2N3na+waM1+tftuzKQCUyvhIFK6OxUs3R05UenPzlfb+jU8Y1jyGz4RS4ie5F4vF67Hzee7XKs0nVdCZaXmwhdInLD8ZrZcp+czcWIsdAIF4lSv1UClEM7XjWn9f/QwlThxO20rluuww65vrvUGHUviBCVNKGjDbICTwonTl6n/8BU0aEQeXY8iydNXiavpji5pBMkbB0iK4KYCNnCqu4Q5fclOqtcmkXJWmH+FcZ9WKV5QDdom0AuDK3c6cVkQPiwBOp04Dc/YSA07ptI/Xs2k1JmVotrzF8vory+Np6bPp3m8gPn+gplG+lLd/3ffMArGcv/bXy+wJXEyzg02LfyxQpcJ7lmOn67UtzCWhe4fnAxfNejDGMvJee0hAIOUTIQCSaG3BAPN/gKITMrMYmVyhyVNVml1dsKCgMGR8Nrio/6GFFbXD508S83nFVOT2QXUZa41l+ClOpYsMYHSSZMucTID4djx4/TEWz+rXXVm15GniNOj/Tx0nJg04fr4dSXUfM5mJSG7L9PappMpccLkQdIERV8nhhNnrlD/2JU0GJKn8shj6GaYN++WTnc9k+J1Cf6U7uySRgU7TnhdCyRj1nKXxAlfcFUNUNaFQcGPh1Z6nO7902K6vbO5JKqq/QS7HrYyY3mmXptkwssSS9L4wcTSIvxMnTh7WTmOvVeIU7Whf+SNLIKuSHUDiNMzmvkCMx0nsz72HT3v1nvCLkdfvvFu0k21ZHpXl2Slt3fE4OTVrH3JCx0Cp85eqfIy3cQK9yk8Wiy5WQUs29nZVbd8o6f9H6v2zPInL9yuluvgODiSwuSC7fSXnEJ6aWkR3Z9prt+E+2XipAjTI32pwWMfm0qgQKzu6/AR/b19b3e8r0Mfuq/9B9T+3R+p8ZP96c9PfuC+5lnuI7dy+K4K5XCdNGEcR06dpRbzKswmzLGWSHoRpyMnL6rlMIgnnRywlqxMFsRaT4aTxx/o2Fq8ME79iBvrwWFk4w4ptHlnYMQJEiLor+HrCbZr7nk2lW7rmKTS935YRGMnFxAcqoI42A14CT34+kS1fHj/axn0t5fHK9LU6s3sKtn3sttvdcpBN6v1+1OVRAyuOGBu4B+vZCgCBRIFI4l/e3kCNWibSE2eT6eLNv2pVXVMkDhBxwkkORKXiaB4i23/1Q0gTl0+nuFuxi5xQoXvUtYqMxIL1/jfqdt10CylIwXlcp2ouTuWg1pDAB/4gUiZuOyorI1eY4bBzIwK34f6xelLd6k+7BAnOPLFZqaqBHy8YakPy3WRFP61cB29sKiQ/gbyNN3bDAHfq4s49aXHuw2g1/v+QD37/0g9Pq6Mb/T7ieo+9CHVa9mbcPz6xz/S631d11F+0E9J1OmNf1H9Vv2o3WtDPOr2+PgHQnyj/8+kJFrYVbdrj7n+Unk58dJii/kuX5g8Rj31IE5weTB4ZB59kbBaL+PYY7zY+w/PUzshHDvIIA0MS3UN23vqIMGI233dM+jOzsnmD4FJ3/iywj8olLWxA+62Dkl0e8cktdyHnWNY9rutY6JadmvQNklJkH4Zt96vDzDuCuQJ1uLv6JyiljnggsfJAdbSH+4Jspeg9Ir+8WqG2o6OLel3P5OqjkGoQCq7D5lT4zoIkbxUB+VXGAP941Nj1Rd8dZ6L975fZIs4wa1T067p6pnk/uCGw66rlQ9/WuyWUH1uwzI59yFpzSOQMW9rlYjThq2exjAXrj3gbgfSJVbwht4mPiBBuOwQJ17Cm75kV5Vu/vvUNTQ8s0Dt4Au0gWXbz9KUDYF9PAfaR6DlIc3pt2gTNc0pVEtfQ+avt2xCEafHBipCY1WoeZsP3crhlWUqfdQdO3ac6j82wO9SHcwWsDkCjNEodWLi1GwhHDF7X0ffHsRp7KQC6jc8r9r6MpU3VfNHP49fr3zhHTsd2QbELpVeo1s7JVPD9sn0bP+Z9Gz/WUqiA72i7p9W+uzyhfiug+fUi79RhxSlaA6v31buweA6IL/wiCp3S3uXJCaQrykYNWzaLc3XcBxxjYkTXqTb9p1RP1owmKjimSt0kuPZKxQKx9QgTn95cZxaGowUiROMT8JG0u8eH02vfT5PEVXYa9IVts0ehne+W6gMs4LEduwzXUlIudz7JsTpwR6Z1PPLedTjC1d8YfBsN+mBUUv+gVxd5E2c8H8Ax6xHTezwTFu8k2Ys3WX5v8JjkjS0CMRNCVy/CURID/j/Hz3J2wAm9JriNKvisVmFSgcJekg+Y8ZG9WGKj/pAAz5of5mwgVYWHLZdteTIJWJfmL/MP6DIEwjUpPXHKW7ZYRW/nbOPvprtir0n7iDEt8dtc9fj+tVN0Yce8P/WZUqlU9+vl21y/w/q5XAM4lTv0f60a7e1qkjzGE/ihPZ1Ny3uXXVXvC2Dc3/+lMNRjolTiwXb6Ma166ZjdhMn+ImCv7n5qz1vnjt0agpdFEidBo6I/CW73YfOqaWjejEJ1KBNIjXrlkZwe9O4Q6pSlvc1R6OzNlH9dsl0+lwp7Tt83ldRr2sL1uwj6PfAXAEcaNoJ9zyXqvRC7JStzTJMnBp3SKRDBrsutTEuEKcWWKqLIAOYWO6EbSo9QMr3+ue5epbXMZZRz128SpnztlKnvtOVpKp+m3ilQAviBDLFAUt1eObgCufp91wRROpPFTac/vDkWPcPoBlx+p9HRyqS9bvHxyhn5dyupM5FICCjl1MLlfTISNaTbBjOBKHG74SdsGn7cWUJnKVPdupwGWxOQT24M7MThkzbU23y0z2pRBEpkCkmV0iZdIGEcYRUC7Ho0CUCYUM8ceGaitcsNmo9P32F2xTBl4sql0j5I4bvs8GDb1H9xwb6JE4t2vR2S5yM9dGOmziVuoiTWRkr4sTjQNqsYhdg89ytRDfMVVXcxAnWwOFk1yoYv7bhbgURxjFrO0xbslMRiGgxWod/foiRWVr0dVI+3dklnYaMNrdxhfV7SJl6V9GwJeYXrgnwJY92sJPFKsCJKpRoYR26aTfPl6VVndrMxw9iy54TFSk8ZLGVGPpgZgE7Ga0Molvtcrx67QadPFtquSOUJU5YNo0EidPqoiP0m1aj6IrBFcW2vaeVRW9ctxuwEeTDHxcpnSPYZzISJzNfddhy/vjb2UqCyP0YiRNsAYE4saHMj35ewkUldTACYw2GKlmHySo1+iDcc+ice4nOqg7yA90FCuf2wzILFAn6Nnm1bT1RSLlAnBas9q97p08LJE2QFoHsOC30mlNpw+ndnHzL4UHi1KBVP9q2fYdlmSZPvUe3PvyW5fUDBw4qdyoXzp+zLFPv/jdMzRFUVrhJzXJLFNlrscCPjhNYcv8RKwl+6MwCtqoPGr2G9h89T3i5wC0ELHlD2rF4nfckG5kezqH7UpVobMtsfNDN6jt0mbL8a3Y9GvKwFfb2zml0e+cktdQDW0AwVQA3IbD1BAemHHYfPKfs2EDp2fhPmrfpEE1dvJP+/opLKbrDR9O4mkp7fbuQmnQdrxSm0QeU1hGbV8T6bRKofttEatg+heaurJpNKI8Oa/gExOmhHr6J05jJm+nXD48gGFH8dcvKFMf/1XKkIgD/1XKE8r0GJ7KI//PoKHUNL2TURR7qwz8b/LL1GWq+1RXEKZKUwz/6aYmyO2Y2jT2+yFWYBGq7BhtXQHLsECezfo3ECWV6/7hEudWBYVnstoPkacykTZYuWszalbzQIuCL7BivwU+dMUBJ3FjO7Bwf5oEGRZ4yNlWQpzVuaaevdqYv3anKV9UE0Mb9tS/EMN5f7ErX1n7YRYqZ5Kkc7uIFLkmeSzn8Y6r/2CCq18o8wl3Kne0/t77+2CCXHahWA6j+o/0VQarfqi/d+tQgtQxYr1X/iuvmLlcw9tLSMnpw4XZqkVNIzSBxsghK4gQbEt8mm28RvlJ2XW39h2NfLIlhJxsIE85dzn5XuNdksTMAAS+FgaPWuGP/2FXEsV/sKuo7bIUh5lGfoeax3/CVNGnBdovhV2bn5O1RZA6+xKI1bNp2nAYMX6aW7b6Mz6fXP5tHt3ZMpg9+WOSGBF9ZsKkERfN+wzGny9QOrts7p9MT70yi2zq5LGT/a+xKeq7/LFUWLjB0CcqbX81Xyt8v/TOHBo1YTgNHLHelscuV1GvQyDzl4NfdqYMP7BAnKJNiqQnLldhZh9QYoYCs54Gw4hxSNxwjquOu6dSs2zgyfv0yREycIkXi1LnfDPr4l0rzFHyfnMJCeteBs/nUdgoiWh3iBOv7VlvQ8YH3zjcLlYX+37YaTV8lrQ4Lq/e2wYuQgmYkxypvy25P/4dzV9o3nFkV4gSI8Xs8LGOT0nnCCoG/AOPDkDghRkpYu+cwtaiwi3TvpEr/b9BN0kODB9+mBq0+pqV5+VRWeoVKSy+7I87Lr1+jOx97l2556G11jDxXuSt0tcx1vKmgyEWW2OddhbVxmDjwsA9l4asO41m7+yA1n1tEcPZ7T7a1hKxOadl1GjRqtZpk/Ub04z6/LFUkCVIm2GCZOG+bipByQJm837A8wu6VgSNW0srCw+ole+DoeTp47IJXVMq2rHxbkR47dZkgLtcjJPuXr96g+WsO0sfD8mi7iXVffYz4scNYvks1J4B62Wg5xhIUlsz0AJIM8wVGp8mt3spWO+1gTVkPufl7FcmCF28OZy6Uqe35Pf3oqHB5J6cgTg/7kThh/Pjhu3i5evGCVt8KExCnSPJV98aXuQT3KFYBSvhQ3B6d7am0a1We8/FRUBXiBHzRHyRWdpz5YjkIOyp/89goeve7heo3iscgae0iYEWSjPlGhXC88+CrzljO6lwnTtAzTc8pUdbvYYx49vJdNGvZTsIGCLMwYU6JbeI0c9kuRZqGTogc4nSt7Cq1mF+x9FUhwTFbRar/QGA6TsDa2I7ScXqsQqqkkSa3Mc2WFZbJfRCn/vNWu3WyOkyxVl2qs3DtfiWpAfEwC5AiKSlT7ErCEo8x7D1ynvrFrnRLoGrClAG2Adv5YcXul4EjV9FlG+zeeB+Rdg4bTY3ap1DW/G0et9ayZxa98aW3Pzpg17hjKkFypwd8lTdqn0BPvjNZz6Z3vl2gdvixlNHjYhid2JE4hfJ28GLH0mek2HH6ZMwKuvf5VJ8QwugqyMyspfat1oOMVYU4bd9/xq3LBHtSmH87AcsokBhiZyBsUUmofQT0XW9WpAekCf9TejA68bWqy/k6ccKKxtwVezwiJEVQYzEL43O22CZOsMkHaRMU1iMhMLG5N6dAkZFm84qp5KC5ZXS1VNdqAO027KrTl/OMu+qAEfeBYyZOHtIllj5xqghVpTkCbqO83KUE3ixjpYs4zdlME9bDHIFnHyoD5gg+G7uKEkyUfSE5ylm+m75IyFeSHHZ4CcVkKGHDQSIUhhHgxgDSHkiGrAgYd1iVFB6rP4+3FptxmxgPiNPS9VW34MpthXv64GsZBPtDxgAp1D9emeBWLOfroM1w4aI/iLiGnU3NuqXT0+95EidICm7rlEI9v/S9M4rbd2rqROIUKU5+e3w+TznZbdgugT4d46nfYHwexk4uVORpyKgVdOzUJYKKAL7ii3edpK37ThuLKylWVQxgYkMFDJze0jae4HA40AC9PjsfcYG2K+UDRyBhWpFfqRGkOHoo2XPKbx0mTJzqxElvy85xIMQJuk0gTkts7qqz03+tl7l5k9pXmCRoOmsTvTzDXIqjiJPaVVf54Q4yoy/pmdtxqiQ2yo5Tq36m/u5Y6qTSVi6zB0zK3O+8G+XUYv42l2J4bgldv2q9vFoHJgjM9IKgTNdvmEuXacho183CijR0lFz5y6n/iHy1hIHJgeEwkCcsuwU74It0lE1RPnR2fkhbG+whhFV7pVfLlQ7SW195Spbw5XXfqxlUv20C4QfETgD2UPh+9M0sr+LYrQTr2uEcQJzgBgQ6L1a76kJ5f5gj2HEKd3MEKzYdUqYAQHxglwY6ST+lVy73mmGKZWEoZkPp/j8ejKX/fCiW6sXEUSfN7ADXg8SpKsSJ61c1xUeEEKeqohfcegnTi32SIDMl6xE2FcJBmuDPDqlOnPI3H6H02cUEG3hWUbdIHwhxYv2mJVWwARVcZIPb2hroDVXoOTXP3WLauEs5vB+9+fGPFBufSYmZs2nomPEq/jJmPMXGZVD9h96nug+/RyPiM2nomAk0bMwEGjoaZSZQbPxE6v3JCJdLFZYuWaWKOO3xsAGFQf28bIN7me7PWb4FNXUGjsw3Nez3edwq5UwXCuB4QBAghdIVw1276lw2JyBe7Dd8OU1eaL2d0BSxiszdB88S1o/NIhSaDx2z53X6x/R1isD56itcr23de4bGzd5CcMDsK0AaBEOZH/202KPYQz0y6Y7OqdT3lyVktJ7rUZBIEauWb2Qp0qQsZ3dKocEGW1lvfbWAYF3cn7PMOSv3qnHvPHDW2E2tn4M4QQqn7DhZmCMI5SBBnCJB4gQi2llziYKXCfSKsAxpFeBM+U9PxykJNpR58bxYLaWZEacvE81/7DaUHKN2vadSIE5YYV0cCvyIM5buVFJ23AOWUIU4Wc1gaPOxEsFSIbPU+HuDTUZm5ZDHJImvg2BhhzHOdeKEjys8m8W7jPGkyoOZDd1WVCDECRu0oEwe7uoP+lPA0pyms4vcS2BZG703ezV46B0lKarXsg+1eXcoNWjZt0JyBAkSx49N8ljC1I/qP8LXfaf1Wn5Mu/cdUKsrPD6MmS2cYwfgqDzf9grrwFGuVYDIfEBsnnvNFTZXjMRpVaHLDgtsUPBOO0ikAgnfpa6j7PnbaPCo1TRo5CqvOGT0Kpq5dBfpCspW7YNUDIhdSbB8HUkB7ipgbuB3T4xVKfDGSwU6SCpev6GsgiPvxOnLdNez42jH/kqiUrD9BP3tlUwv8mOFEfw2tXwzW4mOXbuMFtCdz6bTUU2iuGzDQWrxcqaykeMxFozp+g21zNe5z3Rq1D6Z6raOp1vaJamXoVWftZGPccIYoz/idOTEJWUgE0Yy4a/u4pVramkTSuNY4nSl15U+BcgP8hDhiNQssA0u47VIIE4wLwAJk3HJHBh9Osb69wYbE7AUZicYiVPbD6epXYyt35tMxgir5WyjCaZX/AVsnPiPh2KVSY6/vjye/vLSODUuSAJhgFOIkz8EQ3MdukVMdIxpwjRPW3NnL5TRWM0SOJcHYVq8dj9dLrtGSdNdlsjjphaq37R1W455ESdIg6AjhXp6hL2wERM30vh5u5WBVkbALnGCmsnP49Yp+09WiubcZrikOinpl7tG7VQDKWk603sjyE8j0+iRboOp83vfUdMn36YWrd9VsfnTvajF0++4zjmtuObKr7jW+h1XOZThcpyqa672Hun6T+rU6wsPCLEcOHH9NmrGUjEfPuq4Yh0opPkKfYdiua6SCP1rLCRRy1X8RNNbGDZhg2vn3fDlShnOV5v6NbyUv05y+cY7cOwCQdncGOGlHmFgbOU49Db045I9cP6bR1hiiqTQ4sV0pZdRuOMkNe2aRg3bJdHtnZPV0gb8rEGPBF/DIACwoAz9I/2La1jGerq36zhlnLIquOw/cp7ufi6dRk6stIeCry44xcWuI1gVxxgatI1Xft/4HIYKn3p3svp6q9cmXvkqq0r/NVVHESc/u+qSZxarpbxbOyQRImz9PNwjkx7uOYke6pFN97+eRQ/2yKYHe2bTA69nu457ZKvrD/TIor93H094AcMPHvTL4Px4ZLbnDzvfHxMnu0t1c4u89X+4rdpKYSwXxAlkPZAA90Fm+kxmbbwwOMfD6S6eS/yOwKejHuHQF77xQJyQFvlxho1lxX9/YDjBHIdZ+OtL44U4mQFTC3mbtp8gECQmQZxix5zRYDNUSfi6nuq/Z6z/BEJ09mIZQeqYMM1T4gTXXmuKjtCqwsOuWHCYlm86ROtLjqm4bstR5Z2B4bBLnBas2a8+UmO131duIyLSmzeoRe42albht+7nZWYbLMw3qIXi/pvMrrQ39V5O5cedTv70cdTBdkmrcOj4Bfp4GEhSnnqIuNya4iO0puioW8EYymxYpoOoEQ+Ov6UbbgcpoPox3bdOUmHFD/AAG8QJysyQOE1a6C0O1PsNt2O4jwBBGp6xQW2jxkvm8bcn0aNvZCn9o8feyqan3plMzw+cqV7M9dskephwgNHAPz83zkNitDcA1ytwfNn8xQkeLlewQ+m+VybSo29kq7FgDK3ezCKYNsDxk70mKSL391fGK/2Wxu2T6IMfPJcPa3seWOIEomel4zRp0W66p1smNXtxIjV/KYuavJBJzV/Kpsd7TVb6UQ++nkkPVUR13COTkOoR12H2AHphsJeFH1qzAOIEcwR/fsa35XAQJvYtZdZObef9+wOx9O63C20PA54LsMvN7uaSFwfn0HMDZtlqf+fBs9Tzi1wanrnBsjw+2pZvPET/dv9wggNhqyDEyQqZ0Odfu15OSTNKvAgRdhTrYfXmI15lmDxBxQTSKAS8JOG3DiQLYePW45RgWKqDSgk2RsF3IeKs5buVaRdIKREXrtlHB49XGqK0S5x+qbDftGiN59jVQCLkz6DcNW4dombzttDVMhfudm4Pc6OTGP3Yqr6xjPGc63WbXulPr+ncSh0sq/KoV8fKLw5+wAaNWuNefoNJgrXF3j/2G7cdrzCKmUc79p/hsQSU+ttxgx80BHvE6YYy2Jltw2hmQIOs5cKwPdLixfHUqEMS3dI+yYMUGYcGXTRY7t6pLdXhS+mOLun0yqdzlTPbv3efQHc8M97S/ojeJure90qG6l+38owdmZBi8e5KvQ4fQ+/EZXAzWRE67JZyUgBx8mc5HP9AIOTueMN1zEukaMNWrFjCRFmrwBInGIY0c7kC31BMmJyW6vcEA6x2l91QD7pPIPd2Q7dBs20TJ39tQur+X4+MVKYG4BjYVxDi5Aud0F8bl+NJnIwWwrEkbubEl4kTUkiYUA+uqXC+44DrPQYDlkbitK74KE2Ys5XwzFRGnHMsoaKdJ91A2CFOkI5h40Sk6Te5QdAO7pmx0U2emmS5JDu+CIpW1X0YSHkuy6m7kYqD3OKd9Je5lfpX6WuLvHSfjHVwXseXx3uILgeOXK0sUUP3CEtgg0fm0aisTSrCNxp0oKDbVFX/TrghLP9ZhptQSnfpUdkiTjduUL/hK8JS4gSfQ74CXtRHTl50fyFZlcUL965n0pXFY70MnPX+rXsm3fN8upKUpMzwrQCHutiliCW4B16fSIvXeo4PRk+x9OQv4IvuyImLinj4Kxvq6yAxUA7HEpyVxClYY4JB2F0HzhJMe8AmGjZCGIM/4sTlx+UfdRMoznNSeu5CmdoVB/MCdkK3QbM8ljj81Xmm/0w3cbp6vZz6/LyU3v5qvtcSjb92cB0W3lkHCkuAvoIQJ1/ohP4aXJvoy3XG82PplgAAIABJREFUj/fxc3wrkOsECscsbcKdYKnZSJwCvUM7xAkf+ZA4Dc2oVIMItJ9wKb/jyDHCzjroOrWYXUDtJ5ubJzC7H3AF3TyBWRljHupYkaZjp89Sc3bom1NID0xy/VahD6s63H4d2GDyFdjBKRQ7sc2fFcBBovr+slQt5SGvf+xKvy90s36wdR7LT1YBN7CiwOW8MBDiNDkMl+rgoRpShMFT7RsCNMPtSuk1uqNLKr38yRyvy9h6/7fu45UiuddFk4zdh87S3c+meeiTcLFn+8+kJ3t52nfia+GSgjhBOdzXUl1172XpugMESQaWWtHPrR2T6O4uLn20Lv1mqiVuXt7G/xleznd1STaVOBnHAgLl1DBn5R7lp++5ATPp6KlLVRrmt0mr6bZOSQT3PlArwEdB+c2b1K73NILUCeHtbxao3XggP2997WmCgzs9Z2HZGdezcrcSfA3+50Mj/PpXFOLEiDonTZpZKXWCLiYH7E6DNMlIjqzOIXXSdaOKd5/y0nHitu2mdogTdnuCOBm9OdjtI9zKfTp/rVvXCWYKXphs7ZKJ781IZIznXE5P9TL6McqcOX+Rms5zETiQuCY5m7FW666O8sY67ouQOPkjTnrh5RsPKqVwSJn4hx7LNJ/Fr1XKv3pZu8elZeVqN4JVeQy+usTJaUsadsdTHW/XILn3vZLp8UMAjKFn89HP9vWMQCwgcTJaDt+27zTd2jFF/cNbzV045OP+/C3VVfU+lm84pLbB14+Jp4YdkqjtB1OVojx8/z397mRq33uaWgK9pV0CYWnuh9S1aicelMcjxXI4toBDKfs3rUYpy9vQ+4LJELsBUtYpi3bQ8wNm0b/9Y5iy7wTr3bA0/sI/XdKhV/81zy0xYjKltw9n13CsDHMcVgF6Kf62gUOnBXal4OdMgnMQwE5qJkNYbjt84qJy9eVviY7rQMp05KQ3sYdep1E5PNC79kecpi9xOfYdlllg6Tsx0D7DoXy7SSvcS3YgT20nWW/8siIwVvm4f1/Xth46Rs010tQidyudPFupl6bjZ9VOQMTp9LlSSpxWpPzU6Y1X5xi6O9jGaRUw8ICIU3mFjtP88FMOD5bECVguXL2PHno9y+slBYkTdrnZDTB6CinJ8wM9FXEhbfrryxkUiIK5vz6nbDihJG7+ygXzOkuc/JkjCLRPKBjjJXtbx2QlBdm655RSfIbuoB6xNAczH5BI1Y1JoOYvjKN7nk1TGwDOXigNtFtHlcey/v88OkpJ2N75diH1+XkJffD9IsqcZ+113NcN3Lh5U1kVx65bGL9kiSp8J4L83tE5hbBEqAfYcPqjZo5Av2b3GNvSl60/qMiZT7UCuw1KuaAiAHKtS51AiGBSgImRWQpJFGLqrGLSDVbqA8Oyek0u1UG6hQ9cSJtAoCItGEkHlsD0pbZWWcsqyROkPlNW0fVr1ta6zfDx14exzo+L1hEUwCFlUsuFuVst3cBwXWMfyK+jiza5oFWalbuNrl6zVmy1qucrH8rGNUGcwnFXnT8dJzMcYfvjy4R8+jJhtVry+XncekWWvk7Kp7+8OJ7qt4kjkB8O36WupabdxtO3yat9snKUxwse7fz91YkE/SgO0CO497l0LzLF1wNNmTDZlcRVp5xxbIo4+TFHYKzj7xx6YXc+k6Lcgmzbd8Yvztxe6sxiqtcmUUmb7n7WXDmcyzo9hb0kSJmwy6gmAnbUMXFC+yBpT/TKNu3q/550mSOo1zrO9LqvTBh/hXQLbXz4o31Jra825VrwEcgvPEzxU71NE5iRJviv01ZlLAcDw8uoj51zVQ0w0onfZCzBG8OwjA2KNA3L2Kh+a43XI+GcSYeRNPG9tc1eXmlVHGQmt4R+WORycsx1uaxVyuWs+kC9sxcu0l+yVlKLCltNTWcVUNPcLbTnaKUiv1X7Zvl1sBvAboAvOrhQCGbASz2YxAmKyANHrHRLqYI5Vqe19frnudSgbSLVb5tETbqm0X3dJyjTBA+8lkHYNQddprufTfeySfNVYj7d1jmN7n4mVe10GzHRtf2W7w+2RLC8cUenZGrUIcXD4jJ03rDDrnHHJGVqAH6/2Egg9D9QD/aK+gxdws35TWubOPlbqoOj5NbvT6V2H07zGyEJgfXrPr8srdKPYfKMImrQJonu7JxM+OEOx4CXEsgGltcCCTAsajc802+GIqZcvv+wZUrvic/19FLpNbUjGEuG0IeyGw4cvUC/eWyUexlwow3jmXbblnLBR8CO7zpImezaSsLmDRCnxOnFBBdCME8QSIRZBJCin8d7EydIuVghHCYOIjmA0DC5MbvPT+avphYVCuMsCfpHToEySmlW3iwPfu3M+rhw8RLFZC+j5vNL3FIm9HHPpDV07WqZModk1p6/vDqBbAHuOywv6D/mkGAFkzht33eaBoxYSYdPeK9Z+wMj3K7D63zr96fQ3iPWL9hPRq9Ulsa/SV7jcXtYHsKuOOjdwA0Lf1X9c9QKteRxz3NphGPjy/ujn5bQrR1SCA5c1eaAoctU2ueXJSqFOxco6N7ZJZ3GTDIzcuYxDI8TJlAemTV8YkfHacrCHcq8g8vQaKIyhonjJs+n0e2dYIQUBkgTlXTvzi4p9Opn86j8RqWiYaC3APJUr00SAdNwDPAUD5tMgVhATpxeRP/bapRtPQ+4UIH1cA59hy6ljn1n8KlpCkv6f2odp5YKYeDQKp67WEngmndLV8QJRjGdZkrD9CajOBOuphJnWO+iGzNpk7Lsj6U9O+H8pTK3cjkI0NAJGwKKv4x3SZQg5ccyMwd4H4AXDBCn9NnWdhS5fDinTJrMSI1+XzuPnqB7Z23yIDfNZkMCtYVenJpHJQe9Lf4zouXlIGaVc3q17CrF5xdT86xVSoLFZEwtzc3bQq9Mq9Sn8jcufYz6cR071ri5wkc/LyVf5gu4XCCpPx0ntBWIjhPWrGGwMxoCLIR/n+rbeChwgOQJkilYDzcGuASBXzs2TPnONwuU/R2zBwrLe5BAfWphVVlvG9bNIYFyemAdJ3+76uDChyPsWiEeOXVJ7RbD8a5D55S0rV5MgvJZVZ37hhT28V7ZdNczybQnACOl1ekzmHWhrAtl90AD/NvNtWnxH25V3viycgdd75+WUCc/xAnjgcFDSJ684tNjFdkD4YNOVJv3p6jhgwCDYOE5keB8BKCPppsngMQobkoBpc3eQtjcFGjYvOskwZ0KpFRYWgs4TtigfC9yv/iYYL0meNuozgcWt+nU1EwKZPZe0cc/MBfSp61uAtVsVoE6bjaviFrkllDTKfn09OQV9G7Oavpi4TpK3byTPlm4ibpNX0H3TVxJ984upGbziqnZHJcOk5s0zS2mZpNW0KGT3p4W/I3J7HqdwaPXEEwC2Aku4lS53dNOHTtlfEmcUJ93uww0OJk1axvuYAbZKGdWN9zy/vxsKsGlhL+AFzGW7mA80+ihHtjWb5tIH1ZY9O71zQK6/9UMryZB0O7okkZ27fLc+1wqNe2a7tWO0zLsEid/44aDWhDZHp/nenxd+qtndR3WiWHEFBK8cAvw5VYV0tx10Gz6/RNjbL1MHns722PZ7d3vFhE2LNgJUMqFbiUiJAHdP5mjbELhJYY8SFn/8OQY+t3jY6psRsHOOKRMzSCAXZi6blPKjKKa6SjAVrEU/X2qy/RAbJbLH16ATUREcTMi4pl3k/rMyadmc4qp+dwil487SJ8qFLo5bTprE7Uw5LmvzS6g5nMKqdn8Erpv4gratC9w0gywQf7MQp2BI5YTWLqd8PHQvKAbloTNITOv5SfOeDtHHTC8UsRmNl44VR0wYlVE7lAwu9+7n7UncUJdLDO0eGk8Ne6YrJxUcnsgTnC+y4qveAEZiROUG+95bhz5s/DObSLFMiJchzg9KOIUBOVwYFO/TRIt3xD4P+ja4qO0q8JaMePF9pwguTt30XOnGJdxajpj2S6/pBmERVu9cN8KdjfCLpy/8MBrmV7E6cUK8wT+6hqvo54Z6Wr74VQlfRqZ5akDaKwv585DwEieatuEBJbnYG4Ey3OxWZvp5NnIckIf6BPgSZSsa6/edYjaTVpGTSBJyt1CLSqsfEO5m0mSO52zmVrMK1ZGLZtk5dFXi9Z7uHWx0yeXQYplRqtQJ25yIenOeq0KIh92TGCVO25yAU1bvLPaceYy124F43IhfKCB5xl1CrBbyVeA88WBI1eF3YvG1z35umZ3qY7buFJ6nf7y0ni1jMLr/CCoWMZj4vTed4uUjzWugy9w6PNgK7mdAMOj/3gtk25pl6xcrTzXfyZNc/BWWxAnf8rhdu773e8W0v2vZXjsYLRTD8sADTukmVrexwdF405plD7bv4V3O32Fqsy6kmME21S+AjYUmDnSXbbhoFKuX7zO00q9sS3U1xW9Qfhf+1elzhOXx85QfwGmNjp/bK4fBaObWNaDhAs25ySEDwJG8gSbYrUR5ufvVZJ+IU3e6PsiJ8bS169epbW7DtCI5YX0/uxV1HXGSuoyJY96zMijT+avp6mbd9CRU976voH0gT5R3l8dZcdpwMh822QDOwWgcIzlMF8RisVDRq8kLJ2ZRdhDwU4YfHXiZQuXLv8cnU+DR+fTkDH56nzwaFeeyh+1kub50X9Am/CMHi3hHptLdYwHRMUf/LiIGndIJrjLyZy3jeKmbFYSp/a9p1P2/O0U8/5U5YICpicy5m1V27xBrCDtu3jZe0stt41ljkffyqIG7VyGHpHf+8clSnm6UfsUeqxXNsGRqtNCsCROb3+9QBkXBdE0BkiUoBuIa3je8SrHCx1K4Le0T6X7X8ukg8cuGqsRJB1QEg83iQf0FmG/CZbDzQLsiP3+idGWS3LYLv6np8fS4JHLCbasQPJZOsU8CLtI3/mm0onwW18v8CJO0LX6w1NjFL6wNm4WIAWAxXHshBwQa/5hBiVhSP5wTyCFEsIHAZAnXecJxi5PnfNezaiJO8KS8C/j1ispE0jTiKwipSdZE31FQ5u6NMju/QZaxw5pQt918Ofz+FU0MXeb3bHYKoeXAmxYsIsWYwrFOEiwOEB0j5evVTT/2ePapHy4YTcdOwSuvBK5R7D1Y7bMaXbH/xyVR7d1SlU74uq3SaBb2ibRLW2TFWlqDMfBbZOUrlPDdknUqEMy3dI2UUmaGrSJp0btE5QE4a5n0ujrxHyz5qljnxmEdqEjZQw5eXvoz8+lK+vj+u4SY7naOA8acfpmoZJcoT1jAPm5+5l0uqTxzlFTSqhhhxQlyYAY3ywwcTKaizAr67Q8SODgA04PcJIMy+FQwDYaqtTL4RiSJ+jw/fax0Yqw/G+rkcrEwX8/MlKdg+zoxKnnF7mKAKHt3z85hurGxHkYvsyxIHEd+0x3mxvo8NF04zA8zuG0GE6yJYQXAiC7+m47mCSAg95r12tOgjh54Q76Ic21cw6kCe87lvKHF3oyWjMEFHGCjQoswdkRa5s1oueB4fUdusySMBkJ1Lc2lJv19q2OsVW0f+yKqHo48WKyQ5y27T2t9G++iF9Fi9buU0YJF63Zr3wjqXTNfpW3YPV+pRjLkiGdxOLZgDVs2IyCk1o94Bw788xIE5cbNGI5NWyfRDOWOstCrp2luj2Hz9HUxTtp+uKdKlXL1Et2qiVILEPiAwBLPTDAaEac8P8FswW/f3w0gSRBKgrzBX9/ebyppIkxA3Gq3zZZeW3nvHBJsSz8p9Zj1U7Di1euEix4w2UKJEBGExe+7unC5as0ddEO9XGHpb2f09cRdKjufc5T4tTji3n05DuTlGkTvKjGTC6g2zomuckU/I6ZBfhiRDnoVlmVQT0saf/PoyNr3BG02Rglr/oIwFRBssFUAUzxgEDB9l8wAjbhZMzdqnY64xlEHJ5Z4LjfvGDca7S3oYgTQAChgUizugHiSZAwI0GyOv94mG+Fbzvjgb88OBnG0lM0BdgMGjLKv+mFrXtOK50jLL2BFMEv197D3mvBwA4uVPYfuaC20CLliHpwsgxFciZWjDVIKxzXGnXS+DrSi1euESRbXQ2uW/QytXGsJE49J9KtHZIsX4pxkzfTn1on0e+eGEu/fdwV//B0PP3hqXglpfvj0/HUqF2i8oVm9VVZvOsUwTYWtro3bJ9If+8+XpEoX/c8elKB0kcz2yjhq55TruE5AWH81cMjlJTpt4+PDpol8Xu7pqnfGL5XSIJ6/+Rp2Rurc90/nUMT5to38svtGdOY96con43GfDkPLwRyV+31ds8ypZCwhAdbdscCdEaNpWSY0ID/RexYZsI0dMJGis3cSOcuBYeUhRfKkT9aN3FaVQjF6nwCCaluwAt07ORCGp6xwWeETk0gRvKsxvVZ3CplzPF6ub8FPasWwie/ZPcpeuLtSfTnZ1OU1OKW9knKtYq/XSPY4YaXGJbhsPurQbtkGpezhd7+Zr4y5NigbRK5YqJSFlfHbVxLeGyd/LZOydTk+VQvsGDbBDv8/IW7uqQo5XR/5UJ5nYmTLztOly5doavXb9Dp82V06lyZ0gfEbsQz50uVLafDxy+qH8w7uqTTEh9KzSV7TtF9r2YoKcyhE+bLc3zv2FX3t5cnKMe4wfgf4XZDnYJIHjx2QS37vvFFbtC6xxLyl9qyMYhTv6H+vawbB6BUn2z8bODDYHZe1V1vGPuV89pDAM8k9N+SZpR4mC1QNp+mFhKcA+OjBTa/4DVg5rJdNH3pTuVsGuonIEQgSN+mrFHuVJgsIR2WuUnpJAbTh2ftISU9WyHgJk4o8F3qGvo6zJSrl64/QANGrCAQv0gPRTtP0m2dUlTs+cV8+jxuFYE0/u3l8XTv8+Oo1ZtZpgq3eC/ADEGHPtOVXzsseSBiCz2i63wVQbn+s7GrCDo1iDjniH7w1X1rxxSCZWg9xE7cQHd1STX1x6SXu+uZFC9TB/r12ji2s1RnZ1xHTlxSzpDbfzSdYMnWKsAqtR0iVLTrlJJwfJMc/psdsJT7Hw/GBlUxFstmuk2yFwfnEPT4AgmQukJPEDbHYAjWKoydVKCsmmMpRkJkIbBp2wkal1NCSTO2eCiR63agcMx+5XSSxMdYjoOECUv4wVr2iyyUI+9uPIgTfhgGxK6gpesDt0VTG9BAstUvdiWNyi6oje5D2ideuFDuBgGCuxRjgMVvLAFZKbhCWbfApq8tfJEhQq9J13MCqYYu006DzaHhGRvp9s6pNGflXuOw3OfQBUKZhKnVXw52NxqEg2ARJwwF2+NvaZdCyzccqtbIgD126d3eOU3ZfoF/wHAOMC3w64dH2L6Fdh9Opc5+rID/x0Oxyh0GN/rC4NlqFy+f20mffm+yWzEcEseWPSfSw4bY8o2JFQTW02WRnfalTPgggB2vm7afoLkr91DarGKKm7qZ4AaIY+zETcrvHFyvsPuVhKmFlLfxEEEPT0J0IeBBnHDr67YcpYGj8mn3QXMdGCfBM3jUSuo3PM+9VdlJYwv2WLDsiSWz+autycm73y5UxMbKaWSDtsn0TP+Zyqs8XsxQ5sZupPoxiYSlj/ox8crvGuw2ccQLRR23SyAs1WHrPMiGHrBTDlbC7+iSSkvWeZPuy2XXqEnXdLq9c4pfqZTebiiO1VJdj4lqGdNqd5vdceB/Bnpcrd7KVstTdusZy2E5AFbDb+2YrMjmg69nEEwahGvYd+S8kjht33fG1i2cOHNZOdcFjlbh3+4fRpnzKv18waHwZ/GrrIrTqs2HacNWT39X/xyZp2w0YRde577TCRsYzCJ8BrL3AssO5EJEIwA/mhIEAUbAizjhwrjZJcoCt5PXabHVE7vogqGTxWA4OW3WLU0tKfga4+adJ6hem0S1Bm9WDttw8TKCIjNI0JPvTKZWb2arJb5Wb2WpFIb+Hnsrmx5H+nY23doRpCqBnug1idp8OFXZIjJrG86VsYwIqRKWUPDswM8adpDBWOFtHZMJ3sadFkCcIGkAQcQLHpK981WI+Oq8fPkqJU4rUjvH4OLm4NHA7VZh99mdz6TQXc+m0bfJa5WLBiiVN+02XtncCjcr4jzfj7yRRbA7ht12dsKFy9fofx8dRVbWwP/t/uE0e0WlzhEsf1sRJyxF//ZxuFAZTTBoyQES1fgphUrXj/MkFQTMEHgxYYtZtuRFKQKmxAlY4KsX7kv2HPLUZ3ECTjBaB5tNdl3FOGHM1R1Ds27pBOVqX6Fwxwll3NKX7z8sx0KyBMmTndCu9zS1XRtLdv4CLL7f92om3Qo9rM5p1LhjqlI4f6bfTMtdfP7arOnrTJxAJIEvSArsB+Elj4hjjnyNz/X0nmfT6IXBOfTyJ3Pd9q9avJhOe4/YI4tYnsOSc/MXxtPtnVJo3qpK45FYmn1uwExq2DFNOWDGNuqatEFTE5hfLr2udghi6/90m5bkYTQUVruLdp30GBJ27v6/+4fTyoLD7nyYg7AiTmyWALafOvX1basJDbLRPHfjchD1CAhxivpHwAMAS+KEUqmzitVOOyct28GpLUjT+iiz4Avje3hR+wqQODXskEwjfPjWwgsaVpfhj86fMUpYGq8XE08vDcnx1a3XtaOnLinnqEidvsQB4gS9MCjYA5em3dJdKY67pqlj5KtrXdPVkiSWJRHd+d3SVX04tgXBbf5CutqpiKVLuMXpN2ypIo4wyaAH4H/6XCmBCPX4Ipdu65yudkrCMr8xQJ8PCvtNu6XR3c+NVy5yMPZwCiB7H/ywWC3bQZo5aeF2v8vsmAMQUj1gx+H/e2C4x28ADFlaEacNW48qS+T/98QY2uZjuRDtwkBnvdZx9PO4dXqXchzlCPgiTnUavEp563ZEOULRdfs+iROgwI4DSJ527Pc0ehhqmCDi/z51rbLXtHZL+Op7VBW3LxLyqXH7ZJq/ep9lE5+MXkGNO6T41a+BVVsoecdmbrBsCxc+Hb1S7aLTv+x9VgjTi5evXFd2pkBs8PLk6O+cy1mlsAvzRK/J1LBDKt3ROVnZbsLS5ZcJ+fRt0hp686v5dM/zqdSwfZpS/B+euVHpkMGw6bHT5k5AsSOv26DZ1KBdijLBYebixenTsPPAWeo6aLYiUMBl5MSNlkN+ecgcJfnTC2Dn0r8/MJy27Kk0atm+9zTC/4hVaNt7KvX8cr7VZZUP7wmQcEEy9e8PDvdZVi5GFwL+iFPO4sLoAiTK79YvcQI+WLaDjSe1BOR/xSbokMJ20YDYPILPuwOGrfBB78yhDUL6c8/zacqQJYy4GcPsFXsUycGLxk6AsjZ0kkZlmb+0hk1YT3c/l27qNd5O+1LGhQB2xMEODMwK/OXFcdTshXHU/IVxSjIFacpzA2apXTzLNric2mbN3063dR5HXydZmyHAcit0f7Ac+tFPSwiuTMIxnD5fqsYPH3BWS8E9Pp+npHb6/cEgKIjToeOVOmRtPphCMAhr1U77j6bRG1/5Jk6bd55UelAgTpAmShAEGAG7xImlT0ibtP5EVW/fczhxPjKOHD9Lj3T9TuVxGeQXbT9Ev7qnl8pHeUSEsROWqGNcQxkJtY+ALeKEYcLmCax/u3SLQiPxgV4EDGkOHLmKYJ062gOWTF273BLp2f6z6P3vF9GHPyxWS02QNOGr28KXqRd0IGJY+mvUIYVavTlRWV1+//vFagnokTez6M4uWJ5Kp0tXZKutF3hVzIDUFBHPNUejxAj5D/bIUiTZSuqE7qHnA6lNow6pyhVMFYdU69VKy8qV7zmQFrPQ6eMZXhIn3qWnE0YYv737mRSlj2emo2SHOD31zmSlQ5a7ah+JzSaz2YjevECIE8gQyBGTH5Ad5DERAmnKmOH6MEIeCBECjiG5wrIfl2XShPZ+iJvjzo/emXDGndsmTjzcNCV9WkXfJK2mIycvcXZQU/xowf0LSFr/4Xm0xcLPVFA7DZPG4DcN+hyN2rsc9GLJDeYCvk2xllBY3dq18hsKZyhFg0A17piiXKrAYjV2h123oRBu1bbkVx0BWBiH9ATGNH3tGoVLkzs6g/ia+8ir+ghCW/PxXtlUNybe1Ffmfa9keCl0w0o+nPkaAwgTfM498Jq3/p4/4gQr0b9pNcrvMrexTzmPDgQCIU6MCMgPSBICCBGTIZyzxAl5nI/USJz4up6K1IkRrr00YOKEoUKh9cf0tWr5rv/wZbSm+KiXbZ9Abwlbg+FTbeTETTRwxCpFmHzp8wTafqSVx3IFFK8RL5d6Kh0Heq+QenBbTlfmDvTewrX8P0etoHptk5U+k1EqxfcEty2QQD4a5sQJBP5PT8cp+2J8b5ze2SWZBsYu41MqLbuuFL2ft/B5iKW6hu0SKOaDKR7SV1/Eae+R8/TrliPVZhh3R3IgCGgIBJM4gQTxEh0TKHSF/PoP9FUp60wxYdKGIocOQKBKxInHfe1auXKg+fGwFTRw5GrCjz28TWM3lZ0Aj9XY5YJluP4jVioldPj/WbDGWgHaTrtSRhCIBAQ+/HGxUuK38kN4+OQlatw+gWAjKdx22BnnBxsQfv/EGLqtUxLhdwEBy85/fHKM0rHE+dINBxUpgkK5r3Dx8jWq3yaeQJY4WBEnkFL0i2U6CYKAFQLBJk4gTPpyHvplkoSUJVXd+ySofN61x/lW45T80CBQLeKkDxH6GBlzt9KQUS4ShWW2fsPyqO/Q5fSxSvOUOxc+h2uXgaNWK/0lWPCdvnSXMj6otynHgkA0IwBL25C4tOs91XTJ7qdx66hu6wQaFiH6f8dPXVFug+rFxNGtHZII5h2gqK30+tol0B+eHKv8Jdp5JvB7hHZgeBXOrUGkGrSNV8c459i4YyI17phkp0kpE8UI+CNOTGxAejhAdwmK4Qi63hKW2nAN0iXoOnEdpCBTCDhm3achP01xn0PnSULtIxA04qTfCsTlcJpZsuc0bd3ritg6DN0NPsc1LM/5syWktyvHgkB1EYAUA1bNwyFC1+/VT+fRLe0S6aEemTRpwXZl3fzA0QsE0nRHp2S6r3sGnblQSgePX/TOeVFPAAAe00lEQVS4J7ubBKqLZ7DrY9zYBAGbTFD2hk2ljn1nEKRugRr9xG/NwBHLaNDI5Zax3/Cl6jcp2Pch7UUWAr6IUzDulBW/QapYEiXSpWAgWzNt1AhxqpmhSquCQPUR+ODHxXRXl2Tlm++WtvGkYjtXComEMXIZ03zUa1dZB2W5nK96XMZfCl0dLEtBcgJr75CawF1Oo/YJSgrTsF2iyoP0RG8L9WCmQIIgIAgEB4GaJk4YJS/LQdoEKZME5yIgxMm5cyMjqwEEpi3Zqfz1wffe429PoicqIo4fM4nI93XNXb+XZ31u21gf5a3aQ/9cnsthnDCiyfmc8nU+f1y7H/gZnLF0Zw2gJ00KAtGJQCiIU3QiG553LcQpPOdNRl0NBLCUHOmxGvBIVUFAEDAgIMTJAEiUnwpxivIHQG5fEBAEBAFBwDcCQpx84xNtV0NGnK6V36TLV8ujDd8auV+2QmtUHuSdG7xLw27nKO+vDq6zbRG77Uo5QUAQEAQiAQEhTpEwi8G7h5ARp3fGb6c30rYFb+RR3BITHSPZwTnIlDHfH1Tcnq9yKCPEyRdCck0QEAQiFQFfxIl/P5FCwTvcQ1XeIeF+z4GOPyTECdImPHiIInUKdIq8y+v/qB98NsFdgMkNUg5sJwR52PLKgfP1nRx8jSVa+o8At81lJLWPwNyi0zRlwwn7FaSkICAIOAoBf8QJH5VsRkD//XXUTchggoZASIgTpE1MnETqVP25wz8mIkgT/5PyMf6BOY8dRMI2CCLysc2V/8FxnQkU10HKhAnHbMANxyJxqtrc8bNftdpSSxAQBGobATvECWPUpTX4zeTfWvz+Ilh9lKIcDGLC6CWOEVAf6hfIw+80An/ooiyXQz7/1rMrF+Sx4Uy9LMaB9hDZaCeXY9UPtimFNvD7j8j96mYSOA/jROR7RL1IDyEhTvja5peHfHlX/5HiBxUt4Zj/OfHPoxMnvRyXRR7/o/BI9HJ8rKdcV4gTI2Y/hbRJnn37eDmlJJ5//mhwyphkHLWHgF3iBEKCZwdB/w3l32Wrj1KuY1Wff7NxHYFJC475GogL+gHJ0q/rx+gH5fHOwPPNerE4x/tDbw/HTARxjckZ8vlDHccYE5MunEdDCAlxApD88ogGUGv6HvkfEv3gGF8U/I/H/6B8jfP1c/5H43Ea2+N8PUUZIU46IvaO+bnn1F4tKcUI8POsP8fG55fLBjNFf9H2MggmfpHWlj/ixL+hSFmSg2M8qxz0MnyMazjm31Z+3jlffwb1cnydy+OaHrh9PeU6yGO1Df7oBvnhcev/X0ycuG3URZ86GUNdXdLFZSM5FeIUhrPL/wwYOjN//hLhfyRc438A/hJBPXyN4JyPWSyLcwSk/E+AsvyPj3y0LSFwBIQ0BY4Z1+DnGc8fP4v8XHOZmkjRn/7Sqok+pM3wQcAfcTL7bdSfWdwpzs0C8rk+fnO5HFL9GdTLcXv6/4fetrGufo0lR9wPrjERwjX9/8uKOKEM3jloIxols0Kc9CcqTI6NDF//h2LRK98KEyPU4X9OXON8/MMgQmqFgC8QXoc3/tPyFwm3Lak9BIQ42cPJrBS/GPQfc/2Yn3f8DyDiWUbAMT+/3AbykccSWpThH3+ujxeXsb7KkD9RjUCwiJPVRymePwR+DvmYn2E+x/OKALLCdZj04IMY/w/4bednHHn4Teffd/7/QLuoj/8N/ZnH/5b+/8XlVKcV40Md/f8GxyBc0RSEOEXTbMu91goCQpyqDrtOevBDb/xh5zz0YCzLLx09n18EyDN+CKAtrqMfV330oal586bLWTocpocihuaunNWLP+JkfJYwejxDIDEcfH2UgryAgDDB4fpGaQ4TJn5OuW0mO0zMkM+ECm3iedfzUA7jQeAPZSZV/FGNa9yfKlhxT7hXlOW+9PJcLtJTIU6RPsNyf7WOgBCnqk+BTnp4iYFfEmgVLydj5Hx+uehtMHHiEfGXud6GsT6XdVp6vfwGdRucQ/ViEqhem8TQxZgEeuurBU6Do0bH44s4VbdjPHtMbKrbVqjqY8xMnFhdJFR9O6EfIU5OmAUZQ0QjIMSp6tOrkx60wj/YSPmcv5T1XnCdiZNOtIzECeX4pYVjvV2ur7frpONGHZKobus4qgviFJMYsoj+0G+XfjOdBEeNjqWmiZOZxKpGb6iajWMJkCVVSFl6Vc1mw6a6EKewmSoZaLgiIMSp6jNnJE58zgSHpVBMejifv4JxzlIljMKMOHFd1ttAOeQ5mTjNXbmH6raOp7oxcVQaYldW5y5eVWStbkw8rS46UvXJDaOaNUmcwggGGWoFAkKc5FEQBGoYASFONQxwFDb/wuAcJfX5OsmlzB5qCHr/tFj1/+53C0Pdda30J8SpVmB3bKdCnBw7NTKwSEFAiFOkzKRz7uOlIS7i9GVCfq0M6oMfFini9P73i2ql/1B3KsQp1Ig7uz8hTs6eHxldBCAgxCkCJtFhtyDEKbQTIsQptHg7vTchTk6foVoYHxwxizPm4AEvxCl4WEpLLgSEOIX2SRDiFFq8nd6bECenz1AtjA+OmMUZc/CAF+IUPCylJRcCQpxC+yQIcQot3k7vTYiT02coxOODpIlf9CJ1Cg74jGdwWpNWBAEiIU6hfQqEOIUWb6f3JsTJ6TMU4vFB0sQvepE6BQd8xjM4rUkroUTAaM05lH376kuIky90gn9NiFPwMQ3nFoU4hfPs1cDYp2w44SZOOJZQfQSEONnD0GijCbV045VWrcAtBAhOTQS28VQTbVenTSFO1UEv8LpCnALHLJJrCHGK5Nmt4r3Ji76KwFlUEzwtgDFk68QJhAnBDnEyGrU0NFutUyFO5vCJOQJzXCQ3OhAQ4hQd8xzQXcqLPiC4/BYWPP1CpAowcdLJkn4MtxRMZJDC1Qo7GOV8uH7AMQfOxzmXxTFbCefr7N0d5+xKgvvm9vgat12bqUicQos+/oclCAKMgBAnRkJSNwLyondDEZQDwdMejEycUBokBcSFyYueh2O9rFHihLpwucJ1mPiwvhI80XMeyuj1kY8IAsYkjPPYqalquJb/CHEK7QQIcQot3k7vTYiT02eoFsYnL/rggi542sNTJ0Psg85InJjEcIqWdeKDc/ZNh7osPYJTUtQBadLbRHn9HGXQHgfuBynKOSUIcQrtTAhxCi3eTu9NiJPTZ6gWxicv+uCCLnjaw1MnTqgBssLEh8+xPGcMRuLE7aA+iBKIlF5GX7JDW8Y+zIiTTq6M/dfGuRCn0KIuxCm0eDu9NyFOTp+hWhifvOiDC7rgaQ9PJjxcms9BgBBYCoVzjsjnpTcuhzy717kc9Ke4nhlx4mt6H6pCLf0R4hRa4IU4hRZvp/cmxMnpM1QL45MXfXBBFzyDi6e0JgYwQ/0MCHEKNeLO7k+Ik7Pnp1ZGJy/64MIueAYXT2lNiFOonwEhTqFG3Nn9CXFy9vzUyujkRR9c2AXP4OIprQlxCvUzIMQp1Ig7uz8hTs6en1oZnbzogwu74BlcPKU1+8Sp7Go5zVy6i2Yv312tOHPZLiq/cdMNvRjAdEMhB1GIgBCnKJx0f7csL3p/CAV2XfAMDC8p7R+B7p/Oobqt4+jLhHyfhQ+fuEh12yRT3ZiEasV6bZLp3MUyd1++iBOcg8PPZSS5bML/sARBgBEQ4sRISOpGQF70biiCciB4BgXGqG9kddER6tR3Ot3aIUmRJhCnh3tOpM07T1piU17+/7d3vt9xFecdz3/QvwA7p3mRpDk99E1fhRck7WlrAU7TNFg/IImNk5YmpGBObUkrjLFzOIQSWtMEsCXXkMYQjA1Obe3KNDbIWDbgGGMJTDANnOJfsR1b+LctW356vlea1d3V7mqv7uxqd+9nzrmee+fOPDPP527QN8/MnXvd9v32hL3zQbxDNkavl444OcHkfu+NlheFzI3EEUA4Je6RT+2w+w/e1DWpUQ4BeJZDiTrFCLz57jGbfct4xGjOqqxoknAKjqZuu3Hez+3E8MVJJq5fv25nz1/xcoSNF4o4IZzChDhvZAIzIpyujFwzzb27Q9ek2iHAH3q/zwKefnkmydqGbQfHpticSCqRz7pljW3f80kOnsPHz9nsW58x3YtzzL7t2UB8OeOFhJO75wRUI03VOd/IISACFRVOV0dH7dgfLphCzPf2vG13P7XHFq/cYd9c0mvz2rdkD12rfMkT/fajnt1BfbVTe1L1CfCH3i9zePrlmRRrW17/XVmi6aYFz9usW3qC6JPyE6cvZBEp2rTkiR3W+dPXYx2LV/Zb+P/glhJO2c45gUCDEqiIcHr3d38IBNA3F/+3tXSmrS2VsdbO3rIP1Vc7tZeQkj1S9Qjwh94va3j65ZkUa1qQnZ2OKxJp+ot/XB/g2PH2oazI+uLfr604IoRTxRHTQQ0T8CacNO22a/9Ru+uhPmuNKJSmFFWpTGBX9tUPqbIE+EPvly88/fJMgrXulwenFE1/efeLOSjeevdY9s25Dz8ZDu4p+nTTgufs5u/+MtZx0/zn7PzFkWx/CKcsCk4SSMCLcFqzaSiIJkWNLE0pmPKiVM6++iNVjgB/6P2yhadfnkmwduO8ZycJp1naUmA88pQvmsTkS7dPtLnnx9sCTMEap9vW2qxbx49grVNPMLWnab1yj9m3PVP2GqckPB98TDaBWMLpjaFjNv+hPmtLpcuehosqlgrVV3/qV/2T/BPgD71fpo4n+XsGg9IM3C/vc3MnRJLE0tfu22RDH54MhM5ff3+Dqxbk2iXgi994JiuqVP9PKjxdR8Qp5xFwkTAC0xZOy1YNWFtXtLVLhURQnDL1/+DTAwl7ZJV31/1xq3xPyejh3l8eNA4YlPMbcP+LCAunry3a5IoLrvf8wt+tzRFNEk5fQjhlmXECAd8EIgun02cv24IgylT+Yu844miqtm2pXpu/rM9OnZnY1dY3pKTZQzgl7Ynjb60R+NzcsbfkbmhabRt+/UHR4X3hG5NFExGnori4AQEvBCIJp1NnLlV9Wm4q4eTua/pO4yPFJ4Bwis8QCxCIQ+DrizZlo0izmnrsxf/JFU/aw/vzBSJNEk06fjC+xinOGNRW36e7em0051D5V773QtDPUiL+cRHTvg4JlC2cTn16sWZFU454+nTy7rl1+FxmdMgIpxnFT+cQsGc3v2c3zFmdFU/61tz6V8bEk96U02aWTiTl51rwfbLALuJRsTbds7HoppnqU9slhD/DEtU+9SFQrwTKEk6nz1y2tq7amJpzIqlYrqk7jZc0fQIIp+mzoyUEfBHQNF2OKGrqtp+t32c3NI1P4xXZ2+nP71wXewhLnxrI7TuvLwm3ve8fj90PBiBQjwSmFE5a01Ttt+aKiaKyy1NpGz6LeJruDxLhNF1ytIOAPwL6Rp0iTTniKRyFyhMzY1GgHjt34UrsQeitvNx+Q9/Ia+qx/QdPxO4DAxCoVwJTCqeFK17xt9VAKh3sCL5w+VZb9Pirdt9j24Nc19opvNXjtgaySZoeAYTT9LjRCgK+CTzf975pjVNRERMST4oCnTztZ6mC3sor2GdTtz3x/Nu+3cQeBOqKQEnhpFf9WyVo8jaijH4tGxn7r94DduHSiI2OamnjRNK1ynVf9Xz1yVYFE4yjnCGcotCiLgQqS+B/Dw1bsOVA/tSdE01N3fZX/7TB68sxBYVT02p7cv2+yjqLdQjUAYGiwmn30NHI35grJKi02/cDT+7M+UBkKS76kOTSp3Z66Vufftk1eLRUd9wrQADhVAAKRRCYYQIH/2/Y5j/YZ3/z/Q32+a+Pfcfub+/bZMdP+Ykyhd2bJJyauu2nLyCawow4Ty6BosJpwUNb40eauvrstb2HpkVX7VpTfbHHMH8ZU3ZRHwDCKSox6kOgugTu6OoNptJWdO+uSMc5wqmp2558EdFUEdAYrUsCBYVTz8tDsReE35HK2PY9n8SCovZxPxishe3yh1Q+AYRT+ayoCYGZIPD4L/YGwmnOPRsr0n12cXjTalv10mBF+sAoBOqVwCThdPHyVWvp3BI70tPxHzu8MOl4Ykfsscgf+UUqjwDCqTxO1ILATBG4enU0u5eTpu2++g/rvR1/1vLzsYXhTd22+qX9M+Ui/UKgZglMEk479x2Ov74olbETnt7uODF80VpS8b6Jp3VW8otUHgGEU3mcqAWBmSRw5vxl++O5a8bfutOeT/6O2bf2WP80l1nMJBP6hkA1CEwSTnd5WNukDwD7TA+u2hU76iS/SOURQDiVx4laEKgFAkdPnrNfZA7Yc33vezkG3jlSC24xBgjULIEc4TT44QkPa4oytmOv3+iO7ClqVOitvbLLUhmTf6SpCSCcpmZEDQhAAAIQSCaBHOGkNzTKFiJF93ZK2+Hfn/VKU/Z87O1UqTdQvDpbA8YQTjXwEBgCBCAAAQjUJIGscBq5es3mLdkcWzg1t2+xKyOjXp2VPdmNK+puX7LZ5CepNAGEU2k+3IUABCAAgeQSyAqnoyfOeYnq1LJwUtRKfpJKE0A4lebDXQhAAAIQSC6BrHAaeMfDOqJg+i5tl6/4jerIno+pOq2Tkp+k0gQQTqX5cBcCEIAABJJLICuclq+O/+ZaMJWWylj/3ngbX+Y/DtmLuxGmm+aTn6TSBBBOpflwFwIQgAAEkksgK5wWr+yPvYbIiZMVPW94JSp7znbcXH6SShNAOJXmw10IQAACEEgugUA4Xb02as0d8ReGO1HT3LHF2yJsLeZu6Yi/MHxibJtN/pKKE0A4FWfDHQhAAAIQSDaBQDjpcyS3t/d6i+poLdGGbQe9kJWd2Hs4hbZOkJ98fsXLo8EIBCAAAQhAIHEEssJpXoc/4aToTnNnxk6duRQLqNrLjosW+cjlJ8Ip1mOhMQQgAAEIQCCxBComnCRyvr00YxcuTe/jumqn9j7EUtgGwimxv3UchwAEIAABCMQmUFHhJMEyf9lW238w2qdOVF/twoLH1znCKfZvBgMQgAAEIACBxBKYEE4e1zjlixytUXpk7ZvB1N31IqhVrqm5h//zTWtL9VVENGlcCKciD4BiCEAAAhCAAASmJBAIp+CtunZ/b9XlCyd33dKRth888mtbvnq37Tnwe3vrvWNBvrx7d1Cu+65upfLmdt6qm/JXQQUIQAACEIAABAoSCIST7vjcx2kq0dOmt9xSmYkj9NbbVG3j3mcfp4K/AwohAAEIQAACECiDQFY43f9vr1U82hNX9PhoLz/rKbk9lZKe19MzY6wQqDaBz3z2O5Z/zF24MvYwXt9zMMeuD5uxB4UBCMwwgaxw6t97yOt+Sfkipy2VDuy3dfVZc0c62DdKeyrp0LXKtRZK9fLb+rqWfflJggAEINCIBCSeuh7bGNm1Yu16t+8PhJMMHj0+bLO/fH9wrfNSSfbUlgSBRiSQFU5HTpyz1gqIFi30/t6KV2xd+oDtGjxiFy6N2PmLkw+V677qqX5lFoinTX6SIAABCDQigXwB9K1F3YHQuXHOA1l3nRiSCJIAUpvwka1oFogf3QsnXf/Rn94dFD26Kp1t+/S6V4OysC1XT5Eqlbs+w/Y4h0C9EcgKJ33aZN4SXwvE03bnAxlb0b3bTg5fnBYTtVN72Wnt9BOFkn/ykwQBCECgEQlInLiIk0SKEy4STrqnpFziaeiDw9m64XZhLk5khctubn4ka0vCTCm/nutD9zQeJ6pcxCpsj3MI1BuBrHDSwCVUYk+LpdL28Jo3vO3OrV2+H17zphfxJP9IEIAABBqVQFgA6Tz/kN+uzIkZV+YEV5hNviDSvbBwkg2JM2dT9Z09d65rF3Fy9YJK/AOBOiWQI5wGPzw59qbbNN9y++6KrXbgo1MVQSG7sj9tYZfKmPwjQQACEGhUAhImTgCFz/P9dVNsigApFatbSDiprto996s3gnZaQO5sOLGkOuFzF/nS2HSPBIF6JpAjnOTIwuXRxYkWdC9Y1mfaD6qSSfbVz3QWkMsvEgQgAIFGJhAWQDrXoXVMmpYLixcxcJEinaueokKqF05h4SQ74Sk/J5xU7tZShcWSxJnsybbr240p3AfnEKg3ApOEU8/Lg5GiOm1dGevZNFhVvzVG9Rsl+qQ2JAhAAAKNTEDCJDwF56bIJHicKHJlmnJzyYmg8CJy3cvfjsCtaXLtnGByuevDRZZULmHl1ls5e649OQTqkcAk4XR55Jq1lD1Vl7ZHn3lrRvz+8dry1z3JH/mV9KT/qLqwetJZ4D8EIAABCEBgOgQmCScZWf1SeVGnu5ZvtZGrlZ2eK+aU+lX/5USd5A9p4m0aWEAAAhCAAAQgMD0CBYXTpStX7c4ppsJaUn125vyV6fXqqZX61zhKiSf5IX9IucLJRZ+Uu/C8C+G7qJRC7O4NGldHHBWOd+sj1F6HkqYIdK57LmQPdwhAAAIQgEAjESgonOTg7qGjRXcS1w7cmYGPaoKDxqHxFBJPKpcfpDECEjXhxZsSQxJHTvxI7KjMCSGJJq19UHKCyJ3LTni9ghNNsufe2BnrlX8hAAEIQAACjUOgqHCSi8tWDRQUJNqUcvT69ZqgoHGMbZLZO2msGj9pgkC+cHJ3VO4WiobfotF9F3FSHR1Kzk5YOLn74ZyokyNMDgEIQAACjUKgpHDSgurm9i05gqSWok3uIRSKOmncLAh3hMZyJ3h0pXOXdF5IOKncTdE5AeXauh2AwxGssE1nmxwCEIAABCDQSARKCic5Onz2krV0TIgnCafenR/XFAONJzxdp/Fq3KRcAhI2YaHj7pYSThJM4ek8tVF9dzjB5V5HduujXLnrgxwCEIAABCDQCASmFE5ysnfnR7k7iqf6LL2zNtY4aRytoQXizZ3pYLyN8HB8+yCx44SNzl3SYm4tDFcKT7+5ReDhXYJVR20lpty529zO7d2i6/BeMkFF/oEABCAAAQg0AIGyhJP8zAx8nCNQFOF5fN1vZhTBv6zsz4k0tXbWjqCbUTAV7Nwt/JaocpEooksVBI5pCEAAAhCoKQJlCyeNeiy6M7EIuy3YKHOLfXzk06o6pf5aO7fYWP/j40n1Emmq0lNw03KKPLnvYlWpa7qBAAQgAAEIzCiBSMJJIz195lLutF1nr7WkMvbk+n12/uJIRZ2RffWj/nK2H0hl7DRrmirKHuMQgAAEIAABCJhFFk6CdmXkmj349EDux3ZT6UBQ/eyFffbpOb8bY8qe7LZKMKmf8U/C6GO/GofGQ4IABCAAAQhAAAKVJjAt4eQGtWvwiH17qXbuzhUzbV199s//ui1YF3Xm/GVXPVKudlpXde9PtltrV1+uSOtMB/2qfxIEIAABCEAAAhCoFoFYwkmD1F5JazYN2R0FPtGiBeQtnWn74aPb7b7HXrWN2w5a/28O2Wt7D9nlK9eCSJFyXatc91VP9dUuvMWAizKpH/XHHk3V+onQDwQgAAEIQAACjkBs4eQMabqsZ9OQtbRvnrQGyokeTa2NiSFFqDS1N56PiyTdd3Vzcgmw9s2BfablHHFyCEAAAhCAAASqTcCbcAoPfNf+I7b0qZ02b1xEFRVE42uVckRSZ+/YtFwqE7SXHdkjQQACEIAABCAAgZkmUBHh5Jy6Nnrd9r5/3J7v+60tXtlvi/+9325v77Xmjl5r0dt444euVa77qqf6aqf2JAhAAAIQgAAEIFArBCoqnAo5qTVNxY5C9SmDAAQgAAEIQAACtUKg6sKpVhxnHBCAAAQgAAEIQCAqAYRTVGLUhwAEIAABCEAgsQQQTol99DgOAQhAAAIQgEBUAginqMSoDwEIQAACEIBAYgkgnBL76HEcAhCAAAQgAIGoBBBOUYlRHwIQgAAEIACBxBJAOCX20eM4BCAAAQhAAAJRCSCcohKjPgQgAAEIQAACiSXgRTh95rPfMR3hpOuuxzaGiziHAAQgAAEIQAACdU0A4VTXj4/BQwACEIAABCBQTQJVEU4uIqW8d/v+wL9wmc6VFKEKl1cTBH1BAAIQgAAEIACBqQhUTTgdPT6cHcu3FnXnTO05QeWE09PrXrXX9xzM1ucEAhCAAAQgAAEI1AIBL8Jp9pfvzxFCckxiyK1xurn5kWwkSQIqfO0iTBJKTjjVAhjGAAEIQAACEIAABPIJeBFOP1y2Lkc4SRxJEA19cDinP5XdOOcBm7twZU59Vwnh5EiQQwACEIAABCBQiwS8CCc55iJHLpdAcsmVKS9njZNrRw4BCEAAAhCAAARqiYA34VRLTjEWCEAAAhCAAAQgUAkCCKdKUMUmBCAAAQhAAAINScCLcApPxfk8b0jiOAUBCEAAAhCAQN0S8CKc6tZ7Bg4BCEAAAhCAAAQiEEA4RYBFVQhAAAIQgAAEkk0A4ZTs54/3EIAABCAAAQhEIIBwigCLqhCAAAQgAAEIJJsAwinZzx/vIQABCEAAAhCIQADhFAEWVSEAAQhAAAIQSDYBhFOynz/eQwACEIAABCAQgQDCKQIsqkIAAhCAAAQgkGwCCKdkP3+8hwAEIAABCEAgAgGEUwRYVIUABCAAAQhAINkEEE7Jfv54DwEIQAACEIBABAIIpwiwqAoBCEAAAhCAQLIJ/D9ziDSYmYynewAAAABJRU5ErkJggg==" alt=""><br></span></p><p class="MsoNormal" style="text-align:justify"></p>                            </div>
+                        </div>    
+                          <br>              
+                        <h5 class="mt-4">Project Activities</h5>
+                        <div class="papper_shades">
+                            <div id="tree_view_display" class="span3"></div>
+                        </div>     
+                        <br>    
+                    </div> 
+                    
+                    <div class="col-md-4 mt-5">
+                        <div class="guided-cert">
+                            <div class="badge-con">
+                                <h5>Skills you will develop</h5><br>
+                                <ul class="skill-guide mt-2">
+                                                                    <li>Python</li>
+                                                                    <li>CNN</li>
+                                                                    <li>Flask integration</li>
+                                                                    <li>IBM Watson Studio</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                           <br>          
+                        <div class="w3-card-4 w3-dark-grey">
+
+                            <div class="w3-container w3-center">
+                                <div class="mentor_header"><h3>Mentor</h3></div>
+                                
+                                 
+                                    <img src="../images/mentor_logo/thumbs/1601623100Untitled_design_-_2020-10-02T124759_379.png" alt="Mahankali Surya Tej" class="mentor_pic">
+                                     
+                                <h5>Mahankali Surya Tej</h5>
+                                <p class="guided-con-p">ML Engineer</p>
+                                <p class="bold">Mentor Rating <img class="mr-1 ml-2" src="../assets/guided_projects/images/star-fill.png" alt="star-fill">4.8 / 5
+                                <span class="guided-con-h6-span">(6)</span></p>
+                                <p class="guided-con-span"><img class="pr-2" src="../assets/guided_projects/images/guided-inn3.png"
+                                        alt="guided-inn3">446
+                                    Learners</p>
+                                <p class="guided-con-span"><img class="pr-2" src="../assets/guided_projects/images/guided-inn4.png"
+                                        alt="guided-inn3">13
+                                    Projects</p>
+                                
+                            </div>
+
+                        </div>
+                        <br>  
+                        
+                        <a  href="../global-remote-internship-program.html" target="_blank"><img src="../assets/grip_ad.png" class="ads_images"></a>
+                        
+                        <a class="ads_btn btn btn-primary btn-block" href="../global-remote-internship-program.html" target="_blank">Register Now</a>
+                       
+
+                    </div>
+
+                </div> 
+              
+                    <div class="">                   
+                    <div class="col-md-12 mt-3">
+                   
+                            <section class="pt-5 pb-4">
+                                <div class="container guided-slider">
+                                
+                                    <div class="row">
+                                        <div class="col-8">
+                                        
+                                           
+                                        </div>
+                                        <div class="col-12 text-right">
+                                        <h5 class="mb-3 text-left">Relevant Projects</h5>
+                                            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2"
+                                                role="button" data-slide="prev">
+                                                <i class="fa fa-arrow-left"></i>
+                                            </a>
+                                            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2"
+                                                role="button" data-slide="next">
+                                                <i class="fa fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="col-12">
+                                            <div id="carouselExampleIndicators2" class="carousel slide"
+                                                data-ride="carousel">
+
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="row">
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="pdf-automation.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1612438127PDF_Automation-removebg-preview.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">PDF Automation</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(81)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">2 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="excel-automation.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1612430865Excel.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Excel Automation</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(86)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="implement-deep-learning-techniques-to-detect-malaria-duplicate-.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1602323061Malaria.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Implement Deep Learning Techniques to detect Malaria using IBM Cloud</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(99)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="iceberg-detection-in-satellite-images-duplicate-.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1602324615iceberg_detection_1.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Iceberg Detection in Satellite Images using IBM Watson Studio</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(76)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                        
+
+
+                                                           
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="row">
+
+                                                                                                                    <div class="col-md-3 mb-3">
+                                                                <a href="web-automation-.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609272389web.png);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Web Application Automation </h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(85)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="data-scraping-using-blue-prism.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609268464Da.png);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Data Scraping Using Blue Prism</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(82)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">10 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="g-mail-automation.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609258082Gmail.png);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">E-Mail Automation</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(87)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">10 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="website-for-travel-tourism-sector.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609256308Travel_Tourism.jpg);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Website for Travel & Tourism Sector</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(83)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">10 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                
+
+
+                                                        </div>
+                                                    </div> 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <div class="container">
+                            <br>
+                            <br>
+                                <h5 class="mb-3">Reviews</h5>
+                                <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="guided-review">
+                                                <div class="col-md-2 p-0 col-2">
+                                                    <img src="../assets/testimonials/1.png" class="tets_img" alt="guided-abt1">
+                                                </div>
+                                                <div class="col-md-10 col-10">
+                                                    <h6>SYED RAZA</h6>
+                                                    <p class="test_coll"><span>American University of Sharja, Sharja,UAE</span></p>
+                                                    <p>It was a fruitful experience. A clear road map
+                                                    was provided to follow throughout the
+                                                    project along with an in-depth introduction
+                                                    of the packages required. The guided labs
+                                                    were extremely helpful and easy to follow.</p>
+                                                </div>
+                                            </div>
+                                            <div class="guided-review">
+                                                <div class="col-md-2 p-0 col-2">
+                                                    <img src="../assets/testimonials/2.png" class="tets_img" alt="guided-abt1">
+                                                </div>
+                                                <div class="col-md-10 col-10">
+                                                    <h6>Harshitha Josyula</h6>
+                                                        <p  class="test_coll"><span>GITAM University,Hyderabad, India</span></p>
+
+                                                        <p>The Guided Projects were not only based on
+                                                        solving real world problems but were also really
+                                                        informative, the smartinternz platform has each
+                                                        and every step in detail and even though if we
+                                                        were stuck at any point the Mentors would help
+                                                        us to resolve all our queries. overall it was a
+
+                                                        great experience.</p>
+                                                </div>
+                                            </div>
+                                            <div class="guided-review">
+                                                <div class="col-md-2 p-0 col-2">
+                                                    <img src="../assets/testimonials/3.png" class="tets_img" alt="guided-abt1">
+                                                </div>
+                                                <div class="col-md-10 col-10">
+                                                    <h6>Anuraag Moharana</h6>
+                                                        <p class="test_coll"><span>College of Engineering and Technology, Bhubaneswar, Odisha, India</span></p>
+
+                                                        <p>I took Part of Aritificial Intelligence Guided
+                                                        Project from Smartinternz, it was a wonderful
+                                                        experience and highly motivating, It's a very
+                                                        innovative and smart platform for internships. It
+
+                                                        provides smarter ways of guiding and
+                                                        interacting with participants and educating
+                                                        through guided labs and projects. It really
+                                                        helped me in giving a boost to my career.</p>
+                                                </div>
+                                            </div>                         
+                                        </div>                                    
+                                </div>
+                               
+                            </div>    
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<!-- Mirrored from smartinternz.com/guided-project/iceberg-detection-in-satellite-images-duplicate- by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 13:24:58 GMT -->
+</html>
+
+<script>    
+var base_url = "../index.html";
+var projectId = "161";
+</script>  
+
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../assets/bootstrap_tree/js/treeview.js"></script>
+<script src="../assets/vps/js/mentor/guided_projects_inner.js"></script>  
+
+<script id='pixel-script-poptin' src='../../cdn.popt.in/pixel797f.js?id=1969815f49b4d' async='true'></script>
+
+
+
+
+<style type='text/css'>
+.embeddedServiceHelpButton .helpButton .uiButton {
+background-color: #18265d;
+font-family: "Arial", sans-serif;
+}
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+outline: 1px solid #18265d;
+}
+.message{
+  background-color: #18265d;
+}
+h2[embeddedService-chatHeader_chatHeader]{
+  color: #fff;
+}
+</style>
+
+
+<script type='text/javascript' src='../../service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+var initESW = function(gslbBaseURL) {
+embedded_svc.settings.displayHelpButton = true; //Or false
+embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+// Settings for Chat
+//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+// Returns a valid button ID.
+//};
+//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+embedded_svc.settings.entryFeature = 'LiveAgent';
+
+embedded_svc.init(
+'https://thesmartbridge.my.salesforce.com/',
+'https://talento.force.com/',
+gslbBaseURL,
+'00D2y0000004goQ',
+'Talento',
+{
+baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
+deploymentId: '5722y00000003YS',
+buttonId: '5732y00000003lt',
+baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
+eswLiveAgentDevName: 'Talento',
+isOfflineSupportEnabled: true
+}
+);
+};
+
+if (!window.embedded_svc) {
+var s = document.createElement('script');
+s.setAttribute('src', '../../thesmartbridge.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+s.onload = function() {
+initESW(null);
+};
+document.body.appendChild(s);
+} else {
+initESW('https://service.force.com/');
+}
+</script>

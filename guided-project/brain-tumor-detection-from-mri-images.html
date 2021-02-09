@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from smartinternz.com/guided-project/brain-tumor-detection-from-mri-images by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 13:26:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Brain tumor detection from MRI images">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../assets/guided_projects/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/guided_projects/css/style.css">
+    <link rel="stylesheet" href="../assets/guided_projects/css/internship.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+    <meta property="og:title" content="Guided Projects" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:description" content="Brain tumor detection from MRI images">
+    <meta property="og:image" content="../assets/smartinternz_thumb.png">
+
+    <title>Guided Projects</title>
+    
+    <link rel="stylesheet" href="../../e6t7a8v2.stackpathcdn.com/tutorial/css/fontawesome-all.min.css">
+
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='../../platform-api.sharethis.com/js/sharethis.js#property=5f591cce58adc60012f342c5&product=sop' async='async'></script>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/smartinternz.ico">  
+
+    
+    <meta name="p:domain_verify" content="55c4ec39b8d9f7a35b5fafcd164c516d"/>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    '../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '356991988979960'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=356991988979960&amp;ev=PageView%20%20%20%20&amp;noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TV4Q7TH');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <script type='text/javascript' src='../../platform-api.sharethis.com/js/sharethis.js#property=5f591cce58adc60012f342c5&product=sop' async='async'></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161189280-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161189280-1');
+    </script>
+
+
+ <!-- Hotjar Tracking Code for https://smartinternz.com/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1735161,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    
+    <!--<script type="text/javascript"> var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"3beb4b5cf8def8ca59f84994be43531a4432e4c4aabafd36bc2ddfff59403f79ad01f27f219d594ba5ad42027dff434f", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>"); </script> -->
+
+
+    <style>
+        .whatsapp_red {
+            cursor: pointer;
+        }
+        .back_icons{
+            background-color: #f4c71e;
+            padding: 10px 18px;
+            border-radius: 3px;
+            color: #060606;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .whats_logo_know {
+            background-color: #060606;
+            padding: 7px;
+            margin-right: -5px;
+            margin-left: 28px;
+            border-radius: 2px;
+            height: 48px;
+        }
+        .btn-kr {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0px;
+            border-radius: 3px;
+            background-color: #58d84d;
+            border: 0px;
+            padding: 11px 20px;
+        }
+
+        .discrip span {
+            font-size: 14px !important;
+            font-family: "Montserrat", sans-serif !important;
+            color: #6f7577 !important;
+        }
+        .discrip img{
+            width: 100%;
+            padding: 0px 20px;
+            /*box-shadow: 0 4px 21px 0px #00000099;*/
+            border-radius: 5px;
+        }
+        .discrip {
+            font-size: 14px !important;
+            font-family: "Montserrat", sans-serif !important;
+            font-weight: 500 !important;
+            color: #6f7577 !important;
+            box-shadow: 0px 0px 0px #ffff;
+            border:0px;
+            padding:0px;
+        }
+        .discrip p{
+            font-size: 14px !important;
+            font-family: "Montserrat", sans-serif !important;
+            font-weight: 500 !important;
+            color: #6f7577 !important;
+        }
+        .discrip iframe{
+            width:100%;
+        }
+        .discrip video{
+            width:100%;
+        }
+
+        .btn-enroll{
+            font-weight: 500;
+            padding: 10px 20px;
+        }
+        .skill-guide li{
+            line-height: 2.5;
+            cursor: pointer;
+            display: inline-flex;
+            padding: 0px 22px;
+            margin-bottom: 7px;
+            background: #427bff;
+            color: #ffffff;
+            border: 1px solid #427bff;
+        }
+        .border-secondary{
+            border: 0px !important;
+        }
+        .classy-nav-container{
+            
+        }
+        #tree_view_display{
+            background-color: #ffff;
+            padding: 10px 0px;
+        }
+            .test_coll{
+                margin-bottom: 12px !important;
+            }
+            .mentor_pro{
+            background-color: #cccccc69;
+            margin: 25px 0px;
+            padding: 35px 40px;
+            border-radius: 5px;
+        }
+        .mentor_pro h4{
+            font-size: 26px
+        }
+        .mentor_pro h5{ 
+            margin-bottom: 28px;
+            font-size: 30px;
+        }
+        .mentor_pro img{
+            border-radius: 10px;
+        }
+        .mentor_pro p{
+            font-size: 13px !important;
+        }
+        .tets_img{
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+
+
+        .w3-card-4{
+            border-radius: 12px;
+            box-shadow: 1px 1px 3px #ccc;
+            padding-bottom: 30px;
+        }
+        .w3-container{
+
+        }
+        .mentor_header{
+
+        }
+        .mentor_header h3{
+            background-color: #427bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 0px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .w3-center{
+            text-align:center;
+        }
+        .mentor_pic{
+            width: 150px;
+            border-radius: 50%;
+            margin: 25px 0px;
+        }
+        .w3-container p{
+
+        }
+        .w3-container h5{
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+        .guided-card{
+            padding: 0px;
+        }
+        .discrip ul li{
+            list-style: disc;
+            margin-left: 25px;
+        }
+        .half_star{
+            width: 20px;
+            margin-top: 1px;
+        }
+        .classy-nav-container{
+        background-color: #1f2464 !important;
+	
+	}
+    .guided-inn{
+        float: initial;
+    }
+    .img-fluid{
+
+    }
+    .image_card{
+        width: 100%;
+        height: 160px;
+        background-size: cover;
+    }
+    .card_details{
+        padding: 10px;
+    }
+    .guided-card:hover{
+        padding: 0px;
+        border: 1px solid #9a9a9a96;
+        box-shadow: 1px 1px 15px #9a9a9a;
+    }
+    .card {
+        border: none;
+        min-height: 300px;
+    }
+
+    @media (max-width: 600px){
+        .card {
+            min-height: 120px;
+        }
+        .image_card{
+            height: 120px;
+        }
+        .card_details{
+            padding: 0px;
+        }
+        .discrip img{
+            width: 100% !important;
+        }
+        .discrip span{
+            width: 100% !important;
+        }
+        .btn-enroll{
+            display: inline-block !important;
+        }
+        .guided-inn1{
+            display: block !important;
+        }
+    }
+
+    .btn-enroll{
+        cursor: pointer !important;
+    }
+    .ads_images{
+    border-radius: 5px;
+    width:100%;
+}
+.ads_btn{
+    font-weight: 500;
+    padding: 11px 20px;
+    border-radius: 0px;
+    background-color: #ffe600 !important;
+    border: 0px;
+    color: #161719 !important;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.ads_btn:hover{
+    background-color: #ccb911 !important;
+    color: #ffffff !important;
+}
+
+
+
+
+.guided-inn1 {
+    background: #fff;
+    position: relative;
+    border-radius: 1px;
+    border-bottom: 1px solid #1e236321;
+}
+.guide-cource {
+   
+    background-size: cover;
+    min-height: 160px;
+    width: 100%
+}
+.gui-pri {
+    padding: 6%;
+}
+.guided-inn h4 {
+    color: #333;
+    font-weight: 600;
+    float: left;
+}
+.guided-inn h5 {
+    color: #333;
+    font-weight: 500;
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.main_price{
+    color: #427bff; 
+}
+
+
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("fast");
+            });
+        });  
+    </script>
+
+    <script type="text/javascript" src="../../code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+        src="../../cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#testimonial-slider").owlCarousel({
+                items: 1,
+                itemsDesktop: [1000, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [768, 1],
+                pagination: true,
+                navigation: true,
+                navigationText: ["", ""],
+                slideSpeed: 1000,
+                autoPlay: true
+            });
+        });
+    </script>
+
+<link rel="stylesheet" href="../assets/vps/css/custom/company/admin_projects.css">
+</head>
+
+<body class="light-version">
+
+    <div style="background-color: #fff !important" class="badge-info">
+        <div class="guided-inn pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8">
+
+                        <a href="../guided-projects.html" ><i class="fa fa-arrow-left back_icons" ></i></a>
+                        <h2 class="mt-2">Brain tumor detection from MRI images</h2>
+                        <p>The project aims to build a model using CNN to detect brain tumors from MRI images.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="star-ul mt-2">
+                                    <li class="mr-1"><h6 class="star-p">4.8</h6></li>   
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    </li>
+                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill.png" alt="star-ratting"></a>
+                                    <li><img class="star-li pr-1 half_star" src="../assets/guided_projects/images/half-star.png" alt="star-ratting" ></a>
+                                    </li>
+                                    <span class="star-span pr-1">( 81 )</span><br>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mt-2">
+                                <ul>
+                                    <li class=""><img class="star-li pt-1" src="../assets/guided_projects/images/guided-inn1.png"
+                                            alt="guided-inn1">
+                                        <h6>10 Hrs</h6>
+                                    </li>
+                                    <li class="">
+                                                                            <img class="star-li pl-3 pt-1" src="../assets/guided_projects/images/Basic.png"  alt="guided-inn1">
+                                    
+
+                                  
+                                        <h6>Basic</h6>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 col-sm-12 col-md-4 text-left">
+                        <div class="guided-inn1 mt-0">
+                            <div class="row"> 
+                                <div class="col-md-12 col-12 mb-2">
+                                    <div class="guide-cource" style="background-image: url(../images/mentor_logo/thumbs/1602322941Brain_tumor.png);"></div>
+                                </div>
+                                <div class="gui-pri">
+                                    <div class="col-md-12 col-12 mb-2">
+                                        <h4 class="main_price"> INR 999</h4>&nbsp;&nbsp;
+                                        <h5><s>INR 1998</s><span class="pl-2">50% OFF</span></h5> 
+                                        
+                                    </div>
+                                    <div class="col-md-12 col-12 text-center">
+                                    	
+
+                                        
+
+
+                                            <a class="btn btn-primary btn-enroll btn-block" href="../student-logine82a.html?role=reg" >Enroll Now</a>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="guided-left">
+                <div class="">
+                    <div class="col-md-8 mt-3">
+
+                        <div class="papper_shades">
+                            <h5 class="mt-4">Project Description</h5>
+                            <div class="discrip">
+                                <span id="docs-internal-guid-82b13f59-7fff-69f4-6535-193a7cdcf4ef"><p dir="ltr" style="line-height:1.295;text-align: justify;margin-top:0pt;margin-bottom:8pt;"><span style="font-size: 12pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Brain tumor identification is a really challenging task in the early stages of life. These days the issue of brain tumor automatic identification is of great interest. A tumor is the unusual growth of the tissues. A brain tumor is a number of unnecessary cells growing in the brain or central spinal canal.&nbsp; It is the unrestrained progress of cancer cells in any portion of the body. </span></p><p dir="ltr" style="line-height:1.295;text-align: justify;margin-top:0pt;margin-bottom:8pt;"><span style="font-size: 12pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Deep learning techniques can be used in order to detect the brain tumor of a patient using the MRI images of a patient’s brain. In this application, we are helping the doctors and patients to classify the type of scan for the specific image given with the help of Neural Networks and store the patient's data.</span></p><p dir="ltr" style="line-height:1.295;text-align: justify;margin-top:0pt;margin-bottom:8pt;"><span style="font-size:12pt;font-family:Calibri,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Architecture:</span><span style="font-size:12pt;font-family:Calibri,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&nbsp;</span></p><p dir="ltr" style="line-height:1.295;text-align: justify;margin-top:0pt;margin-bottom:8pt;"><span style="font-size: 12pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><span id="docs-internal-guid-5edf1161-7fff-7ec7-c35a-bed94854764e"></span></span></p><p dir="ltr" style="line-height:1.295;text-align: justify;margin-top:0pt;margin-bottom:8pt;"><span style="font-size:12pt;font-family:Calibri,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:675px;height:233px;"><img src="https://lh6.googleusercontent.com/snOZxU0tZWc3o8bXY8U3DPDJvqbsb2sooO7MWRRBPKU1TtgsKr8f5gesccep_ZaFAbI1z-5T0qZLhqFGYalig5piMMSY12Bex2s8rqvZwXYWxMuM1VGKSGuzYHqEAcyNVesPaqJ9" width="675" height="233" style="margin-left:0px;margin-top:0px;"></span></span></p><div><span style="font-size: 12pt; font-family: Calibri, sans-serif; color: rgb(0, 0, 0); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><br></span></div></span>                            </div>
+                        </div>    
+                          <br>              
+                        <h5 class="mt-4">Project Activities</h5>
+                        <div class="papper_shades">
+                            <div id="tree_view_display" class="span3"></div>
+                        </div>     
+                        <br>    
+                    </div> 
+                    
+                    <div class="col-md-4 mt-5">
+                        <div class="guided-cert">
+                            <div class="badge-con">
+                                <h5>Skills you will develop</h5><br>
+                                <ul class="skill-guide mt-2">
+                                                                    <li>CNN</li>
+                                                                    <li>Flask integration</li>
+                                                                    <li>Tensorflow</li>
+                                                                    <li>Python-Flask</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                           <br>          
+                        <div class="w3-card-4 w3-dark-grey">
+
+                            <div class="w3-container w3-center">
+                                <div class="mentor_header"><h3>Mentor</h3></div>
+                                
+                                 
+                                    <img src="../images/mentor_logo/thumbs/1601623100Untitled_design_-_2020-10-02T124759_379.png" alt="Mahankali Surya Tej" class="mentor_pic">
+                                     
+                                <h5>Mahankali Surya Tej</h5>
+                                <p class="guided-con-p">ML Engineer</p>
+                                <p class="bold">Mentor Rating <img class="mr-1 ml-2" src="../assets/guided_projects/images/star-fill.png" alt="star-fill">4.8 / 5
+                                <span class="guided-con-h6-span">(6)</span></p>
+                                <p class="guided-con-span"><img class="pr-2" src="../assets/guided_projects/images/guided-inn3.png"
+                                        alt="guided-inn3">446
+                                    Learners</p>
+                                <p class="guided-con-span"><img class="pr-2" src="../assets/guided_projects/images/guided-inn4.png"
+                                        alt="guided-inn3">13
+                                    Projects</p>
+                                
+                            </div>
+
+                        </div>
+                        <br>  
+                        
+                        <a  href="../global-remote-internship-program.html" target="_blank"><img src="../assets/grip_ad.png" class="ads_images"></a>
+                        
+                        <a class="ads_btn btn btn-primary btn-block" href="../global-remote-internship-program.html" target="_blank">Register Now</a>
+                       
+
+                    </div>
+
+                </div> 
+              
+                    <div class="">                   
+                    <div class="col-md-12 mt-3">
+                   
+                            <section class="pt-5 pb-4">
+                                <div class="container guided-slider">
+                                
+                                    <div class="row">
+                                        <div class="col-8">
+                                        
+                                           
+                                        </div>
+                                        <div class="col-12 text-right">
+                                        <h5 class="mb-3 text-left">Relevant Projects</h5>
+                                            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2"
+                                                role="button" data-slide="prev">
+                                                <i class="fa fa-arrow-left"></i>
+                                            </a>
+                                            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2"
+                                                role="button" data-slide="next">
+                                                <i class="fa fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="col-12">
+                                            <div id="carouselExampleIndicators2" class="carousel slide"
+                                                data-ride="carousel">
+
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="row">
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="pdf-automation.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1612438127PDF_Automation-removebg-preview.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">PDF Automation</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(91)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">2 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="excel-automation.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1612430865Excel.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Excel Automation</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(87)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="implement-deep-learning-techniques-to-detect-malaria-duplicate-.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1602323061Malaria.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Implement Deep Learning Techniques to detect Malaria using IBM Cloud</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(99)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="iceberg-detection-in-satellite-images-duplicate-.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1602324615iceberg_detection_1.png);">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Iceberg Detection in Satellite Images using IBM Watson Studio</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(77)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                        
+
+
+                                                           
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="row">
+
+                                                                                                                    <div class="col-md-3 mb-3">
+                                                                <a href="web-automation-.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609272389web.png);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Web Application Automation </h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(92)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">8 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="data-scraping-using-blue-prism.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609268464Da.png);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Data Scraping Using Blue Prism</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(92)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">10 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="g-mail-automation.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609258082Gmail.png);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">E-Mail Automation</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(70)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">10 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                                                                        <div class="col-md-3 mb-3">
+                                                                <a href="website-for-travel-tourism-sector.html" class="guided-card">
+                                                                <div class="card">
+                                                                    <div class="row">
+
+                                                                    
+                                                                   
+                                                                        
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="image_card" style="background-image: url(../images/mentor_logo/thumbs/1609256308Travel_Tourism.jpg);">
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-12 col-6">
+                                                                            <div class="card_details">
+                                                                                <h6 class="mt-3">Website for Travel & Tourism Sector</h6>
+                                                                                <ul class="star-ul mt-2">
+                                                                                    <li class="mr-2"><h6 class="course-p">4.5</h6></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <li><img class="star-li pr-1" src="../assets/guided_projects/images/star-fill-mini.png" alt="star-ratting"></li>
+                                                                                    <span class="course-sp px-1 ">(99)</span><br>
+                                                                                </ul>
+                                                                                <p class="course-pp">10 hrs.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                                
+
+
+                                                        </div>
+                                                    </div> 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <div class="container">
+                            <br>
+                            <br>
+                                <h5 class="mb-3">Reviews</h5>
+                                <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="guided-review">
+                                                <div class="col-md-2 p-0 col-2">
+                                                    <img src="../assets/testimonials/1.png" class="tets_img" alt="guided-abt1">
+                                                </div>
+                                                <div class="col-md-10 col-10">
+                                                    <h6>SYED RAZA</h6>
+                                                    <p class="test_coll"><span>American University of Sharja, Sharja,UAE</span></p>
+                                                    <p>It was a fruitful experience. A clear road map
+                                                    was provided to follow throughout the
+                                                    project along with an in-depth introduction
+                                                    of the packages required. The guided labs
+                                                    were extremely helpful and easy to follow.</p>
+                                                </div>
+                                            </div>
+                                            <div class="guided-review">
+                                                <div class="col-md-2 p-0 col-2">
+                                                    <img src="../assets/testimonials/2.png" class="tets_img" alt="guided-abt1">
+                                                </div>
+                                                <div class="col-md-10 col-10">
+                                                    <h6>Harshitha Josyula</h6>
+                                                        <p  class="test_coll"><span>GITAM University,Hyderabad, India</span></p>
+
+                                                        <p>The Guided Projects were not only based on
+                                                        solving real world problems but were also really
+                                                        informative, the smartinternz platform has each
+                                                        and every step in detail and even though if we
+                                                        were stuck at any point the Mentors would help
+                                                        us to resolve all our queries. overall it was a
+
+                                                        great experience.</p>
+                                                </div>
+                                            </div>
+                                            <div class="guided-review">
+                                                <div class="col-md-2 p-0 col-2">
+                                                    <img src="../assets/testimonials/3.png" class="tets_img" alt="guided-abt1">
+                                                </div>
+                                                <div class="col-md-10 col-10">
+                                                    <h6>Anuraag Moharana</h6>
+                                                        <p class="test_coll"><span>College of Engineering and Technology, Bhubaneswar, Odisha, India</span></p>
+
+                                                        <p>I took Part of Aritificial Intelligence Guided
+                                                        Project from Smartinternz, it was a wonderful
+                                                        experience and highly motivating, It's a very
+                                                        innovative and smart platform for internships. It
+
+                                                        provides smarter ways of guiding and
+                                                        interacting with participants and educating
+                                                        through guided labs and projects. It really
+                                                        helped me in giving a boost to my career.</p>
+                                                </div>
+                                            </div>                         
+                                        </div>                                    
+                                </div>
+                               
+                            </div>    
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<!-- Mirrored from smartinternz.com/guided-project/brain-tumor-detection-from-mri-images by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 13:26:49 GMT -->
+</html>
+
+<script>    
+var base_url = "../index.html";
+var projectId = "71";
+</script>  
+
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../assets/bootstrap_tree/js/treeview.js"></script>
+<script src="../assets/vps/js/mentor/guided_projects_inner.js"></script>  
+
+<script id='pixel-script-poptin' src='../../cdn.popt.in/pixel797f.js?id=1969815f49b4d' async='true'></script>
+
+
+
+
+<style type='text/css'>
+.embeddedServiceHelpButton .helpButton .uiButton {
+background-color: #18265d;
+font-family: "Arial", sans-serif;
+}
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+outline: 1px solid #18265d;
+}
+.message{
+  background-color: #18265d;
+}
+h2[embeddedService-chatHeader_chatHeader]{
+  color: #fff;
+}
+</style>
+
+
+<script type='text/javascript' src='../../service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+var initESW = function(gslbBaseURL) {
+embedded_svc.settings.displayHelpButton = true; //Or false
+embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+// Settings for Chat
+//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+// Returns a valid button ID.
+//};
+//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+embedded_svc.settings.entryFeature = 'LiveAgent';
+
+embedded_svc.init(
+'https://thesmartbridge.my.salesforce.com/',
+'https://talento.force.com/',
+gslbBaseURL,
+'00D2y0000004goQ',
+'Talento',
+{
+baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
+deploymentId: '5722y00000003YS',
+buttonId: '5732y00000003lt',
+baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
+eswLiveAgentDevName: 'Talento',
+isOfflineSupportEnabled: true
+}
+);
+};
+
+if (!window.embedded_svc) {
+var s = document.createElement('script');
+s.setAttribute('src', '../../thesmartbridge.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+s.onload = function() {
+initESW(null);
+};
+document.body.appendChild(s);
+} else {
+initESW('https://service.force.com/');
+}
+</script>

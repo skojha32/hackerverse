@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from smartinternz.com/student-login?role=reg by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 13:26:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<title>Student Login</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<meta name="p:domain_verify" content="55c4ec39b8d9f7a35b5fafcd164c516d"/>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TV4Q7TH');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    '../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '356991988979960'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=356991988979960&amp;ev=PageView%20%20%20%20&amp;noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+
+    <script type='text/javascript' src='../platform-api.sharethis.com/js/sharethis.js#property=5f591cce58adc60012f342c5&product=sop' async='async'></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161189280-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161189280-1');
+    </script>
+
+    <!-- Hotjar Tracking Code for https://smartinternz.com/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1735161,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+	
+	<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vps/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="assets/vps/vps/style.css">
+	<link rel="stylesheet" href="assets/vps/css/custom/student_css.css">
+	<link rel="stylesheet" href="assets/vps/vps/responsive.css">
+
+	<link rel="stylesheet" href="public/alertify_lib/css/alertify.min.css" />
+	<link rel="stylesheet" href="public/alertify_lib/css/themes/default.min.css" />
+
+
+	
+	<style>
+	.alertify-notifier .ajs-message{
+		font-size:14px !important;
+	}
+	.sb_logo{
+		width: 20%;
+		padding-top: 36px;
+	}
+	.reg_text{
+		min-height: 40px;
+		font-size: 14px !important;
+	}
+	#c_code{
+		border: 1px solid #c5cdd275 !important;
+		background-color: white !important;
+		font-family: "Montserrat", sans-serif !important;
+		font-weight: 400;
+		font-size: 14px !important;
+		border-right: 0px !important;
+		padding-top: 9px;
+		text-decoration: none !important;
+		color: #231d33 !important;
+		border-top-left-radius: 4px !important;
+		border-bottom-left-radius: 4px !important;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		height: 40px;
+	}
+	.mobile_validation{
+		border: 1px solid #c5cdd275;		
+		background-color: white !important;
+		font-family: "Montserrat", sans-serif !important;
+		font-weight: 400;
+		font-size: 16px !important;
+		border-radius: 4px !important;
+		border-left: 0px !important;
+		border-bottom-left-radius: 0px !important;
+		border-top-left-radius: 0px !important;
+		font-size: 14px !important;
+		width: 100%;
+		padding-left: 15px;
+	}
+	.sel_cr{
+		
+	}
+	.flex{
+		display:flex !important;
+	}
+	</style>
+
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<script src="../www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+
+<body class="light-version">
+   
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form_container">
+			<div class="header_title" align="center"><a href="index.html"><img src="assets/logo/smartinternz.png" class="sb_logo"></a></div>
+				<div class="divs_form">
+					<div class="row">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-8">
+							<div class="heading black-heading">
+							   <div class="custom-links">
+								   <span class="login-tab-color   " id="login_tabs"> Login</span>
+								   <span class="login-tab-color  login-active" id="registration_tabs" >Registration </span>
+							   </div>
+							</div>
+							
+							<form class="login_form" id="login_form" style="display:none" onsubmit="return false;" >
+								<br>
+								<br>
+								<input type="text" class=" login_text login_form_text" id="username" name="username" placeholder="Email">
+								<input type="hidden"  id="role" name="role" value="login">
+								<div class="flexx" id="flexx">
+									<input type="password" class=" custom_passwor_text "  id="login_password" name="login_password" placeholder="Password">
+									<a class="btn btn-link custom-forgot-password" id="forgotpassword_tabs" style="border-bottom: 0.5px solid grey;font-size:11px">Forgot Password?</a>
+								</div>
+
+								<br/>
+									<div class="g-recaptcha" data-sitekey="6LfFV_cUAAAAAPc_NoJc9Y-RdtIyi6BQyL5RQphL"></div>
+									<p id="alert_recaptcha"></p>
+      							<br/>
+
+								  <div class="form-group home-label" style="font-size:11px">By registering you agree to our <a href="terms-conditions.html" >Terms of Use</a>, <a href="privacy-policy.html">Privacy Policy</a> and <a href="data-collection-statement.html">Data Collection Statement</a>.</div>
+
+
+								<button type="login_password" class="btn btn-primary custom-login-btn" style="width: 100%;">Login</button>
+								<br><br>
+								<p id="login_alert_divs"></p>
+							</form>
+						
+							<form class="login_form" id="forgot_form" style="display:none"  onsubmit="return false;">
+								<br>
+								<br>
+
+								<input type="text" class=" login_text"  id="activation_username" name="activation_username" placeholder="Email">
+								<input type="hidden" class=" login_text"  id="role" name="role" value="forgot_password">
+								<button type="submit" class="btn btn-primary custom-login-btn" style="width: 100%;">Next</button>
+								<br>
+								<br>
+								<p id="forgot_alert_divs"></p>
+							</form>
+							
+							
+							<form class="login_form" id="otp_forgot_form" style="display:none"  onsubmit="return false;">
+							<br>
+								<br>
+								<div class="custom-sub-title" style="text-align: center;">Your OTP is sent to your registered Email & Mobile No.</div>
+
+								<input type="text" class=" login_text"  id="otp_text" name="otp_text" placeholder="OTP">
+								<input type="hidden" class=" login_text"  id="role" name="role" value="otp_valid">
+								<input type="hidden" class=" login_text"  id="otp_email" name="otp_email" >
+								
+								<button type="submit" class="btn btn-primary custom-login-btn" style="width: 100%;">Activate Account</button>
+								<br>
+								<br>
+								<p id="otp_alert_divs"></p>
+							</form>
+							
+							
+							<form class="registration_form" id="registration_from"  style="" onsubmit="return false;">
+								
+								<div class="row">
+									<div class="col-sm-6  col-12">
+										<input type="text" class=" reg_text validation_forms" id="firstname" name="firstname" placeholder="First Name">
+										<input type="hidden" id="role" name="role" value="registration">
+									</div>
+									<div class="col-sm-6  col-12">
+										<input type="text" class=" reg_text validation_forms " id="lastname" name="lastname" placeholder="Last Name">
+									</div>
+									<div class="col-sm-12 col-12">
+										<input type="text" class=" reg_text validation_forms email_validation" id="email" name="email" placeholder="Email">
+									</div>
+									<div class="col-sm-12 col-12">
+										<div class="row">
+											<div class="col-sm-3 col-3">
+											<select id="country_code" name="country_code" class=" reg_text validation_forms">
+											<option value="1" title="US&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United States" valuessss="US">US&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United States</option>
+											<option value="61" title="AU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Australia" valuessss="AU">AU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Australia</option>
+											<option value="44" title="GB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United Kingdom" valuessss="GB">GB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United Kingdom</option>
+											<option value="91" title="IN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;India" valuessss="IN" selected="selected"  >IN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;India</option>
+											<option value="966" title="SA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saudi Arabia" valuessss="SA">SA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saudi Arabia</option>
+											<option value="971" title="AE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United Arab Emirates" valuessss="AE">AE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United Arab Emirates</option>
+											<option value="1" title="CA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Canada" valuessss="CA">CA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Canada</option>
+											<option value="65" title="SG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Singapore" valuessss="SG">SG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Singapore</option>
+											<option value="41" title="CH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Switzerland" valuessss="CH">CH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Switzerland</option>
+											<option value="27" title="ZA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Africa" valuessss="ZA">ZA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Africa</option>
+											<option valuessss="" disabled="">--------------------------------------------------</option>
+											<option value="93" title="AF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Afghanistan" valuessss="AF">AF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Afghanistan</option>
+											<option value="358" title="AX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Aland Islands" valuessss="AX">AX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Aland Islands</option>
+											<option value="355" title="AL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Albania" valuessss="AL">AL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Albania</option>
+											<option value="213" title="DZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Algeria" valuessss="DZ">DZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Algeria</option>
+											<option value="1684" title="AS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;American Samoa" valuessss="AS">AS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;American Samoa</option>
+											<option value="376" title="AD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Andorra" valuessss="AD">AD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Andorra</option>
+											<option value="244" title="AO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Angola" valuessss="AO">AO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Angola</option>
+											<option value="1264" title="AI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Anguilla" valuessss="AI">AI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Anguilla</option>
+											<option value="672" title="AQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Antarctica" valuessss="AQ">AQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Antarctica</option>
+											<option value="1268" title="AG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Antigua and Barbuda" valuessss="AG">AG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Antigua and Barbuda</option>
+											<option value="54" title="AR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Argentina" valuessss="AR">AR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Argentina</option>
+											<option value="374" title="AM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Armenia" valuessss="AM">AM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Armenia</option>
+											<option value="297" title="AW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Aruba" valuessss="AW">AW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Aruba</option>
+											<option value="43" title="AT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Austria" valuessss="AT">AT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Austria</option>
+											<option value="994" title="AZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Azerbaijan" valuessss="AZ">AZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Azerbaijan</option>
+											<option value="1242" title="BS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bahamas" valuessss="BS">BS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bahamas</option>
+											<option value="973" title="BH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bahrain" valuessss="BH">BH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bahrain</option>
+											<option value="880" title="BD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bangladesh" valuessss="BD">BD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bangladesh</option>
+											<option value="1246" title="BB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Barbados" valuessss="BB">BB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Barbados</option>
+											<option value="375" title="BY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Belarus" valuessss="BY">BY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Belarus</option>
+											<option value="32" title="BE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Belgium" valuessss="BE">BE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Belgium</option>
+											<option value="501" title="BZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Belize" valuessss="BZ">BZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Belize</option>
+											<option value="229" title="BJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Benin" valuessss="BJ">BJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Benin</option>
+											<option value="1441" title="BM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bermuda" valuessss="BM">BM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bermuda</option>
+											<option value="975" title="BT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bhutan" valuessss="BT">BT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bhutan</option>
+											<option value="591" title="BO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bolivia" valuessss="BO">BO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bolivia</option>
+											<option value="387" title="BA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bosnia and Herzegovina" valuessss="BA">BA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bosnia and Herzegovina</option>
+											<option value="267" title="BW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Botswana" valuessss="BW">BW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Botswana</option>
+											<option value="47" title="BV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bouvet Island" valuessss="BV">BV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bouvet Island</option>
+											<option value="55" title="BR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Brazil" valuessss="BR">BR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Brazil</option>
+											<option value="246" title="IO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;British Indian Ocean Territory" valuessss="IO">IO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;British Indian Ocean Territory</option>
+											<option value="673" title="BN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Brunei Darussalam" valuessss="BN">BN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Brunei Darussalam</option>
+											<option value="359" title="BG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bulgaria" valuessss="BG">BG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Bulgaria</option>
+											<option value="226" title="BF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Burkina Faso" valuessss="BF">BF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Burkina Faso</option>
+											<option value="257" title="BI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Burundi" valuessss="BI">BI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Burundi</option>
+											<option value="855" title="KH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cambodia" valuessss="KH">KH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cambodia</option>
+											<option value="237" title="CM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cameroon" valuessss="CM">CM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cameroon</option>
+											<option value="238" title="CV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cape Verde" valuessss="CV">CV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cape Verde</option>
+											<option value="599" title="BQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Caribbean Netherlands " valuessss="BQ">BQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Caribbean Netherlands </option>
+											<option value="1345" title="KY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cayman Islands" valuessss="KY">KY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cayman Islands</option>
+											<option value="236" title="CF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Central African Republic" valuessss="CF">CF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Central African Republic</option>
+											<option value="235" title="TD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Chad" valuessss="TD">TD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Chad</option>
+											<option value="56" title="CL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Chile" valuessss="CL">CL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Chile</option>
+											<option value="86" title="CN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;China" valuessss="CN">CN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;China</option>
+											<option value="61" title="CX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Christmas Island" valuessss="CX">CX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Christmas Island</option>
+											<option value="61" title="CC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cocos (Keeling) Islands" valuessss="CC">CC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cocos (Keeling) Islands</option>
+											<option value="57" title="CO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Colombia" valuessss="CO">CO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Colombia</option>
+											<option value="269" title="KM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Comoros" valuessss="KM">KM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Comoros</option>
+											<option value="242" title="CG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Congo" valuessss="CG">CG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Congo</option>
+											<option value="243" title="CD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Congo, Democratic Republic of" valuessss="CD">CD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Congo, Democratic Republic of</option>
+											<option value="682" title="CK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cook Islands" valuessss="CK">CK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cook Islands</option>
+											<option value="506" title="CR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Costa Rica" valuessss="CR">CR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Costa Rica</option>
+											<option value="225" title="CI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cote d'Ivoire" valuessss="CI">CI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cote d'Ivoire</option>
+											<option value="385" title="HR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Croatia" valuessss="HR">HR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Croatia</option>
+											<option value="53" title="CU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cuba" valuessss="CU">CU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cuba</option>
+											<option value="599" title="CW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Curacao" valuessss="CW">CW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Curacao</option>
+											<option value="357" title="CY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cyprus" valuessss="CY">CY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Cyprus</option>
+											<option value="420" title="CZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Czech Republic" valuessss="CZ">CZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Czech Republic</option>
+											<option value="45" title="DK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Denmark" valuessss="DK">DK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Denmark</option>
+											<option value="253" title="DJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Djibouti" valuessss="DJ">DJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Djibouti</option>
+											<option value="1767" title="DM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Dominica" valuessss="DM">DM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Dominica</option>
+											<option value="1809" title="DO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Dominican Republic" valuessss="DO">DO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Dominican Republic</option>
+											<option value="593" title="EC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ecuador" valuessss="EC">EC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ecuador</option>
+											<option value="20" title="EG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Egypt" valuessss="EG">EG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Egypt</option>
+											<option value="503" title="SV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;El Salvador" valuessss="SV">SV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;El Salvador</option>
+											<option value="240" title="GQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Equatorial Guinea" valuessss="GQ">GQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Equatorial Guinea</option>
+											<option value="291" title="ER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Eritrea" valuessss="ER">ER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Eritrea</option>
+											<option value="372" title="EE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Estonia" valuessss="EE">EE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Estonia</option>
+											<option value="251" title="ET&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ethiopia" valuessss="ET">ET&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ethiopia</option>
+											<option value="500" title="FK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Falkland Islands" valuessss="FK">FK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Falkland Islands</option>
+											<option value="298" title="FO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Faroe Islands" valuessss="FO">FO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Faroe Islands</option>
+											<option value="679" title="FJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Fiji" valuessss="FJ">FJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Fiji</option>
+											<option value="358" title="FI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Finland" valuessss="FI">FI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Finland</option>
+											<option value="33" title="FR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;France" valuessss="FR">FR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;France</option>
+											<option value="594" title="GF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;French Guiana" valuessss="GF">GF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;French Guiana</option>
+											<option value="689" title="PF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;French Polynesia" valuessss="PF">PF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;French Polynesia</option>
+											<option value="262" title="TF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;French Southern Territories" valuessss="TF">TF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;French Southern Territories</option>
+											<option value="241" title="GA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Gabon" valuessss="GA">GA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Gabon</option>
+											<option value="220" title="GM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Gambia" valuessss="GM">GM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Gambia</option>
+											<option value="995" title="GE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Georgia" valuessss="GE">GE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Georgia</option>
+											<option value="49" title="DE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Germany" valuessss="DE">DE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Germany</option>
+											<option value="233" title="GH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ghana" valuessss="GH">GH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ghana</option>
+											<option value="350" title="GI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Gibraltar" valuessss="GI">GI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Gibraltar</option>
+											<option value="30" title="GR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Greece" valuessss="GR">GR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Greece</option>
+											<option value="299" title="GL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Greenland" valuessss="GL">GL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Greenland</option>
+											<option value="1473" title="GD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Grenada" valuessss="GD">GD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Grenada</option>
+											<option value="590" title="GP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guadeloupe" valuessss="GP">GP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guadeloupe</option>
+											<option value="1671" title="GU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guam" valuessss="GU">GU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guam</option>
+											<option value="502" title="GT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guatemala" valuessss="GT">GT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guatemala</option>
+											<option value="44" title="GG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guernsey" valuessss="GG">GG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guernsey</option>
+											<option value="224" title="GN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guinea" valuessss="GN">GN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guinea</option>
+											<option value="245" title="GW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guinea-Bissau" valuessss="GW">GW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guinea-Bissau</option>
+											<option value="592" title="GY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guyana" valuessss="GY">GY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Guyana</option>
+											<option value="509" title="HT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Haiti" valuessss="HT">HT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Haiti</option>
+											<option value="null" title="HM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Heard and McDonald Islands" valuessss="HM">HM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Heard and McDonald Islands</option>
+											<option value="504" title="HN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Honduras" valuessss="HN">HN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Honduras</option>
+											<option value="852" title="HK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Hong Kong" valuessss="HK">HK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Hong Kong</option>
+											<option value="36" title="HU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Hungary" valuessss="HU">HU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Hungary</option>
+											<option value="354" title="IS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Iceland" valuessss="IS">IS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Iceland</option>
+											<option value="62" title="ID&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Indonesia" valuessss="ID">ID&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Indonesia</option>
+											<option value="98" title="IR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Iran" valuessss="IR">IR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Iran</option>
+											<option value="964" title="IQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Iraq" valuessss="IQ">IQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Iraq</option>
+											<option value="353" title="IE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ireland" valuessss="IE">IE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ireland</option>
+											<option value="44" title="IM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Isle of Man" valuessss="IM">IM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Isle of Man</option>
+											<option value="972" title="IL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Israel" valuessss="IL">IL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Israel</option>
+											<option value="39" title="IT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Italy" valuessss="IT">IT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Italy</option>
+											<option value="1876" title="JM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Jamaica" valuessss="JM">JM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Jamaica</option>
+											<option value="81" title="JP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Japan" valuessss="JP">JP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Japan</option>
+											<option value="44" title="JE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Jersey" valuessss="JE">JE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Jersey</option>
+											<option value="962" title="JO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Jordan" valuessss="JO">JO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Jordan</option>
+											<option value="7" title="KZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kazakhstan" valuessss="KZ">KZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kazakhstan</option>
+											<option value="254" title="KE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kenya" valuessss="KE">KE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kenya</option>
+											<option value="686" title="KI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kiribati" valuessss="KI">KI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kiribati</option>
+											<option value="965" title="KW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kuwait" valuessss="KW">KW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kuwait</option>
+											<option value="996" title="KG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kyrgyzstan" valuessss="KG">KG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Kyrgyzstan</option>
+											<option value="856" title="LA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lao People's Democratic Republic" valuessss="LA">LA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lao People's Democratic Republic</option>
+											<option value="371" title="LV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Latvia" valuessss="LV">LV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Latvia</option>
+											<option value="961" title="LB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lebanon" valuessss="LB">LB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lebanon</option>
+											<option value="266" title="LS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lesotho" valuessss="LS">LS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lesotho</option>
+											<option value="231" title="LR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Liberia" valuessss="LR">LR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Liberia</option>
+											<option value="218" title="LY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Libya" valuessss="LY">LY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Libya</option>
+											<option value="423" title="LI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Liechtenstein" valuessss="LI">LI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Liechtenstein</option>
+											<option value="370" title="LT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lithuania" valuessss="LT">LT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lithuania</option>
+											<option value="352" title="LU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Luxembourg" valuessss="LU">LU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Luxembourg</option>
+											<option value="853" title="MO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Macau" valuessss="MO">MO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Macau</option>
+											<option value="389" title="MK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Macedonia" valuessss="MK">MK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Macedonia</option>
+											<option value="261" title="MG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Madagascar" valuessss="MG">MG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Madagascar</option>
+											<option value="265" title="MW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Malawi" valuessss="MW">MW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Malawi</option>
+											<option value="60" title="MY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Malaysia" valuessss="MY">MY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Malaysia</option>
+											<option value="960" title="MV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Maldives" valuessss="MV">MV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Maldives</option>
+											<option value="223" title="ML&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mali" valuessss="ML">ML&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mali</option>
+											<option value="356" title="MT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Malta" valuessss="MT">MT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Malta</option>
+											<option value="692" title="MH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Marshall Islands" valuessss="MH">MH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Marshall Islands</option>
+											<option value="596" title="MQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Martinique" valuessss="MQ">MQ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Martinique</option>
+											<option value="222" title="MR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mauritania" valuessss="MR">MR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mauritania</option>
+											<option value="230" title="MU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mauritius" valuessss="MU">MU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mauritius</option>
+											<option value="262" title="YT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mayotte" valuessss="YT">YT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mayotte</option>
+											<option value="52" title="MX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mexico" valuessss="MX">MX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mexico</option>
+											<option value="691" title="FM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Micronesia, Federated States of" valuessss="FM">FM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Micronesia, Federated States of</option>
+											<option value="373" title="MD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Moldova" valuessss="MD">MD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Moldova</option>
+											<option value="377" title="MC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Monaco" valuessss="MC">MC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Monaco</option>
+											<option value="976" title="MN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mongolia" valuessss="MN">MN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mongolia</option>
+											<option value="382" title="ME&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Montenegro" valuessss="ME">ME&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Montenegro</option>
+											<option value="1664" title="MS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Montserrat" valuessss="MS">MS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Montserrat</option>
+											<option value="212" title="MA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Morocco" valuessss="MA">MA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Morocco</option>
+											<option value="258" title="MZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mozambique" valuessss="MZ">MZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Mozambique</option>
+											<option value="95" title="MM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Myanmar" valuessss="MM">MM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Myanmar</option>
+											<option value="264" title="NA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Namibia" valuessss="NA">NA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Namibia</option>
+											<option value="674" title="NR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nauru" valuessss="NR">NR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nauru</option>
+											<option value="977" title="NP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nepal" valuessss="NP">NP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nepal</option>
+											<option value="31" title="NL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Netherlands" valuessss="NL">NL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Netherlands</option>
+											<option value="687" title="NC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;New Caledonia" valuessss="NC">NC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;New Caledonia</option>
+											<option value="64" title="NZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;New Zealand" valuessss="NZ">NZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;New Zealand</option>
+											<option value="505" title="NI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nicaragua" valuessss="NI">NI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nicaragua</option>
+											<option value="227" title="NE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Niger" valuessss="NE">NE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Niger</option>
+											<option value="234" title="NG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nigeria" valuessss="NG">NG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Nigeria</option>
+											<option value="683" title="NU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Niue" valuessss="NU">NU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Niue</option>
+											<option value="672" title="NF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Norfolk Island" valuessss="NF">NF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Norfolk Island</option>
+											<option value="850" title="KP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;North Korea" valuessss="KP">KP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;North Korea</option>
+											<option value="1670" title="MP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Northern Mariana Islands" valuessss="MP">MP&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Northern Mariana Islands</option>
+											<option value="47" title="NO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Norway" valuessss="NO">NO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Norway</option>
+											<option value="968" title="OM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Oman" valuessss="OM">OM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Oman</option>
+											<option value="92" title="PK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Pakistan" valuessss="PK">PK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Pakistan</option>
+											<option value="680" title="PW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Palau" valuessss="PW">PW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Palau</option>
+											<option value="970" title="PS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Palestinian Territory, Occupied" valuessss="PS">PS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Palestinian Territory, Occupied</option>
+											<option value="507" title="PA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Panama" valuessss="PA">PA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Panama</option>
+											<option value="675" title="PG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Papua New Guinea" valuessss="PG">PG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Papua New Guinea</option>
+											<option value="595" title="PY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Paraguay" valuessss="PY">PY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Paraguay</option>
+											<option value="51" title="PE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Peru" valuessss="PE">PE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Peru</option>
+											<option value="63" title="PH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Philippines" valuessss="PH">PH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Philippines</option>
+											<option value="870" title="PN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Pitcairn" valuessss="PN">PN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Pitcairn</option>
+											<option value="48" title="PL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Poland" valuessss="PL">PL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Poland</option>
+											<option value="351" title="PT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Portugal" valuessss="PT">PT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Portugal</option>
+											<option value="1" title="PR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Puerto Rico" valuessss="PR">PR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Puerto Rico</option>
+											<option value="974" title="QA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Qatar" valuessss="QA">QA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Qatar</option>
+											<option value="262" title="RE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Reunion" valuessss="RE">RE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Reunion</option>
+											<option value="40" title="RO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Romania" valuessss="RO">RO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Romania</option>
+											<option value="7" title="RU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Russian Federation" valuessss="RU">RU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Russian Federation</option>
+											<option value="250" title="RW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Rwanda" valuessss="RW">RW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Rwanda</option>
+											<option value="590" title="BL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Barthelemy" valuessss="BL">BL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Barthelemy</option>
+											<option value="290" title="SH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Helena" valuessss="SH">SH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Helena</option>
+											<option value="1869" title="KN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Kitts and Nevis" valuessss="KN">KN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Kitts and Nevis</option>
+											<option value="1758" title="LC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Lucia" valuessss="LC">LC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Lucia</option>
+											<option value="1784" title="VC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Vincent and the Grenadines" valuessss="VC">VC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint Vincent and the Grenadines</option>
+											<option value="1599" title="MF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint-Martin (France)" valuessss="MF">MF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint-Martin (France)</option>
+											<option value="1721" title="SX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint-Martin (Pays-Bas)" valuessss="SX">SX&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Saint-Martin (Pays-Bas)</option>
+											<option value="685" title="WS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Samoa" valuessss="WS">WS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Samoa</option>
+											<option value="378" title="SM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;San Marino" valuessss="SM">SM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;San Marino</option>
+											<option value="239" title="ST&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sao Tome and Principe" valuessss="ST">ST&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sao Tome and Principe</option>
+											<option value="221" title="SN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Senegal" valuessss="SN">SN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Senegal</option>
+											<option value="381" title="RS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Serbia" valuessss="RS">RS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Serbia</option>
+											<option value="248" title="SC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Seychelles" valuessss="SC">SC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Seychelles</option>
+											<option value="232" title="SL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sierra Leone" valuessss="SL">SL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sierra Leone</option>
+											<option value="421" title="SK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Slovakia (Slovak Republic)" valuessss="SK">SK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Slovakia (Slovak Republic)</option>
+											<option value="386" title="SI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Slovenia" valuessss="SI">SI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Slovenia</option>
+											<option value="677" title="SB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Solomon Islands" valuessss="SB">SB&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Solomon Islands</option>
+											<option value="252" title="SO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Somalia" valuessss="SO">SO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Somalia</option>
+											<option value="500" title="GS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Georgia and the South Sandwich Islands" valuessss="GS">GS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Georgia and the South Sandwich Islands</option>
+											<option value="82" title="KR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Korea" valuessss="KR">KR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Korea</option>
+											<option value="211" title="SS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Sudan" valuessss="SS">SS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;South Sudan</option>
+											<option value="34" title="ES&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Spain" valuessss="ES">ES&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Spain</option>
+											<option value="94" title="LK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sri Lanka" valuessss="LK">LK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sri Lanka</option>
+											<option value="508" title="PM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;St. Pierre and Miquelon" valuessss="PM">PM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;St. Pierre and Miquelon</option>
+											<option value="249" title="SD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sudan" valuessss="SD">SD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sudan</option>
+											<option value="597" title="SR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Suriname" valuessss="SR">SR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Suriname</option>
+											<option value="47" title="SJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Svalbard and Jan Mayen Islands" valuessss="SJ">SJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Svalbard and Jan Mayen Islands</option>
+											<option value="268" title="SZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Swaziland" valuessss="SZ">SZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Swaziland</option>
+											<option value="46" title="SE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sweden" valuessss="SE">SE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Sweden</option>
+											<option value="963" title="SY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Syria" valuessss="SY">SY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Syria</option>
+											<option value="886" title="TW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Taiwan" valuessss="TW">TW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Taiwan</option>
+											<option value="992" title="TJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tajikistan" valuessss="TJ">TJ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tajikistan</option>
+											<option value="255" title="TZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tanzania" valuessss="TZ">TZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tanzania</option>
+											<option value="66" title="TH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Thailand" valuessss="TH">TH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Thailand</option>
+											<option value="670" title="TL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Timor-Leste" valuessss="TL">TL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Timor-Leste</option>
+											<option value="228" title="TG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Togo" valuessss="TG">TG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Togo</option>
+											<option value="690" title="TK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tokelau" valuessss="TK">TK&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tokelau</option>
+											<option value="676" title="TO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tonga" valuessss="TO">TO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tonga</option>
+											<option value="1868" title="TT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Trinidad and Tobago" valuessss="TT">TT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Trinidad and Tobago</option>
+											<option value="216" title="TN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tunisia" valuessss="TN">TN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tunisia</option>
+											<option value="90" title="TR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Turkey" valuessss="TR">TR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Turkey</option>
+											<option value="993" title="TM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Turkmenistan" valuessss="TM">TM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Turkmenistan</option>
+											<option value="1649" title="TC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Turks and Caicos Islands" valuessss="TC">TC&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Turks and Caicos Islands</option>
+											<option value="688" title="TV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tuvalu" valuessss="TV">TV&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Tuvalu</option>
+											<option value="256" title="UG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Uganda" valuessss="UG">UG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Uganda</option>
+											<option value="380" title="UA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ukraine" valuessss="UA">UA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Ukraine</option>
+											<option value="699" title="UM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United States Minor Outlying Islands" valuessss="UM">UM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;United States Minor Outlying Islands</option>
+											<option value="598" title="UY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Uruguay" valuessss="UY">UY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Uruguay</option>
+											<option value="998" title="UZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Uzbekistan" valuessss="UZ">UZ&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Uzbekistan</option>
+											<option value="678" title="VU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Vanuatu" valuessss="VU">VU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Vanuatu</option>
+											<option value="39" title="VA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Vatican" valuessss="VA">VA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Vatican</option>
+											<option value="58" title="VE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Venezuela" valuessss="VE">VE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Venezuela</option>
+											<option value="84" title="VN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Vietnam" valuessss="VN">VN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Vietnam</option>
+											<option value="1284" title="VG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Virgin Islands (British)" valuessss="VG">VG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Virgin Islands (British)</option>
+											<option value="1340" title="VI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Virgin Islands (U.S.)" valuessss="VI">VI&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Virgin Islands (U.S.)</option>
+											<option value="681" title="WF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Wallis and Futuna Islands" valuessss="WF">WF&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Wallis and Futuna Islands</option>
+											<option value="212" title="EH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Western Sahara" valuessss="EH">EH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Western Sahara</option>
+											<option value="967" title="YE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Yemen" valuessss="YE">YE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Yemen</option>
+											<option value="260" title="ZM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Zambia" valuessss="ZM">ZM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Zambia</option>
+											<option value="263" title="ZW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Zimbabwe" valuessss="ZW">ZW&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Zimbabwe</option>
+											</select>
+
+											</div>
+											<div class="col-sm-9 col-9 flex">
+												<a class="btn btn-link" id="c_code" style="border-bottom: 0.5px solid grey;font-size:11px">+91</a>
+												<input type="text" class=" reg_text validation_forms mobile_validation" id="mobile" name="mobile" placeholder="Mobile Number">
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="row">
+									<div class="col-sm-6 col-12">
+										<input type="password" class=" reg_text validation_forms password_valid" id="password" placeholder="Password" name="password">
+										
+										
+									</div>
+									<div class="col-sm-6 col-12">
+										<input type="password" class=" reg_text validation_forms" id="confirm_password" placeholder="Confirm Password" name="confirm_password">
+									</div>
+
+								</div>	
+								<div class="row">
+									<div class="col-sm-12 col-12" style="padding: 0px 16px;">
+										<span id="password_pattern" style="color: red;font-size: 12px;font-weight: 500;"></span>
+										<span style="font-size: 12px;color: #01100694;font-weight: 500;">Note: Password must have atleast 8 Characters with atleast 1 Uppercase, 1 Lowercase, 1 Numerical number<br><br></span>
+									</div>	
+
+									<div class="col-sm-12 col-12" style="padding: 0px 30px;">
+										<div class="form-group home-label" style="font-size:11px">By registering you agree to our <a href="terms-conditions.html" >Terms of Use</a>, <a href="privacy-policy.html">Privacy Policy</a> and <a href="data-collection-statement.html">Data Collection Statement</a>.</div>
+
+										<button type="submit" class="btn btn-primary custom-login-btn" style="width: 100%;">Register</button>
+										<br>
+										<br>
+										<p id="alert_divs"></p>
+
+									</div>
+
+								</div>	
+
+
+								<!--<input type="text" class=" reg_text validation_forms" id="firstname" name="firstname" placeholder="First Name">
+								<input type="hidden" id="role" name="role" value="registration">
+								<input type="text" class=" reg_text validation_forms " id="lastname" name="lastname" placeholder="Last Name">
+								<input type="text" class=" reg_text validation_forms email_validation" id="email" name="email" placeholder="Email">
+								<input type="text" class=" reg_text validation_forms mobile_validation" id="mobile" name="mobile" placeholder="Mobile Number">
+								<input type="password" class=" reg_text validation_forms password_valid" id="password" placeholder="Password" name="password">
+								<span id="password_pattern" style="color: red;font-size: 12px;font-weight: 500;"></span>
+                				<span style="font-size: 12px;color: #01100694;font-weight: 500;">Note: Password must have atleast 8 Characters with atleast 1 Uppercase, 1 Lowercase, 1 Numerical number<br><br></span>
+								<input type="password" class=" reg_text validation_forms" id="confirm_password" placeholder="Confirm Password" name="confirm_password">
+								<div class="form-group home-label" style="font-size:11px">By registering you agree to our <a href="https://smartinternz.com/terms-conditions" >Terms of Use</a>, <a href="https://smartinternz.com/privacy-policy">Privacy Policy</a> and <a href="https://smartinternz.com/data-collection-statement">Data Collection Statement</a>.</div>								
+								<button type="submit" class="btn btn-primary custom-login-btn" style="width: 100%;">Register</button>
+								<br>
+								<br>
+								<p id="alert_divs"></p>-->
+										
+							</form>	
+								
+								
+								
+						</div>
+						<div class="col-sm-2"></div>
+					
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="col-sm-6">
+			
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+				<div class="item active custome_slide slide_color1">
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<div class="slider_image_div">
+								<img src="assets/vps/images/sliders/1.png" class="slider_image">
+							</div>
+							<div class="slider_text_div">
+								<h3>AN AWESOME INTERNSHIP, AWAITS YOU !</h3>
+								<p>Want to be prominent of all the peers and extraordinary in your organisation, Why the delay? Join the most awaited internship and make your dreams true.</p>
+							</div>
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+				</div>
+
+				<div class="item  custome_slide slide_color2">
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<div class="slider_image_div">
+								<img src="assets/vps/images/sliders/2.png" class="slider_image">
+							</div>
+							<div class="slider_text_div">
+								<h3>ACCESS PRE-DEFINED PROJECT TEMPLATES  </h3>
+								<p>A unique project for every team. Each task is designed, to give you industry experience in the learning stage. Multiple modules help you get a complete overview of the project.</p>
+							</div>
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+				</div>
+
+				<div class="item  custome_slide slide_color3">
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<div class="slider_image_div">
+								<img src="assets/vps/images/sliders/3.png" class="slider_image">
+							</div>
+							<div class="slider_text_div">
+								<h3>AN INTERNSHIP WITH INDUSTRY STANDARDS</h3>
+								<p>Another step towards a successful career. Get reviewed after every task and module completions from mentor, that helps you shine brighter.</p>
+							</div>
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+				</div>
+				
+				<div class="item  custome_slide slide_color4">
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<div class="slider_image_div">
+								<img src="assets/vps/images/sliders/4.png" class="slider_image">
+							</div>
+							<div class="slider_text_div">
+								<h3>GET REWARDED WITH A DIGITAL CERTIFICATE</h3>
+								<p>Upon successful completion, you will be awarded a digital certificate which is a huge value add to your resume and distinguishes you from the rest of the crowd at an entry level into the Industry.</p>
+							</div>
+						</div>
+						<div class="col-sm-1"></div>
+					</div>	
+				</div>
+				
+			  </div>
+
+			  <!-- Left and right controls -->
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			  </a>
+			</div>
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+	</div>
+
+   
+   
+   
+</body>   
+<script src="../www.google.com/recaptcha/api85f1.js?onload=onloadCallback&amp;render=explicit"
+    async defer>
+</script>
+<script type="text/javascript">
+  var onloadCallback = function() {
+  };
+  
+</script>
+
+<script>
+var base_url = "";
+
+
+</script>
+<script src="public/alertify_lib/alertify.min.js"></script> 
+<script src="assets/vps/js/student_login.js"></script>
+
+
+

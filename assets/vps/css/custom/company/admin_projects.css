@@ -1,0 +1,241 @@
+.treeview-colorful .treeview-colorful-list ul {
+    padding-left: 45px;
+    margin-top: .1em;
+}
+.treeview-colorful ul {
+    position: relative;
+    padding-left: 0;
+    list-style: none;
+}
+.tree_mile_stone{
+	background-color: #ff8100 !important;
+}
+.tree_project{
+	background-color: #3ea01e !important;
+}
+.tree_activities{
+	background-color: #ef3910 !important;
+}
+.tree_refrences{
+	background-color: #3298d2 !important;
+}
+.tree_btn {
+	margin-bottom: 10px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    max-width: 240px;
+    word-break: break-word !important;
+    white-space: normal !important;
+    text-align: left;
+}
+.tree_btn:hover{
+	color: #fff !important;
+}
+.tree_btn:focus{
+	color: #fff !important;
+}
+.fa-plus-circle{
+	font-size: 18px;
+	color: #4f7e9c;
+	cursor: pointer;
+}
+.fa-minus-circle{
+	font-size: 18px;
+	color: #4f7e9c;
+	cursor: pointer;
+}
+.create_project{
+	
+}
+.content{
+	min-height:auto !important;
+}
+.create_tree_btn{
+	background-color: #ecf0f5 !important;
+    color: #1f2529;
+}
+.create_tree_btn:hover{
+	color: #1f2529 !important;
+}
+.create_tree_btn:focus{
+	color: #1f2529 !important;
+}
+.preivew_cards{
+    border: 1px solid #31272721;
+    border-radius: 3px;
+    padding: 13px;
+    box-shadow: 1px 1px 3px #ccc6;
+}
+.preview_img{
+    width: 100%;
+}
+.preivew_title{
+	font-size: 18px;
+	font-weight: 500 !important;
+}
+.preivew_link{
+	font-size: 13px;
+	overflow: hidden;
+	font-weight: 500;
+	word-break: break-all;
+}
+.preivew_para{
+	font-size: 13px;
+	height: 38px;
+	overflow: hidden;
+}
+.action_btns{
+	
+}
+.table>thead>tr>th{
+	border-bottom: 2px solid #f4f4f4;
+	font-weight: 600 !important;
+	text-transform: capitalize !important;
+}
+td {
+    border: inherit !important;
+    font-weight: 500 !important;
+    color: #616873 !important;
+}
+tr{
+	border-bottom: 1px solid #3f4d6714 !important;
+}
+
+.project_complexity{
+	margin-top: 15px;
+}
+.project_complexity_tag{
+	background-color: #e8168f;
+    padding: 6px 15px;
+    color: #ffff;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.project_title_div{
+	
+}
+.project_title_text{
+	font-weight: 500 !important;
+	font-size: 25px;
+	line-height: 38px;
+	text-transform: capitalize;
+}
+.project_description_div{
+	
+}
+.project_description_div_scroll{
+	height: 250px;
+    overflow-y: scroll;
+    line-height: 22px;
+    padding-right: 9px;
+    text-align: justify;
+}
+.project_description_text{
+	line-height: 23px;
+}
+.project_category_div{
+	
+}
+.project_category_text{
+	font-weight: 600 !important;
+    font-size: 16px;
+    color: #484f54a8;
+    text-transform: capitalize;
+}
+.project_category_text>span{
+	text-transform: capitalize;
+    font-size: 16px;
+}
+.project_skills_div{
+	
+}
+.project_skills_text{
+	font-weight: 600!important;
+    font-size: 16px;
+    color: #484f54a8;
+    text-transform: capitalize;
+}
+.project_skills_text>span{
+	font-size: 15px;
+    font-weight: 400;
+	
+}
+.project_desciption{
+	font-weight: 600!important;
+    font-size: 16px;
+    color: #484f54a8;
+    text-transform: capitalize;
+}
+.milestone_div{
+	
+}
+.milestone_text{
+	font-weight: 500 !important;
+    font-size: 25px;
+    line-height: 38px;
+    text-transform: capitalize;
+}
+.milestone_text_description{
+	height: 250px;
+    overflow-y: scroll;
+    line-height: 22px;
+    padding-right: 9px;
+    text-align: justify;
+}
+.activity_div{
+	
+}
+.activity_title{
+	font-weight: 600!important;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.activity_title_description{
+	height: 250px;
+    overflow-y: scroll;
+    line-height: 22px;
+    padding-right: 9px;
+    text-align: justify;
+}
+.activity_description_text{
+	
+}
+.project_description>p{
+	font-family: "Montserrat", sans-serif;
+}
+.project_description>span{
+	font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
