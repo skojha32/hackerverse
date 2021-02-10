@@ -150,7 +150,9 @@ input[type=tel]:placeholder,
 input[type=password]:placeholder  {
   color: #cccccc;
 }
-
+input[required] {
+  border-left: 2px solid skyblue;
+}
 /* OTHERS */
 
 *:focus {
