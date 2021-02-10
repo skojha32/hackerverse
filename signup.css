@@ -28,8 +28,6 @@ h2 {
   color: #cccccc;
 }
 
-
-
 /* STRUCTURE */
 
 .wrapper {
@@ -47,8 +45,8 @@ h2 {
   border-radius: 10px 10px 10px 10px;
   background: #fff;
   padding: 30px;
-  width: 90%;
-  max-width: 450px;
+  width: 95%;
+  max-width: 650px;
   position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -65,8 +63,6 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
-
-
 /* TABS */
 
 h2.inactive {
@@ -77,8 +73,6 @@ h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #5fbae9;
 }
-
-
 
 /* FORM TYPOGRAPHY*/
 
@@ -174,4 +168,11 @@ input[required] {
   content: "";
   display: table;
   clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+ .column {
+   width: 100%;
+ } 
+  
 }
