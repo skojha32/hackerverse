@@ -163,6 +163,7 @@ input[required] {
 .column {
   float: left;
   width: 50%;
+  margin-bottom: 20px;
 }
 .row:after {
   content: "";
