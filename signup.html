@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Sign in - HackerVerse</title>
-  <link rel="stylesheet" href="signin.css">
+  <link rel="stylesheet" href="signup.css">
 </head>
 
 <body>
@@ -17,16 +17,16 @@
 
       <!-- Login Form -->
       <form>
-        <input type="text" id="mem1" class="fadeIn second" name="mem1" placeholder="Member #1 Name">
+        <input type="text" id="mem1" class="fadeIn second" name="mem1" placeholder="Member #1 Name" required>
         <input type="text" id="mem2" class="fadeIn second" name="mem2" placeholder="Member #2 Name">
         <input type="text" id="mem3" class="fadeIn second" name="mem3" placeholder="Member #3 Name">
         <input type="text" id="mem4" class="fadeIn second" name="mem4" placeholder="Member #4 Name">
         <input type="text" id="mem5" class="fadeIn second" name="mem5" placeholder="Member #5 Name">
-        <input type="text" id="team" class="fadeIn second" name="team" placeholder="Team Name">
-        <input type="text" id="phone" class="fadeIn second" name="phone" placeholder="Phone Number">
-        <input type="text" id="colname" class="fadeIn second" name="colname" placeholder="College Name">
-        <input type="text" id="email" class="fadeIn second" name="email" placeholder="Email Address">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
+        <input type="text" id="team" class="fadeIn second" name="team" placeholder="Team Name" required>
+        <input type="tel" id="phone" class="fadeIn second" name="phone" placeholder="Phone Number" required>
+        <input type="text" id="colname" class="fadeIn second" name="colname" placeholder="College Name" required>
+        <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email Address" required>
+        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" required>
         <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
     </div>
