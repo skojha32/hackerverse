@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #111;
+  background-repeat: no-repeat;
+}
+
+.signupSection {
+  background-repeat: no-repeat;
+  padding: 50px 5%;
+  text-align: center;
+  display: flex;
+  color: white;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 30%;
+  background: rgba(20, 20, 20, .8);
+  padding: 30px 0;
+  border-right: 5px solid rgba(30, 30, 30, .8);
+}
+.info h2 {
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 48px;
+  position: relative;
+  animation-name: comeup;
+  animation-duration: 1s;
+}
+.signupForm {
+  flex: 1 1 70%;
+  padding: 30px 0;
+  background: rgba(20, 40, 40, .8);
+  transition: .2s;
+}
+.signupForm h2 {
+  font-weight: 300;
+}
+
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+#join-btn {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+}
+#join-btn:hover {
+  background: rgba(20, 20, 20, .8);
+  padding: 10px 80px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .info{
+    border: none;
+  }
+  .info h2 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 550px) {  
+  .info{
+    display: none;
+  }
+}
+
+@keyframes comeup {
+  from {
+    top: 1000px;
+  }
+  to {
+    top: 0px;
+  }
+}
